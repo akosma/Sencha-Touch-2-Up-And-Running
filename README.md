@@ -1,7 +1,7 @@
-Sencha Touch Up and Running
-===========================
+Sencha Touch 2 Up and Running
+=============================
 
-This repository contains the code of the "Sencha Touch Up and Running"
+This repository contains the code of the "Sencha Touch 2 Up and Running"
 book by Adrian Kosmaczewski, published by O'Reilly.
 
 Installation
