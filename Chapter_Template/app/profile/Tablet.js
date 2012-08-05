@@ -1,7 +1,10 @@
 Ext.define('TemplateApp.profile.Tablet', {
     extend: 'Ext.app.Profile',
     config: {
-        name: 'Tablet'
+        name: 'Tablet',
+        models: [],
+        views: [],
+        controllers: []
     },
     isActive: function () {
         return Ext.os.is.Tablet;

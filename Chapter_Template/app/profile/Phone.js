@@ -1,7 +1,10 @@
 Ext.define('TemplateApp.profile.Phone', {
     extend: 'Ext.app.Profile',
     config: {
-        name: 'Phone'
+        name: 'Phone',
+        models: [],
+        views: [],
+        controllers: []
     },
     isActive: function () {
         return Ext.os.is.Phone;

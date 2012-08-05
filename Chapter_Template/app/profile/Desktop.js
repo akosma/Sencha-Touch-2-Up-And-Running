@@ -1,7 +1,10 @@
 Ext.define('TemplateApp.profile.Desktop', {
     extend: 'Ext.app.Profile',
     config: {
-        name: 'Desktop'
+        name: 'Desktop',
+        models: [],
+        views: [],
+        controllers: []
     },
     isActive: function () {
         return Ext.os.is.Desktop;
