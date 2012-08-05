@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Sencha Touch 2 Up and Running Sample Code</title>
+
+        <!-- LiveReload code -->
+        <script>document.write('<scr' + 'ipt src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+        <!-- LiveReload code -->
+        <link rel="stylesheet" href="_libs/sencha/resources/css/sencha-touch.css" />
+
+        <script src="_libs/sencha/sencha-touch-all-debug.js"></script>
+        <script>
+            var data = [{ 
+                    title: 'Template',
+                    url: 'Chapter_Template'
+                }, { 
+                    title: 'Item 2',
+                    url: ''
+                }, { 
+                    title: 'Item 3',
+                    url: ''
+                }, { 
+                    title: 'Item 4',
+                    url: ''
+            }];
+
+            Ext.application({
+                name: 'SenchaTouch2UpAndRunning',
+                launch: function () {
+                    Ext.Viewport.add({
+                        xtype: 'list',
+                        fullscreen: true,
+                        itemTpl: '{title}',
+                        data: data,
+                        items: [{
+                            xtype: 'titlebar',
+                            docked: 'top',
+                            title: 'Sencha Touch 2 Code'
+                        }, {
+                            xtype: 'titlebar',
+                            docked: 'bottom',
+                            title: 'by Adrian Kosmaczewski'
+                        }],
+                        ui: 'round',
+                        listeners: {
+                            itemtap: function(list, index, target, record, e, eOpts) {
+                                location.href = record.get('url');
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
+
