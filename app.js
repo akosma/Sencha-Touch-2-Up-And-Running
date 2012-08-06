@@ -10,6 +10,18 @@ var data = [{
     title: 'Item 3',
     url: '',
     chapter: '3. Data'
+},{ 
+    title: 'Item 3',
+    url: '',
+    chapter: '3. Data'
+},{ 
+    title: 'Item 3',
+    url: '',
+    chapter: '3. Data'
+},{ 
+    title: 'Item 3',
+    url: '',
+    chapter: '3. Data'
 }, { 
     title: 'Item 4',
     url: '',
@@ -35,10 +47,13 @@ Ext.application({
             itemTpl: '{title}',
             store: store,
             grouped: true,
+            indexBar: {
+                letters: ['2', '3', '4', '5', '6', '7', '8', '9', '10']
+            },
             items: [{
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Sencha Touch 2 Code'
+                title: 'Sencha Touch 2 Book Code'
             }, {
                 xtype: 'titlebar',
                 docked: 'bottom',
