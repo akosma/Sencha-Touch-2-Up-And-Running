@@ -26,6 +26,10 @@ var data = [{
     title: 'Item 4',
     url: '',
     chapter: '4. Whatever'
+}, { 
+    title: 'Forms sample',
+    url: 'Chapter_5_Forms',
+    chapter: '5. Forms'
 }];
 
 var store = Ext.create('Ext.data.Store', {
