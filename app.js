@@ -2,6 +2,10 @@ var data = [{
     title: 'Template',
     url: 'Chapter_Template',
     chapter: '2. Getting Started'
+},{ 
+    title: 'SDK-Generated app',
+    url: 'Chapter_2_Getting_Started/MyApp',
+    chapter: '2. Getting Started'
 }, { 
     title: 'Item 2',
     url: '',
