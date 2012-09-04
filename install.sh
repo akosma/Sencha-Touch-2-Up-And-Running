@@ -33,3 +33,22 @@ mv $LIBS/sencha-touch-2.0.1.1/ $LIBS/sencha/
 rm $LIBS/sencha.zip
 
 
+
+
+echo
+echo "###############################"
+echo "#"
+echo "# Downloading Sencha Touch SDK Tools Beta 3"
+echo "#"
+echo "###############################"
+curl http://cdn.sencha.io/sdk-tools/SenchaSDKTools-2.0.0-beta3-osx.app.zip --output $LIBS/sencha_sdk.zip
+
+# Extract the contents of the zip file
+unzip $LIBS/sencha_sdk.zip -d $LIBS
+
+# Execute the application contained in it (OS X only)
+open $LIBS/SenchaSDKTools-2.0.0-beta3-osx.app
+
+# Remove the zip file
+rm $LIBS/sencha_sdk.zip
+
