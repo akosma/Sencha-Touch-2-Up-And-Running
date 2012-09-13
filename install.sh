@@ -51,4 +51,5 @@ open $LIBS/SenchaSDKTools-2.0.0-beta3-osx.app
 
 # Remove the zip file
 rm $LIBS/sencha_sdk.zip
+rm -r $LIBS/__MACOSX
 
