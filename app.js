@@ -58,6 +58,7 @@ Ext.application({
     startupImage: {
         '320x460': 'img/Default.png',
         '640x920': 'img/Default@2x.png', // Retina iPhone
+        '640x1096': 'img/Default-568@2x.png', // Retina 4-inch iPhone
         '768x1004': 'img/Default-Portrait.png',
         '748x1024': 'img/Default-Landscape.png',
         '1536x2008': 'img/Default-Portrait@2x.png', // Retina iPad, Portrait
