@@ -1,4 +1,4 @@
-Ext.define('Chapter5Forms.view.phone.FormSample', {
+Ext.define('Chapter5Forms.view.FormSample', {
     extend: 'Ext.form.Panel',
     xtype: 'formsample',
     config: {

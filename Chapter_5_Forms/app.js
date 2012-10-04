@@ -5,7 +5,7 @@ if (!window.Ext) {
 Ext.application({
     name: 'Chapter5Forms',
     appFolder: 'app',
-    profiles: ['Phone', 'Default'],
+    profiles: ['Phone', 'Tablet', 'Default'],
 
     icon: {
         57: '../img/Icon.png',
@@ -26,7 +26,7 @@ Ext.application({
     },
 
     models: [],
-    views: [],
+    views: ['FormSample'],
     controllers: [],
 
     fullscreen: true,

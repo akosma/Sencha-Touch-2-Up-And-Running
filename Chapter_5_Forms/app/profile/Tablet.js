@@ -1,13 +1,13 @@
-Ext.define('Chapter5Forms.profile.Phone', {
+Ext.define('Chapter5Forms.profile.Tablet', {
     extend: 'Ext.app.Profile',
     config: {
-        name: 'Phone',
+        name: 'Tablet',
         models: [],
         views: [],
         controllers: []
     },
     isActive: function () {
-        return Ext.os.is.Phone;
+        return Ext.os.is.Tablet;
     },
     launch: function () {
         Ext.Viewport.add({

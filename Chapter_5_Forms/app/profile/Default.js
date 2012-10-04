@@ -1,7 +1,7 @@
 Ext.define('Chapter5Forms.profile.Default', {
     extend: 'Ext.app.Profile',
     isActive: function () {
-        return Ext.os.is.Desktop || Ext.os.is.Tablet;
+        return Ext.os.is.Desktop;
     },
     launch: function () {
         Ext.Viewport.add({
