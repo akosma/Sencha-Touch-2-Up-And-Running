@@ -11,7 +11,7 @@ Ext.define('Chapter5Forms.profile.Phone', {
     },
     launch: function () {
         Ext.Viewport.add({
-            xtype: 'formsample'
+            xtype: 'indexview'
         });
     }
 });

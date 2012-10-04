@@ -3,7 +3,7 @@ Ext.define('Chapter5Forms.profile.Tablet', {
     config: {
         name: 'Tablet',
         models: [],
-        views: [],
+        views: ['RootView'],
         controllers: []
     },
     isActive: function () {
@@ -11,7 +11,7 @@ Ext.define('Chapter5Forms.profile.Tablet', {
     },
     launch: function () {
         Ext.Viewport.add({
-            xtype: 'formsample'
+            xtype: 'rootview'
         });
     }
 });

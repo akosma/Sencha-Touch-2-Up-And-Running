@@ -26,7 +26,7 @@ Ext.application({
     },
 
     models: [],
-    views: ['FormSample'],
+    views: ['FormSample', 'IndexView'],
     controllers: [],
 
     fullscreen: true,
