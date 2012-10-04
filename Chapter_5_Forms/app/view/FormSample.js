@@ -9,6 +9,7 @@ Ext.define('Chapter5Forms.view.FormSample', {
             items: [{
                 xtype: 'button',
                 text: 'Submit',
+                align: 'right',
                 listeners: {
                     tap: function() {
                         var form = Ext.ComponentQuery.query('formsample')[0];

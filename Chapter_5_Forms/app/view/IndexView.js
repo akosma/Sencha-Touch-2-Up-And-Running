@@ -8,13 +8,12 @@ Ext.define('Chapter5Forms.view.IndexView', {
         items: [{
             xtype: 'titlebar',
             docked: 'top',
-            title: 'Forms'
+            title: 'Forms',
+            ui: 'light'
         }],
         itemTpl: '{title}',
-        ui: 'round',
         listeners: {
             itemtap: function(list, index, target, record, e, eOpts) {
-                location.href = record.get('url');
             }
         }
     }

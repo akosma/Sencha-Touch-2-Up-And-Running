@@ -11,6 +11,13 @@ Ext.define('Chapter5Forms.view.tablet.RootView', {
             xtype: 'formsample',
             flex: 2
         }]
+    },
+    initialize: function () {
+        console.log('initialize rootview');
+        Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, { buffer: 50 });
+    },
+    handleOrientationChange: function () {
+        console.log('orientation change');
     }
 });
 
