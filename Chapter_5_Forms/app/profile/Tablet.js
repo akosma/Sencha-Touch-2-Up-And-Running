@@ -4,10 +4,10 @@ Ext.define('Chapter5Forms.profile.Tablet', {
         name: 'Tablet',
         models: [],
         views: ['RootView'],
-        controllers: []
+        controllers: ['TabletController']
     },
     isActive: function () {
-        return Ext.os.is.Tablet;
+        return Ext.os.is.Tablet || Ext.os.is.Desktop;
     },
     launch: function () {
         Ext.Viewport.add({

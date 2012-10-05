@@ -5,7 +5,7 @@ if (!window.Ext) {
 Ext.application({
     name: 'Chapter5Forms',
     appFolder: 'app',
-    profiles: ['Phone', 'Tablet', 'Default'],
+    profiles: ['Phone', 'Tablet'],
 
     icon: {
         57: '../img/Icon.png',
