@@ -1,24 +1,8 @@
-Ext.define('Chapter5Forms.view.FormSample', {
+Ext.define('Chapter5Forms.view.CheckboxSample', {
     extend: 'Ext.form.Panel',
-    xtype: 'formsample',
+    xtype: 'checkboxsample',
     config: {
         items: [{
-            xtype: 'titlebar',
-            title: 'Checkboxes',
-            docked: 'top',
-            items: [{
-                xtype: 'button',
-                text: 'Submit',
-                align: 'right',
-                listeners: {
-                    tap: function() {
-                        var form = Ext.ComponentQuery.query('formsample')[0];
-                        var values = form.getValues();
-                        Ext.Msg.alert(JSON.stringify(values));
-                    }
-                }
-            }]
-        }, {
             xtype: 'fieldset',
             title: 'Checkboxes',
             instructions: 'Select a country',

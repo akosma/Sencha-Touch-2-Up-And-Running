@@ -25,9 +25,10 @@ Ext.application({
         '1496x2048': '../img/Default-Landscape@2x.png' // Retina iPad, Landscape
     },
 
-    models: [],
-    views: ['FormSample', 'IndexView'],
+    models: ['Sample'],
+    views: ['CheckboxSample', 'IndexView'],
     controllers: [],
+    stores: ['SampleStore'],
 
     fullscreen: true,
     isIconPrecomposed: true,

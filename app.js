@@ -31,7 +31,7 @@ var data = [{
     url: '',
     chapter: '4. Whatever'
 }, { 
-    title: 'Forms sample',
+    title: 'Forms',
     url: 'Chapter_5_Forms',
     chapter: '5. Forms'
 }];

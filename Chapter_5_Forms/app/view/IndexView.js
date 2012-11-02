@@ -1,19 +1,17 @@
 Ext.define('Chapter5Forms.view.IndexView', {
-    extend: 'Ext.dataview.List',
+    extend: 'Ext.dataview.NestedList',
     xtype: 'indexview',
     config: {
-        data: [{ 
-            title: 'Checkboxes'
-        }],
-        items: [{
-            xtype: 'titlebar',
-            docked: 'top',
-            title: 'Forms',
-            ui: 'light'
-        }],
-        itemTpl: '{title}',
+        store: {
+            xtype: 'samplestore'
+        },
+        title: 'Forms',
         listeners: {
-            itemtap: function(list, index, target, record, e, eOpts) {
+            itemtap: function(nestedlist, list, index, target, record, e, eOpts) {
+                var screen = record.get('screen');
+                nestedlist.setDetailCard({
+                    xtype: screen
+                });
             }
         }
     }
