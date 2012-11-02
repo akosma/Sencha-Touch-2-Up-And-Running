@@ -5,7 +5,7 @@ Ext.define('Chapter5Forms.view.CheckboxSample', {
         items: [{
             xtype: 'fieldset',
             title: 'Checkboxes',
-            instructions: 'Select a country',
+            instructions: 'Select one or many countries',
             items: [{
                 xtype: 'checkboxfield',
                 name: 'country',

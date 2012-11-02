@@ -5,9 +5,11 @@ Ext.define('Chapter5Forms.view.tablet.RootView', {
         id: 'rootView',
         layout: 'hbox',
         items: [{ 
+            margin: 2,
             xtype: 'indexview',
             flex: 1
         }, { 
+            margin: 2,
             id: 'samplePane',
             xtype: 'container',
             layout: 'card',
