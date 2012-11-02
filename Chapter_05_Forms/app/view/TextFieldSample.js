@@ -98,7 +98,8 @@ Ext.define('Chapter5Forms.view.TextFieldSample', {
             }, {
                 xtype: 'urlfield',
                 name: 'url',
-                label: 'URL'
+                label: 'URL',
+                value: 'http://akosma.com/'
             }]
         }]
     }
