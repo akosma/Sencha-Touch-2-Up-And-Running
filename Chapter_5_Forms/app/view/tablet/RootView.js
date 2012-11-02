@@ -23,7 +23,7 @@ Ext.define('Chapter5Forms.view.tablet.RootView', {
                     action: 'showFormSamples'
                 }]
             }, {
-                html: 'Choose a sample on the left'
+                html: 'Choose a form sample from the menu'
             }]
         }]
     }

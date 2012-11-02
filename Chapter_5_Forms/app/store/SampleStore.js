@@ -6,7 +6,8 @@ Ext.define('Chapter5Forms.store.SampleStore', {
         defaultRootProperty: 'items',
         data: {
             items: [
-                { text: 'Checkboxes', screen: 'checkboxsample', leaf: true }
+                { text: 'Checkboxes', screen: 'checkboxsample', leaf: true },
+                { text: 'Text Fields', screen: 'textfieldsample', leaf: true }
             ]
         }
     }

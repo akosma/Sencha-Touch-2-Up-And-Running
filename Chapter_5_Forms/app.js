@@ -26,7 +26,7 @@ Ext.application({
     },
 
     models: ['Sample'],
-    views: ['CheckboxSample', 'IndexView'],
+    views: ['CheckboxSample', 'TextFieldSample', 'IndexView'],
     controllers: [],
     stores: ['SampleStore'],
 

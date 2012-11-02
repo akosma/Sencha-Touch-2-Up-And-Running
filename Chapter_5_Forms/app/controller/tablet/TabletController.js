@@ -19,22 +19,22 @@ Ext.define('Chapter5Forms.controller.tablet.TabletController', {
     },
 
     launch: function () {
-        var orientation = Ext.Viewport.getOrientation();
-        this.handleOrientationChange({ orientation: orientation });
+        var o = Ext.Viewport.getOrientation();
+        this.handleOrientationChange({ orientation: o });
         Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, { buffer: 50 });
     },
 
     handleOrientationChange: function (obj) {
         var indexView = this.getIndexView();
         var showFormSamplesButton = this.getShowFormSamplesButton();
-        var orientation = obj.orientation;
+        var o = obj.orientation;
         var rootView = this.getRootView();
-        if (orientation === 'landscape') {
+        if (o === 'landscape') {
             rootView.insert(0, indexView);
             indexView.setHidden(false);
             showFormSamplesButton.setHidden(true);
         }
-        else if (orientation === 'portrait') {
+        else if (o === 'portrait') {
             indexView.setHidden(true);
             showFormSamplesButton.setHidden(false);
         }
@@ -60,7 +60,6 @@ Ext.define('Chapter5Forms.controller.tablet.TabletController', {
                 centered: true,
                 width: 260,
                 height: 400,
-                scrollable: true,
                 hidden: true,
                 items: [{
                     xtype: 'indexview'
