@@ -5,11 +5,11 @@ Ext.define('Chapter12Universal.view.tablet.RootView', {
         id: 'rootView',
         layout: 'hbox',
         items: [{ 
-            margin: 2,
+            margin: '0 1 0 0',
             xtype: 'indexview',
             flex: 1
         }, { 
-            margin: 2,
+            margin: '0 0 0 1',
             id: 'mainPane',
             xtype: 'container',
             layout: 'card',
