@@ -4,7 +4,7 @@ Ext.define('Chapter5Forms.profile.Phone', {
         name: 'Phone',
         models: [],
         views: [],
-        controllers: []
+        controllers: ['PhoneController']
     },
     isActive: function () {
         return Ext.os.is.Phone;

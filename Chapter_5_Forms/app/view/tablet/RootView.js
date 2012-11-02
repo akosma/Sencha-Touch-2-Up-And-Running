@@ -2,22 +2,30 @@ Ext.define('Chapter5Forms.view.tablet.RootView', {
     extend: 'Ext.Container',
     xtype: 'rootview',
     config: {
+        id: 'rootView',
         layout: 'hbox',
-        items: [
-            { 
+        items: [{ 
             xtype: 'indexview',
             flex: 1
         }, { 
-            xtype: 'formsample',
-            flex: 2
+            id: 'samplePane',
+            xtype: 'container',
+            layout: 'card',
+            flex: 3,
+            items: [{
+                id: 'titleToolbar',
+                title: 'Form Samples',
+                xtype: 'toolbar',
+                docked: 'top',
+                items: [{
+                    xtype: 'button',
+                    text: 'Forms',
+                    action: 'showFormSamples'
+                }]
+            }, {
+                html: 'Choose a sample on the left'
+            }]
         }]
-    },
-    initialize: function () {
-        console.log('initialize rootview');
-        Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, { buffer: 50 });
-    },
-    handleOrientationChange: function () {
-        console.log('orientation change');
     }
 });
 
