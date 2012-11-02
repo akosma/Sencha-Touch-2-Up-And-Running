@@ -1,19 +1,19 @@
-Ext.define('Chapter5Forms.controller.tablet.TabletController', {
+Ext.define('Chapter12Universal.controller.tablet.TabletController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
             rootView: '#rootView',
             indexView: '#indexView',
-            samplePane: '#samplePane',
+            mainPane: '#mainPane',
             titleToolbar: '#titleToolbar',
-            showFormSamplesButton: 'button[action=showFormSamples]'
+            showMenuButton: 'button[action=showMenu]'
         },
         control: {
             indexView: {
                 itemtap: 'indexViewItemTap' 
             },
-            showFormSamplesButton: {
-                tap: 'showFormSamples'
+            showMenuButton: {
+                tap: 'showMenu'
             }
         }
     },
@@ -33,17 +33,17 @@ Ext.define('Chapter5Forms.controller.tablet.TabletController', {
 
     handleOrientationChange: function (obj) {
         var indexView = this.getIndexView();
-        var showFormSamplesButton = this.getShowFormSamplesButton();
+        var showMenuButton = this.getShowMenuButton();
         var o = obj.orientation;
         var rootView = this.getRootView();
         if (o === 'landscape') {
             rootView.insert(0, indexView);
             indexView.setHidden(false);
-            showFormSamplesButton.setHidden(true);
+            showMenuButton.setHidden(true);
         }
         else if (o === 'portrait') {
             indexView.setHidden(true);
-            showFormSamplesButton.setHidden(false);
+            showMenuButton.setHidden(false);
         }
     },
 
@@ -65,10 +65,10 @@ Ext.define('Chapter5Forms.controller.tablet.TabletController', {
         }
     },
 
-    showFormSamples: function (button, e, eOpts) {
+    showMenu: function (button, e, eOpts) {
         this.createOverlay();
-        var showFormSamplesButton = this.getShowFormSamplesButton();
-        this.overlay.showBy(showFormSamplesButton, 'tl-bc');
+        var showMenuButton = this.getShowMenuButton();
+        this.overlay.showBy(showMenuButton, 'tl-bc');
     },
 
     indexViewItemTap: function(nestedlist, list, index, target, record, e, eOpts) {
@@ -77,8 +77,8 @@ Ext.define('Chapter5Forms.controller.tablet.TabletController', {
         titleToolbar.setTitle(text);
 
         var screen = record.get('screen');
-        var samplePane = this.getSamplePane();
-        samplePane.setActiveItem({
+        var mainPane = this.getMainPane();
+        mainPane.setActiveItem({
             xtype: screen
         });
 

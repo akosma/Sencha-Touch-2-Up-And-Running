@@ -1,39 +1,19 @@
 var data = [{ 
     title: 'Template',
     url: 'Chapter_Template',
-    chapter: '2. Getting Started'
+    chapter: '02. Getting Started'
 },{ 
     title: 'SDK-Generated app',
-    url: 'Chapter_2_Getting_Started/MyApp',
-    chapter: '2. Getting Started'
-}, { 
-    title: 'Item 2',
-    url: '',
-    chapter: '3. Data'
-}, { 
-    title: 'Item 3',
-    url: '',
-    chapter: '3. Data'
-},{ 
-    title: 'Item 3',
-    url: '',
-    chapter: '3. Data'
-},{ 
-    title: 'Item 3',
-    url: '',
-    chapter: '3. Data'
-},{ 
-    title: 'Item 3',
-    url: '',
-    chapter: '3. Data'
-}, { 
-    title: 'Item 4',
-    url: '',
-    chapter: '4. Whatever'
+    url: 'Chapter_02_Getting_Started/MyApp',
+    chapter: '02. Getting Started'
 }, { 
     title: 'Forms',
-    url: 'Chapter_5_Forms',
-    chapter: '5. Forms'
+    url: 'Chapter_05_Forms',
+    chapter: '05. Forms'
+}, { 
+    title: 'Universal Application',
+    url: 'Chapter_12_Universal_App',
+    chapter: '12. Deployment in Devices'
 }];
 
 var store = Ext.create('Ext.data.Store', {
