@@ -34,6 +34,30 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
                     this.getParent().eraseTest();
                 }
             }
+        }, {
+            xtype: 'button',
+            text: 'Ext.Array.every()',
+            listeners: {
+                tap: function (sender, e, eOpts) {
+                    this.getParent().everyTest();
+                }
+            }
+        }, {
+            xtype: 'button',
+            text: 'Ext.Array.filter()',
+            listeners: {
+                tap: function (sender, e, eOpts) {
+                    this.getParent().filterTest();
+                }
+            }
+        }, {
+            xtype: 'button',
+            text: 'Ext.Array.flatten()',
+            listeners: {
+                tap: function (sender, e, eOpts) {
+                    this.getParent().flattenTest();
+                }
+            }
         }]
     },
 
@@ -87,6 +111,42 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         console.log('Erased array:');
         console.dir(erasedArray);
         this.showArray('Erased array', erasedArray);
+    },
+
+    everyTest: function () {
+        var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
+        var result = Ext.Array.every(sampleArray, function (item) {
+            // If here the inner function returns "false" at any point, the 
+            // loop ends and the value in "result" will be "false".
+            // In this case, however, as 'whatever' is not contained in the 
+            // sampleArray, the function always returns true, and 'result'
+            // contains true as well.
+            return (item !== 'whatever');
+        }, this);
+        console.log('Result of `every()`: ' + result);
+        this.showTitleText('Ext.every()', result);
+    },
+
+    filterTest: function () {
+        var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
+        var filteredArray = Ext.Array.filter(sampleArray, function (item) {
+            return (typeof(item) === 'string');
+        }, this);
+        console.log('Original array:');
+        console.dir(sampleArray);
+        console.log('Filtered array:');
+        console.dir(filteredArray);
+        this.showArray('Filtered Array', filteredArray);
+    },
+    
+    flattenTest: function () {
+        var sampleArray = [1234, true, 'asdfadf', ['inner array', true, false, 234], 'another string', '', 0];
+        var flattenedArray = Ext.Array.flatten(sampleArray);
+        console.log('Original array:');
+        console.dir(sampleArray);
+        console.log('Flattened array:');
+        console.dir(flattenedArray);
+        this.showArray('Flattened Array', flattenedArray);
     },
 
     showArray: function (title, array) {
