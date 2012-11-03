@@ -1,64 +1,24 @@
 Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
     extend: 'Chapter3ClassSystem.view.DemoPanel',
     xtype: 'arraydemo',
-    config: {
-        items: [{
-            xtype: 'button',
-            text: 'Ext.Array.clean()',
-            listeners: {
-                tap: function (sender, e, eOpts) {
-                    this.getParent().cleanTest();
+    config: {},
+
+    initialize: function (component, eOpts) {
+        var methods = ['clean', 'contains', 'difference', 'erase', 'every', 'filter', 'flatten', 'from', 'include'];
+        Ext.Array.each(methods, function (item) {
+            var methodName = 'Ext.Array.' + item + '()';
+            this.add({
+                xtype: 'button',
+                text: methodName,
+                listeners: {
+                    tap: function (sender, e, eOpts) {
+                        console.log('-----------------------------');
+                        console.log('Testing: ' + methodName);
+                        this.getParent()[item + 'Test']();
+                    }
                 }
-            }
-        }, {
-            xtype: 'button',
-            text: 'Ext.Array.contains()',
-            listeners: {
-                tap: function (sender, e, eOpts) {
-                    this.getParent().containsTest();
-                }
-            }
-        }, {
-            xtype: 'button',
-            text: 'Ext.Array.difference()',
-            listeners: {
-                tap: function (sender, e, eOpts) {
-                    this.getParent().differenceTest();
-                }
-            }
-        }, {
-            xtype: 'button',
-            text: 'Ext.Array.erase()',
-            listeners: {
-                tap: function (sender, e, eOpts) {
-                    this.getParent().eraseTest();
-                }
-            }
-        }, {
-            xtype: 'button',
-            text: 'Ext.Array.every()',
-            listeners: {
-                tap: function (sender, e, eOpts) {
-                    this.getParent().everyTest();
-                }
-            }
-        }, {
-            xtype: 'button',
-            text: 'Ext.Array.filter()',
-            listeners: {
-                tap: function (sender, e, eOpts) {
-                    this.getParent().filterTest();
-                }
-            }
-        }, {
-            xtype: 'button',
-            text: 'Ext.Array.flatten()',
-            listeners: {
-                tap: function (sender, e, eOpts) {
-                    this.getParent().flattenTest();
-                }
-            }
-        }]
+            });
+        }, this);
     },
 
     cleanTest: function () {
@@ -138,7 +98,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         console.dir(filteredArray);
         this.showArray('Filtered Array', filteredArray);
     },
-    
+
     flattenTest: function () {
         var sampleArray = [1234, true, 'asdfadf', ['inner array', true, false, 234], 'another string', '', 0];
         var flattenedArray = Ext.Array.flatten(sampleArray);
@@ -147,6 +107,23 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         console.log('Flattened array:');
         console.dir(flattenedArray);
         this.showArray('Flattened Array', flattenedArray);
+    },
+
+    fromTest: function () {
+        var bool = true;
+        var booleanArray = Ext.Array.from(bool);
+        console.log('Generated array:');
+        console.dir(booleanArray);
+        this.showArray('Generated array', booleanArray);
+    },
+
+    includeTest: function () {
+        var sampleArray = [1234, 456, true, 'test'];
+        Ext.Array.include(sampleArray, true);
+        Ext.Array.include(sampleArray, 'whatever');
+        console.log('Array with inclusions:');
+        console.dir(sampleArray);
+        this.showArray('Array with inclusions', sampleArray);
     },
 
     showArray: function (title, array) {
