@@ -55,8 +55,8 @@ Ext.define('Chapter5Forms.controller.tablet.TabletController', {
                 modal: true,
                 hideOnMaskTap: true,
                 centered: true,
-                width: 260,
-                height: 400,
+                width: 340,
+                height: 600,
                 hidden: true,
                 items: [{
                     xtype: 'indexview'
