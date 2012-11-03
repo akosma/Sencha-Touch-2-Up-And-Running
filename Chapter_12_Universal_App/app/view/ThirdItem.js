@@ -1,5 +1,5 @@
 Ext.define('Chapter12Universal.view.ThirdItem', {
-    extend: 'Ext.form.Panel',
+    extend: 'Ext.Panel',
     xtype: 'thirditem',
     config: {
         html: 'Third item'
