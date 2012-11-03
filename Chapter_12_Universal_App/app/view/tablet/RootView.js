@@ -13,7 +13,7 @@ Ext.define('Chapter12Universal.view.tablet.RootView', {
             id: 'mainPane',
             xtype: 'container',
             layout: 'card',
-            flex: 3,
+            flex: 2,
             items: [{
                 id: 'titleToolbar',
                 title: 'Universal App',

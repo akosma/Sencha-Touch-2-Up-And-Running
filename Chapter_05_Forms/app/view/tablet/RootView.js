@@ -13,7 +13,7 @@ Ext.define('Chapter5Forms.view.tablet.RootView', {
             id: 'samplePane',
             xtype: 'container',
             layout: 'card',
-            flex: 3,
+            flex: 2,
             items: [{
                 id: 'titleToolbar',
                 title: 'Form Samples',
