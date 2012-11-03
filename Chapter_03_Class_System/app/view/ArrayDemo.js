@@ -40,7 +40,11 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
     cleanTest: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var cleanArray = Ext.Array.clean(sampleArray);
-        this.showArray('Cleaned array', cleanArray);
+        console.log('Original array:');
+        console.dir(sampleArray);
+        console.log('Clean array:');
+        console.dir(cleanArray);
+        this.showArray('Clean array', cleanArray);
     },
 
     containsTest: function () {
@@ -50,25 +54,38 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
 
         Ext.Array.each(tests, function (item) {
             if (Ext.Array.contains(sampleArray, item)) {
+                console.log('"' + item + '" IS contained');
                 results.push('<span class="green">YES</span>: "' + item + '"');
             }
             else {
+                console.log('"' + item + '" is NOT contained');
                 results.push('<span class="red">NO</span>: "' + item + '"');
             }
         }, this);
-        this.showTitleText('Comparison results', results.join('<br>'));
+        var text = results.join('<br>');
+        this.showTitleText('Comparison results', text);
     },
 
     differenceTest: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var anotherArray = ['asdfadf', new Date(), 1234, true, '', 234];
         var difference = Ext.Array.difference(sampleArray, anotherArray);
+        console.log('Original array:');
+        console.dir(sampleArray);
+        console.log('Another array:');
+        console.dir(anotherArray);
+        console.log('Difference array:');
+        console.dir(difference);
         this.showArray('Difference', difference);
     },
 
     eraseTest: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var erasedArray = Ext.Array.erase(sampleArray, 1, 3);
+        console.log('Original array:');
+        console.dir(sampleArray);
+        console.log('Erased array:');
+        console.dir(erasedArray);
         this.showArray('Erased array', erasedArray);
     },
 
