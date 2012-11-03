@@ -7,6 +7,10 @@ var data = [{
     url: 'Chapter_02_Getting_Started/MyApp',
     chapter: '02. Getting Started'
 }, { 
+    title: 'Foundation Classes',
+    url: 'Chapter_03_Class_System',
+    chapter: '03. Class System'
+}, { 
     title: 'Forms',
     url: 'Chapter_05_Forms',
     chapter: '05. Forms'

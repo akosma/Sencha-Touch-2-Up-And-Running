@@ -1,0 +1,15 @@
+h1 {
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
