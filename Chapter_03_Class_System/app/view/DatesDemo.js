@@ -7,13 +7,12 @@ Ext.define('Chapter3ClassSystem.view.DatesDemo', {
     },
 
     getFunctions: function () {
-        return ['parse'];
-        //return ['add', 'between', 'clearTime', 'format', 'getDayOfYear',
-            //'getDaysInMonth', 'getElapsed', 'getFirstDateOfMonth', 
-            //'getFirstDayOfMonth', 'getGMTOffset', 'getLastDateOfMonth', 
-            //'getLastDayOfMonth', 'getMonthNumber', 'getShortDayName', 
-            //'getShortMonthName', 'getSuffix', 'getTimezone', 'getWeekOfYear', 
-            //'isDST', 'isLeapYear', 'isValid', 'parse'];
+        return ['add', 'between', 'clearTime', 'format', 'getDayOfYear',
+            'getDaysInMonth', 'getElapsed', 'getFirstDateOfMonth', 
+            'getFirstDayOfMonth', 'getGMTOffset', 'getLastDateOfMonth', 
+            'getLastDayOfMonth', 'getMonthNumber', 'getShortDayName', 
+            'getShortMonthName', 'getSuffix', 'getTimezone', 'getWeekOfYear', 
+            'isDST', 'isLeapYear', 'isValid', 'parse'];
     },
 
     addDemo: function () {
