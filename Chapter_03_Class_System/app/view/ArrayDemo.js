@@ -2,9 +2,17 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
     extend: 'Chapter3ClassSystem.view.DemoPanel',
     xtype: 'arraydemo',
 
+    getPrefix: function () {
+        return 'Ext.Array';
+    },
+
     getFunctions: function () {
-        return ['clean', 'contains', 'difference', 'erase', 
-            'every', 'filter', 'flatten', 'from', 'include'];
+        return ['min'];
+        //return ['clean', 'contains', 'difference', 'erase', 
+            //'every', 'filter', 'flatten', 'from', 'include', 'indexOf',
+            //'insert', 'intersect', 'map', 'max', 'mean', 'merge', 'min',
+            //'pluck', 'remove', 'replace', 'slice', 'some', 'sort', 'splice',
+            //'sum', 'toArray', 'union', 'unique'];
     },
 
     cleanDemo: function () {
@@ -12,8 +20,6 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         var cleanArray = Ext.Array.clean(sampleArray);
         console.log('Original array:');
         console.dir(sampleArray);
-        console.log('Clean array:');
-        console.dir(cleanArray);
         this.showArray('Clean array', cleanArray);
     },
 
@@ -44,8 +50,6 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         console.dir(sampleArray);
         console.log('Another array:');
         console.dir(anotherArray);
-        console.log('Difference array:');
-        console.dir(difference);
         this.showArray('Difference', difference);
     },
 
@@ -54,8 +58,6 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         var erasedArray = Ext.Array.erase(sampleArray, 1, 3);
         console.log('Original array:');
         console.dir(sampleArray);
-        console.log('Erased array:');
-        console.dir(erasedArray);
         this.showArray('Erased array', erasedArray);
     },
 
@@ -80,8 +82,6 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         }, this);
         console.log('Original array:');
         console.dir(sampleArray);
-        console.log('Filtered array:');
-        console.dir(filteredArray);
         this.showArray('Filtered Array', filteredArray);
     },
 
@@ -90,16 +90,12 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         var flattenedArray = Ext.Array.flatten(sampleArray);
         console.log('Original array:');
         console.dir(sampleArray);
-        console.log('Flattened array:');
-        console.dir(flattenedArray);
         this.showArray('Flattened Array', flattenedArray);
     },
 
     fromDemo: function () {
         var bool = true;
         var booleanArray = Ext.Array.from(bool);
-        console.log('Generated array:');
-        console.dir(booleanArray);
         this.showArray('Generated array', booleanArray);
     },
 
@@ -107,10 +103,94 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         var sampleArray = [1234, 456, true, 'test'];
         Ext.Array.include(sampleArray, true);
         Ext.Array.include(sampleArray, 'whatever');
-        console.log('Array with inclusions:');
-        console.dir(sampleArray);
         this.showArray('Array with inclusions', sampleArray);
     },
+
+    indexOfDemo: function () {
+        var sampleArray = [1234, 456, true, 'test'];
+        var index = Ext.Array.indexOf(sampleArray, 'whatever');
+        console.log('Index of "whatever" (should be -1):');
+        console.log(index);
+        this.showTitleText('Index of "whatever" (should be -1)', index);
+    },
+
+    insertDemo: function () {
+        var sampleArray = [1234, 456, true, 'test'];
+        console.log('Original Array');
+        console.dir(sampleArray);
+        var itemsToInsert = [768, 'something', false, null];
+        var insertedArray = Ext.Array.insert(sampleArray, 1, itemsToInsert);
+        console.log('Items to insert');
+        console.dir(itemsToInsert);
+        console.log('insertedArray === sampleArray');
+        console.log(insertedArray === sampleArray);
+        this.showArray('Array with insertions', insertedArray);
+    },
+
+    intersectDemo: function() {
+        var sampleArray = [1234, 456, true, 'test'];
+        console.log('Original Array');
+        console.dir(sampleArray);
+        var anotherArray = [true, false, 'test', 'whatever', 456];
+        console.log('Another Array');
+        console.dir(anotherArray);
+        var intersection = Ext.Array.intersect(anotherArray, sampleArray);
+        this.showArray('Intersected Array', intersection);
+    },
+
+    mapDemo: function () {
+        var sampleArray = [1234, 456, true, 'test'];
+        console.log('Original Array');
+        console.dir(sampleArray);
+        var mapped = Ext.Array.map(sampleArray, function (item) {
+            return item + '_boom';
+        }, this);
+        this.showArray('Mapped array', mapped);
+    },
+
+    maxDemo: function () {
+        var sampleArray = [1234, 456, -234, 654, 0, 'whatever', "BOOM", true, 'test'];
+        console.log('Original Array');
+        console.dir(sampleArray);
+        var max = Ext.Array.max(sampleArray);
+        console.log('Maximum value: ' + max);
+        this.showTitleText('Maximum value', max);
+    },
+
+    meanDemo: function () {},
+
+    mergeDemo: function () {},
+
+    minDemo: function () {
+        var sampleArray = [1234, 456, -234, 654, 0, 'whatever', "BOOM", true, 'test'];
+        console.log('Original Array');
+        console.dir(sampleArray);
+        var max = Ext.Array.min(sampleArray);
+        console.log('Minimum value: ' + max);
+        this.showTitleText('Minimum value', max);
+    },
+
+    pluckDemo: function () {},
+
+    removeDemo: function () {},
+
+    replaceDemo: function () {},
+
+    sliceDemo: function () {},
+
+    someDemo: function () {},
+
+    sortDemo: function () {},
+
+    spliceDemo: function () {},
+
+    sumDemo: function () {},
+
+    toArrayDemo: function () {},
+
+    unionDemo: function () {},
+
+    uniqueDemo: function () {},
 
     showArray: function (title, array) {
         var text = [];
@@ -119,6 +199,8 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
             text.push(index + '> "' + item + '"');
             ++index;
         }, this);
+        console.log(title);
+        console.dir(array);
         this.showTitleText(title, text.join('<br>'));
     }
 });

@@ -7,6 +7,7 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
 
     initialize: function (component, eOpts) {
         var methods = this.getFunctions();
+        var prefix = this.getPrefix();
 
         this.add({
             html: 'Tap each button to execute a demo of the functions.<br>You can also see more information in the "console.log" statements in your browser console.'
@@ -16,7 +17,7 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
         // array above, dynamically, that calls a function in this view
         // of the same name, ending in "...Demo"
         Ext.Array.each(methods, function (item) {
-            var methodName = 'Ext.Array.' + item + '()';
+            var methodName = prefix + '.' + item + '()';
             this.add({
                 xtype: 'button',
                 text: methodName,
@@ -31,6 +32,19 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
                 }
             });
         }, this);
+    },
+
+    getPrefix: function () {
+        // Subclasses should override this function, to return the
+        // prefix used by each demo in the buttons created automatically
+        // during initialize().
+        return '';
+    },
+    
+    getFunctions: function () {
+        // Subclasses should override this function, to return the 
+        // names of the methods that should be demoed
+        return [];
     },
     
     showTitleText: function (title, text) {
