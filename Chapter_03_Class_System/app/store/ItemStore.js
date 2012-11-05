@@ -11,6 +11,7 @@ Ext.define('Chapter3ClassSystem.store.ItemStore', {
                 { text: 'Delayed Task', screen: 'delayedtaskdemo', leaf: true },
                 { text: 'DOM Manipulation', screen: 'dommanipdemo', leaf: true },
                 { text: 'Ext Object', screen: 'extdemo', leaf: true },
+                { text: 'Feature Detection', screen: 'featuredemo', leaf: true },
                 { text: 'Function', screen: 'functiondemo', leaf: true },
                 { text: 'HashMap', screen: 'hashmapdemo', leaf: true },
                 { text: 'Inflector', screen: 'inflectordemo', leaf: true },

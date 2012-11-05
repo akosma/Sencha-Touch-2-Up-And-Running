@@ -68,7 +68,8 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
                 centered: true,
                 width: 260,
                 height: 300,
-                hidden: true
+                hidden: true,
+                scrollable: true
             });
         }
         this.overlay.setHtml(text);
