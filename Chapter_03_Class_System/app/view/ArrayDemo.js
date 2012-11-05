@@ -1,25 +1,10 @@
 Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
     extend: 'Chapter3ClassSystem.view.DemoPanel',
     xtype: 'arraydemo',
-    config: {},
 
-    initialize: function (component, eOpts) {
-        var methods = ['clean', 'contains', 'difference', 'erase', 
+    getFunctions: function () {
+        return ['clean', 'contains', 'difference', 'erase', 
             'every', 'filter', 'flatten', 'from', 'include'];
-        Ext.Array.each(methods, function (item) {
-            var methodName = 'Ext.Array.' + item + '()';
-            this.add({
-                xtype: 'button',
-                text: methodName,
-                listeners: {
-                    tap: function (sender, e, eOpts) {
-                        console.log('-----------------------------');
-                        console.log('Demo: ' + methodName);
-                        this.getParent()[item + 'Demo']();
-                    }
-                }
-            });
-        }, this);
     },
 
     cleanDemo: function () {
