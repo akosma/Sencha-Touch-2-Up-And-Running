@@ -13,3 +13,22 @@ h1 {
     font-weight: bold;
 }
 
+.outerDiv {
+    font-size: 13px;
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+}
+
+.innerDiv {
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.inserted {
+    background-color: blue;
+    color: white;
+}
+

@@ -8,9 +8,10 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
     initialize: function (component, eOpts) {
         var methods = this.getFunctions();
         var prefix = this.getPrefix();
+        var instructions = this.getInstructions();
 
         this.add({
-            html: 'Tap each button to execute a demo of the functions.<br>You can also see more information in the "console.log" statements in your browser console.'
+            html: instructions
         });
 
         // This code creates a button for each method specified in the
@@ -52,6 +53,10 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
         // Subclasses should override this function, to return the 
         // names of the methods that should be demoed
         return [];
+    },
+
+    getInstructions: function () {
+        return 'Tap each button to execute a demo of the functions.<br>You can also see more information in the "console.log" statements in your browser console.';
     },
     
     showTitleText: function (title, text) {

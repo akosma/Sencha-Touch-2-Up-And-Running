@@ -26,7 +26,7 @@ Ext.application({
     },
 
     models: ['Item'],
-    views: ['ArrayDemo', 'DatesDemo', 'DelayedTaskDemo', 'DomManipDemo', 
+    views: ['ArrayDemo', 'DatesDemo', 'DelayedTaskDemo', 'DomHelper', 'DomQuery', 
         'ExtObjDemo', 'FunctionDemo', 'HashMapDemo', 'InflectorDemo',
         'IndexView', 'LoggerDemo', 'NumberDemo', 'ObsMixinDemo', 'StringDemo', 
         'VersionDemo', 'FeatureDemo'],
