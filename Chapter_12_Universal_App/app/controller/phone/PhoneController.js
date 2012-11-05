@@ -17,7 +17,7 @@ Ext.define('Chapter12Universal.controller.phone.PhoneController', {
             this.screens = {};
         }
         if (!this.screens[screenName]) {
-            this.screens[screenName] = Ext.createByAlias('widget.' + screenName);
+            this.screens[screenName] = Ext.widget(screenName);
         }
         nestedlist.setDetailCard(this.screens[screenName]);
     }

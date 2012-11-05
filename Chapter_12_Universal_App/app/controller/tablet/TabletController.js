@@ -81,7 +81,7 @@ Ext.define('Chapter12Universal.controller.tablet.TabletController', {
             this.screens = {};
         }
         if (!this.screens[screenName]) {
-            this.screens[screenName] = Ext.createByAlias('widget.' + screenName);
+            this.screens[screenName] = Ext.widget(screenName);
         }
 
         var mainPane = this.getMainPane();
