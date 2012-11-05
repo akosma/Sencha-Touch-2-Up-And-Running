@@ -3,7 +3,7 @@ Ext.define('Chapter3ClassSystem.view.DomQuery', {
     xtype: 'domquerydemo',
 
     config: {
-        html: '<div class="outerDiv">Outer DIV<div id="someDiv" class="innerDiv">Inner DIV</div></div>'
+        html: '<div class="outerDiv">Outer DIV<div id="queryDiv" class="innerDiv">Inner DIV</div></div>'
     },
 
     getPrefix: function () {
@@ -26,7 +26,7 @@ Ext.define('Chapter3ClassSystem.view.DomQuery', {
     },
 
     selectNodeDemo: function () {
-        var div = Ext.DomQuery.selectNode('#someDiv');
+        var div = Ext.DomQuery.selectNode('#queryDiv');
         console.log('Found DIV element');
         console.dir(div);
         this.showTitleText("Contents of the DIV found", div.innerHTML);
