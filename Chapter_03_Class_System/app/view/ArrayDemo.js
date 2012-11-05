@@ -4,7 +4,8 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
     config: {},
 
     initialize: function (component, eOpts) {
-        var methods = ['clean', 'contains', 'difference', 'erase', 'every', 'filter', 'flatten', 'from', 'include'];
+        var methods = ['clean', 'contains', 'difference', 'erase', 
+            'every', 'filter', 'flatten', 'from', 'include'];
         Ext.Array.each(methods, function (item) {
             var methodName = 'Ext.Array.' + item + '()';
             this.add({
@@ -13,15 +14,15 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
                 listeners: {
                     tap: function (sender, e, eOpts) {
                         console.log('-----------------------------');
-                        console.log('Testing: ' + methodName);
-                        this.getParent()[item + 'Test']();
+                        console.log('Demo: ' + methodName);
+                        this.getParent()[item + 'Demo']();
                     }
                 }
             });
         }, this);
     },
 
-    cleanTest: function () {
+    cleanDemo: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var cleanArray = Ext.Array.clean(sampleArray);
         console.log('Original array:');
@@ -31,7 +32,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showArray('Clean array', cleanArray);
     },
 
-    containsTest: function () {
+    containsDemo: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var tests = [false, '', 'whatever', 'asdfadf', 1234, 6578];
         var results = [];
@@ -50,7 +51,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showTitleText('Comparison results', text);
     },
 
-    differenceTest: function () {
+    differenceDemo: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var anotherArray = ['asdfadf', new Date(), 1234, true, '', 234];
         var difference = Ext.Array.difference(sampleArray, anotherArray);
@@ -63,7 +64,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showArray('Difference', difference);
     },
 
-    eraseTest: function () {
+    eraseDemo: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var erasedArray = Ext.Array.erase(sampleArray, 1, 3);
         console.log('Original array:');
@@ -73,7 +74,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showArray('Erased array', erasedArray);
     },
 
-    everyTest: function () {
+    everyDemo: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var result = Ext.Array.every(sampleArray, function (item) {
             // If here the inner function returns "false" at any point, the 
@@ -87,7 +88,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showTitleText('Ext.every()', result);
     },
 
-    filterTest: function () {
+    filterDemo: function () {
         var sampleArray = [1234, true, 'asdfadf', null, 'another string', '', 0];
         var filteredArray = Ext.Array.filter(sampleArray, function (item) {
             return (typeof(item) === 'string');
@@ -99,7 +100,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showArray('Filtered Array', filteredArray);
     },
 
-    flattenTest: function () {
+    flattenDemo: function () {
         var sampleArray = [1234, true, 'asdfadf', ['inner array', true, false, 234], 'another string', '', 0];
         var flattenedArray = Ext.Array.flatten(sampleArray);
         console.log('Original array:');
@@ -109,7 +110,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showArray('Flattened Array', flattenedArray);
     },
 
-    fromTest: function () {
+    fromDemo: function () {
         var bool = true;
         var booleanArray = Ext.Array.from(bool);
         console.log('Generated array:');
@@ -117,7 +118,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         this.showArray('Generated array', booleanArray);
     },
 
-    includeTest: function () {
+    includeDemo: function () {
         var sampleArray = [1234, 456, true, 'test'];
         Ext.Array.include(sampleArray, true);
         Ext.Array.include(sampleArray, 'whatever');
