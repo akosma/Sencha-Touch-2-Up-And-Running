@@ -76,11 +76,16 @@ Ext.define('Chapter5Forms.controller.tablet.TabletController', {
         var text = record.get('text');
         titleToolbar.setTitle(text);
 
-        var screen = record.get('screen');
-        var samplePane = this.getSamplePane();
-        samplePane.setActiveItem({
-            xtype: screen
-        });
+        var screenName = record.get('screen');
+        if (!this.screens) {
+            this.screens = {};
+        }
+        if (!this.screens[screenName]) {
+            this.screens[screenName] = Ext.createByAlias('widget.' + screenName);
+        }
+
+        var mainPane = this.getSamplePane();
+        mainPane.setActiveItem(this.screens[screenName]);
 
         if (this.overlay) {
             this.overlay.hide();
