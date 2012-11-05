@@ -7,7 +7,7 @@ Ext.define('Chapter3ClassSystem.store.ItemStore', {
         data: {
             items: [
                 { text: 'Array', screen: 'arraydemo', leaf: true },
-                { text: 'Dates', screen: 'datesdemo', leaf: true },
+                { text: 'Date Extras', screen: 'datesdemo', leaf: true },
                 { text: 'Delayed Task', screen: 'delayedtaskdemo', leaf: true },
                 { text: 'DOM Manipulation', screen: 'dommanipdemo', leaf: true },
                 { text: 'Ext Object', screen: 'extdemo', leaf: true },

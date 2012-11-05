@@ -25,9 +25,16 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
                 height: '44px',
                 listeners: {
                     tap: function (sender, e, eOpts) {
-                        console.log('-----------------------------');
-                        console.log('Demo: ' + methodName);
-                        this.getParent()[item + 'Demo']();
+                        var parent = this.getParent();
+                        var method = item + 'Demo';
+                        if (parent[method]) {
+                            console.log('-----------------------------');
+                            console.log('Demo: ' + methodName);
+                            parent[method]();
+                        }
+                        else {
+                            console.log('Demo ' + methodName + ' not implemented');
+                        }
                     }
                 }
             });
