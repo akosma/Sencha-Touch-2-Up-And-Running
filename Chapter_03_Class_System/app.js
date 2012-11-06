@@ -33,7 +33,6 @@ Ext.application({
     controllers: [],
     stores: [ 'ItemStore' ],
 
-    fullscreen: true,
     isIconPrecomposed: true,
     statusBarStyle: 'black', // can also be 'default'
 
