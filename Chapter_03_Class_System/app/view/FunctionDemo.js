@@ -88,9 +88,33 @@ Ext.define('Chapter3ClassSystem.view.FunctionDemo', {
     },
 
     flexSetterDemo: function () {
+        var setValue = Ext.Function.flexSetter(function(name, value) {
+            console.log('name: "' + name + '", value: "' + value + '"');
+        });
+
+        setValue('name1', 'value1');
+
+        setValue({
+            name2: 'value2',
+            name3: 'value3',
+            name4: 'value4'
+        });
+        
+        this.showTitleText('flexSetter() demo', 'Check the console for more information');
     },
 
     passDemo: function () {
+        var originalFunction = function(){
+            console.log('inside the original function, arguments:');
+            console.dir(Ext.Array.from(arguments));
+        };
+
+        var callback = Ext.Function.pass(originalFunction, ['first', 'second']);
+
+        callback();
+        callback('third');
+
+        this.showTitleText('pass() demo', 'Check the console for more information');
     }
 });
 
