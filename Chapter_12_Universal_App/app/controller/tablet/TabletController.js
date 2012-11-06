@@ -54,7 +54,6 @@ Ext.define('Chapter12Universal.controller.tablet.TabletController', {
                 layout: 'card',
                 modal: true,
                 hideOnMaskTap: true,
-                centered: true,
                 width: 340,
                 height: 600,
                 hidden: true,
