@@ -20,6 +20,7 @@ Ext.define('Chapter3ClassSystem.store.ItemStore', {
                 { text: 'JSON', screen: 'jsondemo', leaf: true },
                 { text: 'Logger', screen: 'loggerdemo', leaf: true },
                 { text: 'Number', screen: 'numberdemo', leaf: true },
+                { text: 'Object', screen: 'objectdemo', leaf: true },
                 { text: 'Observable Mixin', screen: 'obsdemo', leaf: true },
                 { text: 'String', screen: 'stringdemo', leaf: true },
                 { text: 'Version', screen: 'versiondemo', leaf: true }

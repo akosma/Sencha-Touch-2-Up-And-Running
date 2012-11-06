@@ -29,7 +29,7 @@ Ext.application({
     views: [ 'ArrayDemo', 'DatesDemo', 'DelayedTaskDemo', 'DomHelper', 'DomQuery', 
         'ExtObjDemo', 'FunctionDemo', 'HashMapDemo', 'InflectorDemo',
         'IndexView', 'LoggerDemo', 'NumberDemo', 'ObsMixinDemo', 'StringDemo', 
-        'VersionDemo', 'FeatureDemo', 'JsonDemo' ],
+        'VersionDemo', 'FeatureDemo', 'JsonDemo', 'ObjectDemo' ],
     controllers: [],
     stores: [ 'ItemStore' ],
 
