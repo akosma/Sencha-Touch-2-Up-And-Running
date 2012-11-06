@@ -74,6 +74,7 @@ Ext.define('Chapter3ClassSystem.view.DemoPanel', {
                 width: 260,
                 height: 300,
                 hidden: true,
+                padding: 10,
                 scrollable: true
             });
         }
