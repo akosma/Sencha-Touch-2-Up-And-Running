@@ -25,13 +25,13 @@ Ext.application({
         '1496x2048': '../img/Default-Landscape@2x.png' // Retina iPad, Landscape
     },
 
-    models: ['Item'],
-    views: ['ArrayDemo', 'DatesDemo', 'DelayedTaskDemo', 'DomHelper', 'DomQuery', 
+    models: [ 'Item' ],
+    views: [ 'ArrayDemo', 'DatesDemo', 'DelayedTaskDemo', 'DomHelper', 'DomQuery', 
         'ExtObjDemo', 'FunctionDemo', 'HashMapDemo', 'InflectorDemo',
         'IndexView', 'LoggerDemo', 'NumberDemo', 'ObsMixinDemo', 'StringDemo', 
-        'VersionDemo', 'FeatureDemo'],
+        'VersionDemo', 'FeatureDemo', 'JsonDemo' ],
     controllers: [],
-    stores: ['ItemStore'],
+    stores: [ 'ItemStore' ],
 
     fullscreen: true,
     isIconPrecomposed: true,

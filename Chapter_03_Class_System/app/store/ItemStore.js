@@ -17,6 +17,7 @@ Ext.define('Chapter3ClassSystem.store.ItemStore', {
                 { text: 'Function', screen: 'functiondemo', leaf: true },
                 { text: 'HashMap', screen: 'hashmapdemo', leaf: true },
                 { text: 'Inflector', screen: 'inflectordemo', leaf: true },
+                { text: 'JSON', screen: 'jsondemo', leaf: true },
                 { text: 'Logger', screen: 'loggerdemo', leaf: true },
                 { text: 'Number', screen: 'numberdemo', leaf: true },
                 { text: 'Observable Mixin', screen: 'obsdemo', leaf: true },

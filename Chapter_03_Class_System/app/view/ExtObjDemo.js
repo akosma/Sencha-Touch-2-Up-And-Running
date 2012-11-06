@@ -2,7 +2,6 @@ Ext.define('Chapter3ClassSystem.view.ExtObjDemo', {
     extend: 'Chapter3ClassSystem.view.DemoPanel',
     xtype: 'extdemo',
     config: {
-        html: 'Ext Demo',
         id: 'extdemo' // used by the getCmpDemo() function below
     },
 
@@ -241,13 +240,43 @@ Ext.define('Chapter3ClassSystem.view.ExtObjDemo', {
     },
 
     typeOfDemo: function () {
+        var undef;
+        var nil = null;
+        var str = 'string';
+        var num = 234;
+        var bool = true;
+        var date = new Date();
+        var func = function () {
+            console.log('something');
+        };
+        var obj = { key1: 'value1' };
+        var arr = [ 'value1', 'value2' ];
+        var reg = /match/gi;
+        var elem = Ext.getDoc().dom;
+        
+        var all = [ undef, nil, str, num, bool, date, func, obj, arr, reg, elem ];
+        
+        var results = [];
+        var index = 0;
+        Ext.iterate(all, function (item) {
+            var txt = index + '> ' + item + ': ' + Ext.typeOf(item);
+            console.log(txt);
+            results.push(txt);
+        }, this);
+        this.showTitleText('typeOf() Demo', results.join('<br>'));
     },
 
     valueFromDemo: function () {
+        var value = Ext.valueFrom('', 'whatever');
+        console.log(value);
+        this.showTitleText('valueFrom() Demo', value);
     },
 
     widgetDemo: function () {
+        var button = Ext.widget('button');
+        var className = Ext.getClassName(button);
+        console.dir(className);
+        this.showTitleText('Button class name', className);
     }
-
 });
 
