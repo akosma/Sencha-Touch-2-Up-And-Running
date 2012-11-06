@@ -13,6 +13,10 @@ Ext.define('Chapter3ClassSystem.view.HashMapDemo', {
 
     addDemo: function () {
         var map = Ext.create('Ext.util.HashMap');
+        map.on('add', function (map, key, value, eOpts) {
+            console.log('EVENT; item added; key: "' + key + '", value: "' + value + '"');
+        });
+
         map.add('key1', 'value1');
         map.add('key2', 1234);
         map.add('key3', true);
@@ -27,6 +31,10 @@ Ext.define('Chapter3ClassSystem.view.HashMapDemo', {
         map.add('key1', 'value1');
         map.add('key2', 1234);
         map.add('key3', true);
+
+        map.on('clear', function (map, eOpts) {
+            console.log('EVENT; map cleared');
+        });
 
         map.clear();
         var txt = 'Map has ' + map.getCount() + ' values';
@@ -122,6 +130,10 @@ Ext.define('Chapter3ClassSystem.view.HashMapDemo', {
         map.add('key2', 1234);
         map.add('key3', true);
         
+        map.on('remove', function (map, key, value, eOpts) {
+            console.log('EVENT; item removed; key: "' + key + '", value: "' + value + '"');
+        });
+        
         map.remove(true);
         var txt = 'Map has ' + map.getCount() + ' values';
         console.log(txt);
@@ -135,6 +147,10 @@ Ext.define('Chapter3ClassSystem.view.HashMapDemo', {
         map.add('key2', 1234);
         map.add('key3', true);
         
+        map.on('remove', function (map, key, value, eOpts) {
+            console.log('EVENT; item removed; key: "' + key + '", value: "' + value + '"');
+        });
+        
         map.removeByKey('key2');
         var txt = 'Map has ' + map.getCount() + ' values';
         console.log(txt);
@@ -147,6 +163,10 @@ Ext.define('Chapter3ClassSystem.view.HashMapDemo', {
         map.add('key1', 'value1');
         map.add('key2', 1234);
         map.add('key3', true);
+        
+        map.on('replace', function (map, key, value, old, eOpts) {
+            console.log('EVENT; item replaced; key: "' + key + '", old value: "' + old  +'", new value: "' + value + '"');
+        });
         
         map.replace('key2', 'new value');
         var txt = 'Map has ' + map.getCount() + ' values; new item at "key2" = "' + map.get('key2') + '"';
