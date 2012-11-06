@@ -27,9 +27,9 @@ Ext.application({
 
     models: [ 'Item' ],
     views: [ 'ArrayDemo', 'DatesDemo', 'DelayedTaskDemo', 'DomHelper', 'DomQuery', 
-        'ExtObjDemo', 'FunctionDemo', 'HashMapDemo', 'InflectorDemo',
-        'IndexView', 'LoggerDemo', 'NumberDemo', 'ObsMixinDemo', 'StringDemo', 
-        'VersionDemo', 'FeatureDemo', 'JsonDemo', 'ObjectDemo' ],
+        'ExtObjDemo', 'FeatureDemo', 'FunctionDemo', 'HashMapDemo', 'InflectorDemo',
+        'IndexView', 'JsonDemo', 'LoggerDemo', 'NumberDemo', 'ObjectDemo', 
+        'ObsMixinDemo', 'StringDemo', 'VersionDemo' ],
     controllers: [],
     stores: [ 'ItemStore' ],
 
