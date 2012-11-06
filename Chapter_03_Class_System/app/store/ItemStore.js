@@ -3,6 +3,7 @@ Ext.define('Chapter3ClassSystem.store.ItemStore', {
     xtype: 'itemstore',
     config: {
         model: 'Chapter3ClassSystem.model.Item',
+        storeId: 'itemstore',
         defaultRootProperty: 'items',
         data: {
             items: [
