@@ -12,7 +12,6 @@ Ext.define('Chapter3ClassSystem.view.StringDemo', {
                 'trim', 'urlAppend' ];
     },
 
-
     capitalizeDemo: function () {
         var sample = "whatever you shouldn't usually do.";
         var txt = Ext.String.capitalize(sample);
