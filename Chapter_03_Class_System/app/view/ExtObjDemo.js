@@ -262,6 +262,7 @@ Ext.define('Chapter3ClassSystem.view.ExtObjDemo', {
             var txt = index + '> ' + item + ': ' + Ext.typeOf(item);
             console.log(txt);
             results.push(txt);
+            index++;
         }, this);
         this.showTitleText('typeOf() Demo', results.join('<br>'));
     },
