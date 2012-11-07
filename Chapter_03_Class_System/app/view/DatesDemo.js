@@ -71,7 +71,7 @@ Ext.define('Chapter3ClassSystem.view.DatesDemo', {
             if (patterns.hasOwnProperty(key)) {
                 format = patterns[key];
                 formatted = Ext.Date.format(sampleDate, format);
-                console.log(format + ': ' + formatted);
+                console.log(format + ': "' + formatted + '"');
                 output.push(formatted);
             }
         }

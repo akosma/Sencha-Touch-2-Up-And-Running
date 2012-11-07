@@ -134,7 +134,7 @@ Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
         var anotherArray = [true, false, 'test', 'whatever', 456];
         console.log('Another Array');
         console.dir(anotherArray);
-        var intersection = Ext.Array.intersect(anotherArray, sampleArray);
+        var intersection = Ext.Array.intersect(sampleArray, anotherArray);
         this.showArray('Intersected Array', intersection);
     },
 
