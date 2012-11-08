@@ -73,7 +73,7 @@ Ext.define('Chapter3ClassSystem.view.FunctionDemo', {
         throttled();
 
         // No matter how many times we try, this will only be executed
-        // once every 4 seconds:
+        // once, and after 4 seconds:
         throttled();
         throttled();
         throttled();
