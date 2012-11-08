@@ -69,9 +69,11 @@ Ext.define('Chapter3ClassSystem.view.FunctionDemo', {
 
         var throttled = Ext.Function.createThrottled(fn, 4000, this);
 
-        // No matter how many times we try, this will only be executed
-        // once every 4 seconds.
+        // The first call is executed immediately:
         throttled();
+
+        // No matter how many times we try, this will only be executed
+        // once every 4 seconds:
         throttled();
         throttled();
         throttled();
