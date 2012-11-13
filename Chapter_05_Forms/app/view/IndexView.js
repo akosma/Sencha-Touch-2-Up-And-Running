@@ -6,7 +6,12 @@ Ext.define('Chapter5Forms.view.IndexView', {
         store: {
             xtype: 'samplestore'
         },
-        title: 'Forms'
+        title: 'Form Demos',
+        listeners: {
+            back: function (nestedList, node, lastActiveList, detailCardActive, eOpts) {
+                lastActiveList.deselectAll();
+            }
+        }
     }
 });
 

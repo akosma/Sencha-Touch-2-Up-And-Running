@@ -6,7 +6,12 @@ Ext.define('Chapter12Universal.view.IndexView', {
         store: {
             xtype: 'itemstore'
         },
-        title: 'Items'
+        title: 'Items',
+        listeners: {
+            back: function (nestedList, node, lastActiveList, detailCardActive, eOpts) {
+                lastActiveList.deselectAll();
+            }
+        }
     }
 });
 

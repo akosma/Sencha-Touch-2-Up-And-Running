@@ -6,7 +6,12 @@ Ext.define('Chapter3ClassSystem.view.IndexView', {
         store: {
             xtype: 'itemstore'
         },
-        title: 'Demos'
+        title: 'Foundation',
+        listeners: {
+            back: function (nestedList, node, lastActiveList, detailCardActive, eOpts) {
+                lastActiveList.deselectAll();
+            }
+        }
     }
 });
 
