@@ -26,14 +26,14 @@ Ext.define('Chapter3ClassSystem.view.NumberDemo', {
 
     snapDemo: function () {
         var num = Ext.Number.snap(223, 100, 0, 1000);
-        var txt = 'Retrieved value: ' + num;
+        var txt = 'Snapped value: ' + num;
         console.log(txt);
         this.showTitleText('snap() demo', txt);
     },
 
     toFixedDemo: function () {
         var num = Ext.Number.toFixed(243.54234534, 2);
-        var txt = 'Retrieved value: ' + num;
+        var txt = 'Fixed value: ' + num;
         console.log(txt);
         this.showTitleText('toFixed() demo', txt);
     }
