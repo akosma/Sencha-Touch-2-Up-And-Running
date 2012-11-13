@@ -63,7 +63,7 @@ Ext.define('Chapter3ClassSystem.view.StringDemo', {
 
     leftPadDemo: function () {
         var sample = "whatever you shouldn't usually do.";
-        var txt = Ext.String.leftPad(sample, 10, '-');
+        var txt = Ext.String.leftPad(sample, 50, '-');
         console.log(txt);
         this.showTitleText('leftPad() demo', txt);
     },
