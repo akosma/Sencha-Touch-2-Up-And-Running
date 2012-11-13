@@ -34,8 +34,13 @@ Ext.define('Chapter3ClassSystem.view.ObsMixinDemo', {
             kind: 'Lion',
             listeners: {
                 eating: function (prey) {
-                    console.log(Ext.String.format('{0} the {1} is eating {2} the {3}!', this.getName(), 
-                                                  this.getKind(), prey.getName(), prey.getKind()));
+                    var template = '{0} the {1} is eating {2} the {3}!';
+                    var name = this.getName();
+                    var kind = this.getKind();
+                    var preyName = prey.getName();
+                    var preyKind = prey.getKind();
+                    var txt = Ext.String.format(template, name, kind, preyName, preyKind);
+                    console.log(txt);
                 }
             }
         });
@@ -45,8 +50,13 @@ Ext.define('Chapter3ClassSystem.view.ObsMixinDemo', {
             kind: 'Zebra',
             listeners: {
                 beingEaten: function (predator) {
-                    console.log(Ext.String.format('{0} the {1} is being eaten by {2} the {3}!', this.getName(),
-                                                  this.getKind(), predator.getName(), predator.getKind()));
+                    var template = '{0} the {1} is being eaten by {2} the {3}!';
+                    var name = this.getName();
+                    var kind = this.getKind();
+                    var predName = predator.getName();
+                    var predKind = predator.getKind();
+                    var txt = Ext.String.format(template, name, kind, predName, predKind);
+                    console.log(txt);
                 }
             }
         });
