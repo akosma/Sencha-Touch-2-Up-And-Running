@@ -7,7 +7,7 @@ Ext.define('Chapter3ClassSystem.view.LoggerDemo', {
     },
 
     getFunctions: function () {
-        return [ 'deprecate', 'error', 'info', 'log', 'verbose', 'warn' ];
+        return [ 'deprecate', 'error', 'log', 'warn' ];
     },
 
     deprecateDemo: function () {
@@ -20,18 +20,8 @@ Ext.define('Chapter3ClassSystem.view.LoggerDemo', {
         this.showTitleText('Logger samples', 'Check the console for more information');
     },
 
-    infoDemo: function () {
-        Ext.Logger.info('this is an info message');
-        this.showTitleText('Logger samples', 'Check the console for more information');
-    },
-
     logDemo: function () {
         Ext.Logger.log('this is an generic log message', 0);
-        this.showTitleText('Logger samples', 'Check the console for more information');
-    },
-
-    verboseDemo: function () {
-        Ext.Logger.verbose('this is an verbose message');
         this.showTitleText('Logger samples', 'Check the console for more information');
     },
 
