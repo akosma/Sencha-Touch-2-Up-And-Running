@@ -34,7 +34,7 @@ Ext.define('Chapter3ClassSystem.view.VersionDemo', {
             txt.push(key + '> "' + value + '"');
         }, this);
 
-        console.log(txt);
+        console.log(txt.join('\n'));
         this.showTitleText('Ext.Version demo', txt.join('<br>'));
     }
 
