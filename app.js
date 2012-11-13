@@ -11,6 +11,10 @@ var data = [{
     url: 'Chapter_03_Class_System',
     chapter: '03. Class System'
 }, { 
+    title: 'Views Catalogue',
+    url: 'Chapter_04_Views',
+    chapter: '04. Views'
+}, { 
     title: 'Forms',
     url: 'Chapter_05_Forms',
     chapter: '05. Forms'
@@ -58,7 +62,7 @@ Ext.application({
             store: store,
             grouped: true,
             indexBar: {
-                letters: ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+                letters: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
             },
             items: [{
                 xtype: 'titlebar',
