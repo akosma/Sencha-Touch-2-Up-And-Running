@@ -15,7 +15,7 @@ var data = [{
     url: 'Chapter_04_Views',
     chapter: '04. Views'
 }, { 
-    title: 'Data',
+    title: 'Data Browser App',
     url: 'Chapter_05_Data',
     chapter: '05. Data'
 }, { 
