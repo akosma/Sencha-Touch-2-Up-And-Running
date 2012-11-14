@@ -87,7 +87,6 @@ Ext.define('Chapter5Data.controller.tablet.TabletController', {
         if (this.overlay) {
             this.overlay.hide();
         }
-        return false;
     }
 });
 
