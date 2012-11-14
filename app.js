@@ -15,9 +15,25 @@ var data = [{
     url: 'Chapter_04_Views',
     chapter: '04. Views'
 }, { 
+    title: 'Data',
+    url: 'Chapter_05_Data',
+    chapter: '05. Data'
+}, { 
+    title: 'Server Side HTML',
+    url: 'Chapter_05_Data/Server/index.php',
+    chapter: '05. Data'
+}, { 
+    title: 'Server Side JSON',
+    url: 'Chapter_05_Data/Server/index.php?format=json',
+    chapter: '05. Data'
+}, { 
+    title: 'Server Side XML',
+    url: 'Chapter_05_Data/Server/index.php?format=xml',
+    chapter: '05. Data'
+}, { 
     title: 'Forms',
-    url: 'Chapter_05_Forms',
-    chapter: '05. Forms'
+    url: 'Chapter_06_Forms',
+    chapter: '06. Forms'
 }, { 
     title: 'Universal Application',
     url: 'Chapter_12_Universal_App',
