@@ -1,4 +1,4 @@
-Ext.define('Chapter5Forms.view.tablet.RootView', {
+Ext.define('Chapter6Forms.view.tablet.RootView', {
     extend: 'Ext.Container',
     xtype: 'rootview',
     config: {

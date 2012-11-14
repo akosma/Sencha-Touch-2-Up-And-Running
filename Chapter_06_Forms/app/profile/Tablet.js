@@ -1,4 +1,4 @@
-Ext.define('Chapter5Forms.profile.Tablet', {
+Ext.define('Chapter6Forms.profile.Tablet', {
     extend: 'Ext.app.Profile',
     config: {
         name: 'Tablet',

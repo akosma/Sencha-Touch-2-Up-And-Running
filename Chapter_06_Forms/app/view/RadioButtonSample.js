@@ -1,4 +1,4 @@
-Ext.define('Chapter5Forms.view.RadioButtonSample', {
+Ext.define('Chapter6Forms.view.RadioButtonSample', {
     extend: 'Ext.form.Panel',
     xtype: 'radiobuttonsample',
     config: {

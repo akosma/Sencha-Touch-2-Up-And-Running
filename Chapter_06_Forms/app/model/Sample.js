@@ -1,4 +1,4 @@
-Ext.define('Chapter5Forms.model.Sample', {
+Ext.define('Chapter6Forms.model.Sample', {
     extend: 'Ext.data.Model',
     config: {
         fields: ['text', 'screen']

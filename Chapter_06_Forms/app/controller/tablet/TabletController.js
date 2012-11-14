@@ -1,4 +1,4 @@
-Ext.define('Chapter5Forms.controller.tablet.TabletController', {
+Ext.define('Chapter6Forms.controller.tablet.TabletController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {

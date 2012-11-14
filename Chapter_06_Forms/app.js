@@ -3,7 +3,7 @@ if (!window.Ext) {
 }
 
 Ext.application({
-    name: 'Chapter5Forms',
+    name: 'Chapter6Forms',
     appFolder: 'app',
     profiles: ['Phone', 'Tablet'],
 

@@ -1,4 +1,4 @@
-Ext.define('Chapter5Forms.view.IndexView', {
+Ext.define('Chapter6Forms.view.IndexView', {
     extend: 'Ext.dataview.NestedList',
     xtype: 'indexview',
     config: {

@@ -1,8 +1,8 @@
-Ext.define('Chapter5Forms.store.SampleStore', {
+Ext.define('Chapter6Forms.store.SampleStore', {
     extend: 'Ext.data.TreeStore',
     xtype: 'samplestore',
     config: {
-        model: 'Chapter5Forms.model.Sample',
+        model: 'Chapter6Forms.model.Sample',
         defaultRootProperty: 'items',
         data: {
             items: [
