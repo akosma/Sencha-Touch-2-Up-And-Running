@@ -44,7 +44,7 @@ CREATE TABLE data (
   `password` varchar(255) default NULL,
   `modified_on` varchar(50) default NULL,
   PRIMARY KEY (`id`)
-) TYPE=MyISAM AUTO_INCREMENT=1; 
+) AUTO_INCREMENT=1; 
 
 
 INSERT INTO `data` (`first_name`,`last_name`,`phone`,`email`,`address`,`city`,`zip`,`state`,`country`,`created_on`,`description`,`password`,`modified_on`) VALUES ('Vladimir','Nielsen','1 68 631 6574-1888','sit.amet@cursusnonegestas.com','168-1181 Praesent St.','Florence','U69 7HP','KKD','Gambia','2010-08-09','orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor','UHF87UBC8EK','2009-08-29');
