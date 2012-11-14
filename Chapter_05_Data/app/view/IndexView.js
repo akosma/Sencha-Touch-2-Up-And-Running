@@ -1,17 +1,36 @@
 Ext.define('Chapter5Data.view.IndexView', {
-    extend: 'Ext.dataview.NestedList',
+    extend: 'Ext.navigation.View',
     xtype: 'indexview',
     config: {
-        id: 'indexView',
-        store: {
-            xtype: 'itemstore'
+        id: 'navigationView',
+        navigationBar: {
+            items: [{
+                xtype: 'button',
+                iconCls: 'refresh',
+                iconMask: true,
+                ui: 'plain',
+                action: 'refresh',
+                align: 'left'
+            }, {
+                xtype: 'segmentedbutton',
+                action: 'switchformat',
+                align: 'right',
+                items: [{
+                    text: 'JSON',
+                    pressed: true
+                }, {
+                    text: 'XML'
+                }]
+            }]
         },
-        title: 'Items',
-        listeners: {
-            back: function (nestedList, node, lastActiveList, detailCardActive, eOpts) {
-                lastActiveList.deselectAll();
-            }
-        }
+        items: [{
+            xtype: 'list',
+            id: 'listView',
+            store: {
+                xtype: 'peoplestore'
+            },
+            itemTpl: '<div class="contact">{firstName} <strong>{lastName}</strong></div>'
+        }]
     }
 });
 

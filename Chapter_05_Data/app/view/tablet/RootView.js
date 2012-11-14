@@ -16,7 +16,7 @@ Ext.define('Chapter5Data.view.tablet.RootView', {
             flex: 2,
             items: [{
                 id: 'titleToolbar',
-                title: 'Universal App',
+                title: 'JSON & XML Data Browser',
                 xtype: 'toolbar',
                 docked: 'top',
                 items: [{

@@ -1,25 +1,39 @@
 Ext.define('Chapter5Data.controller.phone.PhoneController', {
-    extend: 'Ext.app.Controller',
+    extend: 'Chapter5Data.controller.MainController',
     config: {
         refs: {
-            indexView: '#indexView'
+            listView: '#listView',
+            navigationView: '#navigationView'
         },
         control: {
-            indexView: {
-                itemtap: 'indexViewItemTap' 
+            listView: {
+                itemtap: 'listViewItemTap' 
+            },
+            navigationView: {
+                back: 'navigationViewBack'
             }
         }
     },
 
-    indexViewItemTap: function(nestedlist, list, index, target, record, e, eOpts) {
-        var screenName = record.get('screen');
-        if (!this.screens) {
-            this.screens = {};
-        }
-        if (!this.screens[screenName]) {
-            this.screens[screenName] = Ext.widget(screenName);
-        }
-        nestedlist.setDetailCard(this.screens[screenName]);
+    listViewItemTap: function (listView, index, target, record, e, eOpts) {
+        this.getRefreshButton().setHidden(true);
+        this.getSwitchFormatSegmentedButton().setHidden(true);
+        var first = record.get('firstName');
+        var last = record.get('lastName');
+        var title = Ext.String.format('{0} {1}', first, last);
+        var formView = Ext.widget('formview', {
+            title: title
+        });
+        formView.setRecord(record);
+        var navigationView = this.getNavigationView();
+        navigationView.push(formView);
+    },
+
+    navigationViewBack: function (navigationView, eOpts) {
+        this.getRefreshButton().setHidden(false);
+        this.getSwitchFormatSegmentedButton().setHidden(false);
+        var list = this.getListView();
+        list.deselectAll();
     }
 });
 

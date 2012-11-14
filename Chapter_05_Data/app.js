@@ -25,10 +25,10 @@ Ext.application({
         '1496x2048': '../img/Default-Landscape@2x.png' // Retina iPad, Landscape
     },
 
-    models: ['Item'],
-    views: ['FirstItem', 'SecondItem', 'ThirdItem', 'IndexView'],
+    models: ['Person'],
+    views: ['IndexView', 'FormView'],
     controllers: [],
-    stores: ['ItemStore'],
+    stores: ['PeopleStore'],
 
     isIconPrecomposed: true,
     statusBarStyle: 'black', // can also be 'default'

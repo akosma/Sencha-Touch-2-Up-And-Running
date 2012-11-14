@@ -1,16 +1,16 @@
 Ext.define('Chapter5Data.controller.tablet.TabletController', {
-    extend: 'Ext.app.Controller',
+    extend: 'Chapter5Data.controller.MainController',
     config: {
         refs: {
             rootView: '#rootView',
-            indexView: '#indexView',
+            listView: '#listView',
             mainPane: '#mainPane',
             titleToolbar: '#titleToolbar',
             showMenuButton: 'button[action=showMenu]'
         },
         control: {
-            indexView: {
-                itemtap: 'indexViewItemTap' 
+            listView: {
+                itemtap: 'listViewItemTap' 
             },
             showMenuButton: {
                 tap: 'showMenu'
@@ -70,25 +70,24 @@ Ext.define('Chapter5Data.controller.tablet.TabletController', {
         this.overlay.showBy(showMenuButton, 'tl-bc');
     },
 
-    indexViewItemTap: function(nestedlist, list, index, target, record, e, eOpts) {
-        var titleToolbar = this.getTitleToolbar();
-        var text = record.get('text');
-        titleToolbar.setTitle(text);
+    listViewItemTap: function (listView, index, target, record, e, eOpts) {
+        var first = record.get('firstName');
+        var last = record.get('lastName');
+        var title = Ext.String.format('{0} {1}', first, last);
+        this.getTitleToolbar().setTitle(title);
 
-        var screenName = record.get('screen');
-        if (!this.screens) {
-            this.screens = {};
+        if (!this.formView) {
+            this.formView = Ext.widget('formview');
         }
-        if (!this.screens[screenName]) {
-            this.screens[screenName] = Ext.widget(screenName);
-        }
+        this.formView.setRecord(record);
 
         var mainPane = this.getMainPane();
-        mainPane.setActiveItem(this.screens[screenName]);
+        mainPane.setActiveItem(this.formView);
 
         if (this.overlay) {
             this.overlay.hide();
         }
+        return false;
     }
 });
 
