@@ -6,7 +6,8 @@ Ext.define('Chapter5Data.controller.tablet.TabletController', {
             listView: '#listView',
             mainPane: '#mainPane',
             titleToolbar: '#titleToolbar',
-            showMenuButton: 'button[action=showMenu]'
+            showMenuButton: 'button[action=showMenu]',
+            navigationView: '#navigationView'
         },
         control: {
             listView: {
@@ -32,17 +33,16 @@ Ext.define('Chapter5Data.controller.tablet.TabletController', {
     },
 
     handleOrientationChange: function (obj) {
-        var indexView = this.getIndexView();
+        var navigationView = this.getNavigationView();
         var showMenuButton = this.getShowMenuButton();
         var o = obj.orientation;
         var rootView = this.getRootView();
         if (o === 'landscape') {
-            rootView.insert(0, indexView);
-            indexView.setHidden(false);
+            navigationView.setHidden(false);
             showMenuButton.setHidden(true);
         }
         else if (o === 'portrait') {
-            indexView.setHidden(true);
+            navigationView.setHidden(true);
             showMenuButton.setHidden(false);
         }
     },
@@ -56,11 +56,14 @@ Ext.define('Chapter5Data.controller.tablet.TabletController', {
                 hideOnMaskTap: true,
                 width: 340,
                 height: 600,
-                hidden: true,
-                items: [{
-                    xtype: 'indexview'
-                }]
+                hidden: true
             });
+            this.overlay.addListener('show', function () {
+                this.overlay.add(this.getNavigationView());
+            }, this);
+            this.overlay.addListener('hide', function () {
+                this.getRootView().insert(0, this.getNavigationView());
+            }, this);
         }
     },
 
