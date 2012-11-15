@@ -31,6 +31,10 @@ var data = [{
     url: 'Chapter_05_Data/Server/index.php?format=xml',
     chapter: '05. Data'
 }, { 
+    title: 'Local Storage',
+    url: 'Chapter_05_LocalStorage',
+    chapter: '05. Data'
+}, { 
     title: 'Forms',
     url: 'Chapter_06_Forms',
     chapter: '06. Forms'
