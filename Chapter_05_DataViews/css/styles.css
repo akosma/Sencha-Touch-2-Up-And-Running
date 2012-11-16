@@ -1,0 +1,46 @@
+strong {
+    font-weight: bold;
+}
+
+div.tweetdiv {
+    float: left;
+    width: 300px;
+    padding: 10px 10px 0px 10px;
+    margin: 10px;
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+    min-height: 150px;
+}
+
+div.avatar {
+    float: left;
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+div.text {
+    width: 200px;
+    float: left;
+}
+
+p.username {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+p.tweet {
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+p.date {
+    color: gray;
+    font-size: 0.7em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+

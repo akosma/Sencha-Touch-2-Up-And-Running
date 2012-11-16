@@ -35,6 +35,10 @@ var data = [{
     url: 'Chapter_05_LocalStorage',
     chapter: '05. Data'
 }, { 
+    title: 'Data Views',
+    url: 'Chapter_05_DataViews',
+    chapter: '05. Data'
+}, { 
     title: 'Forms',
     url: 'Chapter_06_Forms',
     chapter: '06. Forms'
