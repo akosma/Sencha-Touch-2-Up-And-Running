@@ -26,6 +26,8 @@ Ext.define('Chapter5Data.view.IndexView', {
         items: [{
             xtype: 'list',
             id: 'listView',
+            grouped: true,
+            indexBar: true,
             store: {
                 xtype: 'peoplestore'
             },

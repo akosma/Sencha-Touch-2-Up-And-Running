@@ -9,6 +9,11 @@ Ext.define('Chapter5Data.store.PeopleStore', {
             property: 'firstName',
             direction: 'ASC'
         }],
+        grouper: {
+            groupFn: function(record) {
+                return record.get('firstName').substr(0, 1);
+            }
+        },
         proxy: {
             type: 'ajax',
             url : 'Server/index.php?format=json'
