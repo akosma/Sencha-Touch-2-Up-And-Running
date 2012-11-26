@@ -104,28 +104,38 @@ Ext.define('AkoLib.view.SplitView', {
     },
 
     getMasterPanel: function () {
-        var masterPanel = this.getComponent('masterPanel');
-        return masterPanel;
+        if (!this.masterPanel) {
+            this.masterPanel = this.getComponent('masterPanel');
+        }
+        return this.masterPanel;
     },
 
     getDetailPanel: function () {
-        var detailPanel = this.getComponent('detailPanel');
-        return detailPanel;
+        if (!this.detailPanel) {
+            this.detailPanel = this.getComponent('detailPanel');
+        }
+        return this.detailPanel;
     },
 
     getToolbar: function () {
-        var toolbar = this.getDetailPanel().getComponent('titleToolbar');
-        return toolbar;
+        if (!this.toolbar) {
+            this.toolbar = this.getDetailPanel().getComponent('titleToolbar');
+        }
+        return this.toolbar;
     },
 
     getShowMenuButton: function () {
-        var showMenuButton = this.getToolbar().getComponent('showMenuButton');
-        return showMenuButton;
+        if (!this.showMenuButton) {
+            this.showMenuButton = this.getToolbar().getComponent('showMenuButton');
+        }
+        return this.showMenuButton;
     },
 
     getContentPanel: function () {
-        var contentPanel = this.getDetailPanel().getComponent('contentPanel');
-        return contentPanel;
+        if (!this.contentPanel) {
+            this.contentPanel = this.getDetailPanel().getComponent('contentPanel');
+        }
+        return this.contentPanel;
     },
 
     hideOverlayView: function () {
