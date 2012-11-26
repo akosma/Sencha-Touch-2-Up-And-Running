@@ -1,51 +1,75 @@
 var data = [{ 
     title: 'Template',
     url: 'Chapter_Template',
-    chapter: '02. Getting Started'
+    chapter: '2. Getting Started',
+    chapterNumber: 2,
+    order: 1
 },{ 
     title: 'SDK-Generated app',
     url: 'Chapter_02_Getting_Started/MyApp',
-    chapter: '02. Getting Started'
+    chapter: '2. Getting Started',
+    chapterNumber: 2,
+    order: 2
 }, { 
     title: 'Foundation Classes',
     url: 'Chapter_03_Class_System',
-    chapter: '03. Class System'
+    chapter: '3. Class System',
+    chapterNumber: 3,
+    order: 1
 }, { 
     title: 'Views Catalogue',
     url: 'Chapter_04_Views',
-    chapter: '04. Views'
+    chapter: '4. Views',
+    chapterNumber: 4,
+    order: 1
 }, { 
     title: 'Data Browser App',
     url: 'Chapter_05_Data',
-    chapter: '05. Data'
+    chapter: '5. Data',
+    chapterNumber: 5,
+    order: 1
 }, { 
     title: 'Server Side HTML',
     url: 'Chapter_05_Data/Server/index.php',
-    chapter: '05. Data'
+    chapter: '5. Data',
+    chapterNumber: 5,
+    order: 2
 }, { 
     title: 'Server Side JSON',
     url: 'Chapter_05_Data/Server/index.php?format=json',
-    chapter: '05. Data'
+    chapter: '5. Data',
+    chapterNumber: 5,
+    order: 3
 }, { 
     title: 'Server Side XML',
     url: 'Chapter_05_Data/Server/index.php?format=xml',
-    chapter: '05. Data'
+    chapter: '5. Data',
+    chapterNumber: 5,
+    order: 4
 }, { 
     title: 'Local Storage',
     url: 'Chapter_05_LocalStorage',
-    chapter: '05. Data'
+    chapter: '5. Data',
+    chapterNumber: 5,
+    order: 5
 }, { 
     title: 'Data Views',
     url: 'Chapter_05_DataViews',
-    chapter: '05. Data'
+    chapter: '5. Data',
+    chapterNumber: 5,
+    order: 6
 }, { 
     title: 'Forms',
     url: 'Chapter_06_Forms',
-    chapter: '06. Forms'
+    chapter: '6. Forms',
+    chapterNumber: 6,
+    order: 1
 }, { 
     title: 'Universal Application',
     url: 'Chapter_12_Universal_App',
-    chapter: '12. Deployment in Devices'
+    chapter: '12. Deployment in Devices',
+    chapterNumber: 12,
+    order: 1
 }];
 
 var store = Ext.create('Ext.data.Store', {
@@ -53,8 +77,21 @@ var store = Ext.create('Ext.data.Store', {
     grouper: {
         groupFn: function(record) {
             return record.get('chapter');
-        }
-    }
+        },
+        sortProperty: 'chapterNumber'
+    },
+    sorters: [{
+        property: 'chapterNumber',
+        direction: 'ASC'
+    }, {
+        property: 'order',
+        direction: 'ASC'
+    }]
+    //grouper: {
+    //groupFn: function(record) {
+    //return record.get('chapter');
+    //}
+    //}
 });
 
 Ext.application({
@@ -86,7 +123,7 @@ Ext.application({
             store: store,
             grouped: true,
             indexBar: {
-                letters: ['02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+                letters: ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
             },
             items: [{
                 xtype: 'titlebar',
