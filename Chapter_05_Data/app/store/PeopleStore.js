@@ -3,7 +3,7 @@ Ext.define('Chapter5Data.store.PeopleStore', {
     xtype: 'peoplestore',
     config: {
         model: 'Chapter5Data.model.Person',
-        storeId: 'peopleStore',
+        storeId: 'PeopleStore',
         autoLoad: true,
         sorters: [{
             property: 'firstName',

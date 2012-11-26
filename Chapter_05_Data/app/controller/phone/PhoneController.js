@@ -2,15 +2,15 @@ Ext.define('Chapter5Data.controller.phone.PhoneController', {
     extend: 'Chapter5Data.controller.MainController',
     config: {
         refs: {
-            listView: '#listView',
-            navigationView: '#navigationView'
+            listView: 'indexview > #listView',
+            indexView: 'indexview'
         },
         control: {
             listView: {
-                itemtap: 'listViewItemTap' 
+                itemsingletap: 'listViewItemTap' 
             },
-            navigationView: {
-                back: 'navigationViewBack'
+            indexView: {
+                back: 'indexViewBack'
             }
         }
     },
@@ -25,11 +25,11 @@ Ext.define('Chapter5Data.controller.phone.PhoneController', {
             title: title
         });
         formView.setRecord(record);
-        var navigationView = this.getNavigationView();
-        navigationView.push(formView);
+        var indexView = this.getIndexView();
+        indexView.push(formView);
     },
 
-    navigationViewBack: function (navigationView, eOpts) {
+    indexViewBack: function (indexView, eOpts) {
         this.getRefreshButton().setHidden(false);
         this.getSwitchFormatSegmentedButton().setHidden(false);
         var list = this.getListView();
