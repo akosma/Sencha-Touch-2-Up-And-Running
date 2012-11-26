@@ -16,12 +16,12 @@ Ext.define('Chapter5Data.controller.MainController', {
     },
 
     refresh: function (button, e, eOpts) {
-        var store = Ext.getStore('peopleStore');
+        var store = Ext.getStore('PeopleStore');
         store.load();
     },
 
     switchFormat: function (segmentedButton, button, isPressed, eOpts) {
-        var store = Ext.getStore('peopleStore');
+        var store = Ext.getStore('PeopleStore');
         if (isPressed) {
             var format = button.getText();
             var newProxy = null;
