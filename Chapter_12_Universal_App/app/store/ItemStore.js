@@ -3,7 +3,7 @@ Ext.define('Chapter12Universal.store.ItemStore', {
     xtype: 'itemstore',
     config: {
         storeId: 'ItemStore',
-        model: 'Chapter12Universal.model.Item',
+        model: 'AkoLib.model.Item',
         data: [
                 { text: 'First item', screen: 'firstitem' },
                 { text: 'Second item', screen: 'seconditem' },

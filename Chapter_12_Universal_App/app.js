@@ -31,7 +31,7 @@ Ext.application({
         '1496x2048': '../img/Default-Landscape@2x.png' // Retina iPad, Landscape
     },
 
-    models: ['Item'],
+    models: ['AkoLib.model.Item'],
     views: ['FirstItem', 'SecondItem', 'ThirdItem', 'IndexView'],
     controllers: [],
     stores: ['ItemStore'],
