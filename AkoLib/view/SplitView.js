@@ -65,7 +65,7 @@ Ext.define('AkoLib.view.SplitView', {
     },
 
     handleOrientationChange: function (obj) {
-        var masterPanel = this.getComponent('masterPanel');
+        var masterPanel = this.getMasterPanel();
         var showMenuButton = this.getShowMenuButton();
         var o = obj.orientation;
         if (o === 'landscape') {
