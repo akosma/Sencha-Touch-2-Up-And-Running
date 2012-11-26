@@ -3,8 +3,7 @@ Ext.define('Chapter12Universal.controller.tablet.TabletController', {
     config: {
         refs: {
             splitView: 'akosplitview',
-            listView: 'indexview > #listView',
-            indexView: 'indexview'
+            listView: 'indexview > #listView'
         },
         control: {
             listView: {
