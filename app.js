@@ -87,11 +87,6 @@ var store = Ext.create('Ext.data.Store', {
         property: 'order',
         direction: 'ASC'
     }]
-    //grouper: {
-    //groupFn: function(record) {
-    //return record.get('chapter');
-    //}
-    //}
 });
 
 Ext.application({
