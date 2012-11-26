@@ -33,7 +33,9 @@ Ext.define('AkoLib.view.SplitView', {
                 docked: 'top',
                 items: [{
                     xtype: 'button',
-                    itemId: 'showMenuButton'
+                    itemId: 'showMenuButton',
+                    hideAnimation: 'fadeOut',
+                    showAnimation: 'fadeIn'
                 }]
             }, {
                 xtype: 'container',
