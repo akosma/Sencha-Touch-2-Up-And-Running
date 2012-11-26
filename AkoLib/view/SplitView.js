@@ -14,7 +14,12 @@ Ext.define('AkoLib.view.SplitView', {
             xtype: 'container',
             itemId: 'masterPanel',
             flex: 1,
-            layout: 'fit'
+            layout: 'fit',
+            hideAnimation: 'slideOut',
+            showAnimation: {
+                type: 'slideIn',
+                direction: 'right'
+            }
         }, { 
             margin: '0 0 0 1',
             itemId: 'detailPanel',
@@ -46,8 +51,7 @@ Ext.define('AkoLib.view.SplitView', {
     },
 
     initialize: function(){
-        var me = this;
-        me.callParent(arguments);
+        this.callParent(arguments);
 
         var o = Ext.Viewport.getOrientation();
         this.handleOrientationChange({ orientation: o });
@@ -69,12 +73,12 @@ Ext.define('AkoLib.view.SplitView', {
         var showMenuButton = this.getShowMenuButton();
         var o = obj.orientation;
         if (o === 'landscape') {
-            masterPanel.setHidden(false);
-            showMenuButton.setHidden(true);
+            masterPanel.show();
+            showMenuButton.hide();
         }
         else if (o === 'portrait') {
-            masterPanel.setHidden(true);
-            showMenuButton.setHidden(false);
+            masterPanel.hide();
+            showMenuButton.show();
         }
     },
 
