@@ -11,7 +11,7 @@ Ext.define('AkoLib.view.SplitView', {
         layout: 'hbox',
         items: [{ 
             margin: '0 1 0 0',
-            xtype: 'panel',
+            xtype: 'container',
             itemId: 'masterPanel',
             flex: 1,
             layout: 'fit'
@@ -38,7 +38,7 @@ Ext.define('AkoLib.view.SplitView', {
                     }
                 }]
             }, {
-                xtype: 'panel',
+                xtype: 'container',
                 itemId: 'contentPanel',
                 layout: 'fit'
             }]
