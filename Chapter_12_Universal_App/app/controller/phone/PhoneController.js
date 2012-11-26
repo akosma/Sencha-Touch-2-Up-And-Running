@@ -7,7 +7,7 @@ Ext.define('Chapter12Universal.controller.phone.PhoneController', {
         },
         control: {
             listView: {
-                itemtap: 'listViewItemTap' 
+                itemsingletap: 'listViewItemTap' 
             }
         }
     },
@@ -15,16 +15,10 @@ Ext.define('Chapter12Universal.controller.phone.PhoneController', {
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         var screenName = record.get('screen');
         var text = record.get('text');
-        if (!this.screens) {
-            this.screens = {};
-        }
-        if (!this.screens[screenName]) {
-            this.screens[screenName] = Ext.widget('panel', {
-                html: text,
-                title: text
-            });
-        }
-        this.getIndexView().push(this.screens[screenName]);
+        this.getIndexView().push(Ext.widget('panel', {
+            html: text,
+            title: text
+        }));
     }
 });
 
