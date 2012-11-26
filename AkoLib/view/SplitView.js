@@ -33,14 +33,7 @@ Ext.define('AkoLib.view.SplitView', {
                 docked: 'top',
                 items: [{
                     xtype: 'button',
-                    itemId: 'showMenuButton',
-                    listeners: {
-                        tap: function (button, e, eOpts) {
-                            var me = button.up('akosplitview');
-                            var showMenuButton = me.getShowMenuButton();
-                            me.getOverlayView().showBy(showMenuButton, 'tl-bc');
-                        } 
-                    }
+                    itemId: 'showMenuButton'
                 }]
             }, {
                 xtype: 'container',
@@ -62,6 +55,9 @@ Ext.define('AkoLib.view.SplitView', {
         this.getContentPanel().add(this.getDetailView());
         this.setTitle(this.getScreenTitle());
         this.getShowMenuButton().setText(this.getMenuButtonTitle());
+        this.getShowMenuButton().addListener('tap', function (button, e, eOpts) {
+            this.getOverlayView().showBy(button, 'tl-bc');
+        }, this);
     },
 
     handleOnBeforeOrientationChange: function () {
