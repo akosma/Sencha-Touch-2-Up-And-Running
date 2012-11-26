@@ -32,7 +32,7 @@ Ext.application({
     },
 
     models: ['AkoLib.model.Item'],
-    views: ['FirstItem', 'SecondItem', 'ThirdItem', 'IndexView'],
+    views: ['IndexView'],
     controllers: [],
     stores: ['ItemStore'],
 
