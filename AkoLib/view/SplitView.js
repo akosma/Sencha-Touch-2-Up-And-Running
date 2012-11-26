@@ -87,7 +87,9 @@ Ext.define('AkoLib.view.SplitView', {
                 hideOnMaskTap: true,
                 width: 340,
                 height: 600,
-                hidden: true
+                hidden: true,
+                hideAnimation: 'fadeOut',
+                showAnimation: 'fadeIn'
             });
             this.overlayView.addListener('show', function () {
                 this.getOverlayView().add(this.getMasterView());
