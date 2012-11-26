@@ -1,31 +1,28 @@
 Ext.define('Chapter3ClassSystem.store.ItemStore', {
-    extend: 'Ext.data.TreeStore',
+    extend: 'Ext.data.Store',
     xtype: 'itemstore',
     config: {
-        model: 'Chapter3ClassSystem.model.Item',
-        storeId: 'itemstore',
-        defaultRootProperty: 'items',
-        data: {
-            items: [
-                { text: 'Array', screen: 'arraydemo', leaf: true },
-                { text: 'Date Extras', screen: 'datesdemo', leaf: true },
-                { text: 'Delayed Task', screen: 'delayedtaskdemo', leaf: true },
-                { text: 'DOM Helper', screen: 'domhelperdemo', leaf: true },
-                { text: 'DOM Query', screen: 'domquerydemo', leaf: true },
-                { text: 'Ext Object', screen: 'extdemo', leaf: true },
-                { text: 'Feature Detection', screen: 'featuredemo', leaf: true },
-                { text: 'Function', screen: 'functiondemo', leaf: true },
-                { text: 'HashMap', screen: 'hashmapdemo', leaf: true },
-                { text: 'Inflector', screen: 'inflectordemo', leaf: true },
-                { text: 'JSON', screen: 'jsondemo', leaf: true },
-                { text: 'Logger', screen: 'loggerdemo', leaf: true },
-                { text: 'Number', screen: 'numberdemo', leaf: true },
-                { text: 'Object', screen: 'objectdemo', leaf: true },
-                { text: 'Observable Mixin', screen: 'obsdemo', leaf: true },
-                { text: 'String', screen: 'stringdemo', leaf: true },
-                { text: 'Version', screen: 'versiondemo', leaf: true }
-            ]
-        }
+        model: 'AkoLib.model.Item',
+        storeId: 'ItemStore',
+        data: [
+            { text: 'Array', screen: 'arraydemo' },
+            { text: 'Date Extras', screen: 'datesdemo' },
+            { text: 'Delayed Task', screen: 'delayedtaskdemo' },
+            { text: 'DOM Helper', screen: 'domhelperdemo' },
+            { text: 'DOM Query', screen: 'domquerydemo' },
+            { text: 'Ext Object', screen: 'extdemo' },
+            { text: 'Feature Detection', screen: 'featuredemo' },
+            { text: 'Function', screen: 'functiondemo' },
+            { text: 'HashMap', screen: 'hashmapdemo' },
+            { text: 'Inflector', screen: 'inflectordemo' },
+            { text: 'JSON', screen: 'jsondemo' },
+            { text: 'Logger', screen: 'loggerdemo' },
+            { text: 'Number', screen: 'numberdemo' },
+            { text: 'Object', screen: 'objectdemo' },
+            { text: 'Observable Mixin', screen: 'obsdemo' },
+            { text: 'String', screen: 'stringdemo' },
+            { text: 'Version', screen: 'versiondemo' }
+        ]
     }
 });
 

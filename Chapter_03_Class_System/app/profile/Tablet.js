@@ -3,7 +3,7 @@ Ext.define('Chapter3ClassSystem.profile.Tablet', {
     config: {
         name: 'Tablet',
         models: [],
-        views: ['RootView'],
+        views: ['AkoLib.view.SplitView'],
         controllers: ['TabletController']
     },
     isActive: function () {
@@ -11,7 +11,18 @@ Ext.define('Chapter3ClassSystem.profile.Tablet', {
     },
     launch: function () {
         Ext.Viewport.add({
-            xtype: 'rootview'
+            xtype: 'akosplitview',
+            screenTitle: 'Class System',
+            menuButtonTitle: 'Demos',
+            masterView: { 
+                xtype: 'indexview',
+                margin: '0 1 0 0',
+                flex: 1
+            },
+            detailView: {
+                xtype: 'panel',
+                html: 'Choose a demo from the menu'
+            }
         });
     }
 });
