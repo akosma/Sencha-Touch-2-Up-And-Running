@@ -1,16 +1,14 @@
 Ext.define('Chapter12Universal.store.ItemStore', {
-    extend: 'Ext.data.TreeStore',
+    extend: 'Ext.data.Store',
     xtype: 'itemstore',
     config: {
+        storeId: 'ItemStore',
         model: 'Chapter12Universal.model.Item',
-        defaultRootProperty: 'items',
-        data: {
-            items: [
-                { text: 'First item', screen: 'firstitem', leaf: true },
-                { text: 'Second item', screen: 'seconditem', leaf: true },
-                { text: 'Third item', screen: 'thirditem', leaf: true }
-            ]
-        }
+        data: [
+                { text: 'First item', screen: 'firstitem' },
+                { text: 'Second item', screen: 'seconditem' },
+                { text: 'Third item', screen: 'thirditem' }
+        ]
     }
 });
 

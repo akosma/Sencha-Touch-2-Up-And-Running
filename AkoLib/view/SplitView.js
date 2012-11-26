@@ -135,6 +135,7 @@ Ext.define('AkoLib.view.SplitView', {
 
     displayComponent: function (component) {
         var contentPanel = this.getContentPanel();
+        contentPanel.removeAll(false, false);
         contentPanel.add(component);
     }
 });

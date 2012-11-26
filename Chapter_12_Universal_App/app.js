@@ -2,6 +2,12 @@ if (!window.Ext) {
     alert('Sencha Touch could not be loaded - please check the paths in the index.html file.');
 }
 
+Ext.Loader.setConfig({
+    paths: {
+        'AkoLib': '../AkoLib'
+    }
+});
+
 Ext.application({
     name: 'Chapter12Universal',
     appFolder: 'app',
