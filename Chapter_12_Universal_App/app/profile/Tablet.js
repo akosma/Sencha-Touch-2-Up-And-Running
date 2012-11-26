@@ -15,9 +15,7 @@ Ext.define('Chapter12Universal.profile.Tablet', {
             screenTitle: 'Universal App',
             menuButtonTitle: 'Menu',
             masterView: { 
-                xtype: 'indexview',
-                margin: '0 1 0 0',
-                flex: 1
+                xtype: 'indexview'
             },
             detailView: {
                 xtype: 'panel',

@@ -15,9 +15,7 @@ Ext.define('Chapter5Data.profile.Tablet', {
             screenTitle: 'Data Demo',
             menuButtonTitle: 'Menu',
             masterView: { 
-                xtype: 'indexview',
-                margin: '0 1 0 0',
-                flex: 1
+                xtype: 'indexview'
             },
             detailView: {
                 xtype: 'panel',

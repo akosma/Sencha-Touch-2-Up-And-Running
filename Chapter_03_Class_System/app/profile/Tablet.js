@@ -15,9 +15,7 @@ Ext.define('Chapter3ClassSystem.profile.Tablet', {
             screenTitle: 'Class System',
             menuButtonTitle: 'Demos',
             masterView: { 
-                xtype: 'indexview',
-                margin: '0 1 0 0',
-                flex: 1
+                xtype: 'indexview'
             },
             detailView: {
                 xtype: 'panel',
