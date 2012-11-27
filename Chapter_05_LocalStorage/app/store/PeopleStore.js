@@ -3,7 +3,7 @@ Ext.define('Chapter5LocalStorage.store.PeopleStore', {
     xtype: 'peoplestore',
     config: {
         model: 'Chapter5LocalStorage.model.Person',
-        storeId: 'peopleStore',
+        storeId: 'PeopleStore',
         autoLoad: true,
         autoSync: true,
         sorters: [{

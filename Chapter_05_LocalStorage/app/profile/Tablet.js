@@ -3,7 +3,7 @@ Ext.define('Chapter5LocalStorage.profile.Tablet', {
     config: {
         name: 'Tablet',
         models: [],
-        views: ['RootView'],
+        views: ['AkoLib.view.SplitView'],
         controllers: ['TabletController']
     },
     isActive: function () {
@@ -11,7 +11,24 @@ Ext.define('Chapter5LocalStorage.profile.Tablet', {
     },
     launch: function () {
         Ext.Viewport.add({
-            xtype: 'rootview'
+            xtype: 'akosplitview',
+            screenTitle: 'JSON & XML Data Browser',
+            menuButtonTitle: 'Menu',
+            masterView: { 
+                xtype: 'indexview'
+            },
+            detailView: {
+                xtype: 'panel',
+                html: 'Choose a demo from the menu'
+            },
+            detailToolbarButtons: [{
+                xtype: 'spacer'
+            }, {
+                xtype: 'button',
+                text: 'Save',
+                action: 'saveTablet',
+                hidden: true
+            }]
         });
     }
 });

@@ -6,6 +6,7 @@ Ext.define('AkoLib.view.SplitView', {
         detailView: null,
         screenTitle: 'Sample Split View',
         menuButtonTitle: 'Menu',
+        detailToolbarButtons: null,
 
         itemId: 'splitView',
         layout: 'hbox',
@@ -62,12 +63,17 @@ Ext.define('AkoLib.view.SplitView', {
         this.getShowMenuButton().addListener('tap', function (button, e, eOpts) {
             this.getOverlayView().showBy(button, 'tl-bc');
         }, this);
+
+        var toolbarButtons = this.getDetailToolbarButtons();
+        if (toolbarButtons) {
+            this.getTitleToolbar().add(toolbarButtons);
+        }
     },
 
     // PUBLIC METHODS
 
     setTitle: function (title) {
-        var toolbar = this.getToolbar();
+        var toolbar = this.getTitleToolbar();
         toolbar.setTitle(title);
     },
 
@@ -137,25 +143,25 @@ Ext.define('AkoLib.view.SplitView', {
         return this.detailPanel;
     },
 
-    getToolbar: function () {
-        if (!this.toolbar) {
-            this.toolbar = this.getDetailPanel().getComponent('titleToolbar');
-        }
-        return this.toolbar;
-    },
-
-    getShowMenuButton: function () {
-        if (!this.showMenuButton) {
-            this.showMenuButton = this.getToolbar().getComponent('showMenuButton');
-        }
-        return this.showMenuButton;
-    },
-
     getContentPanel: function () {
         if (!this.contentPanel) {
             this.contentPanel = this.getDetailPanel().getComponent('contentPanel');
         }
         return this.contentPanel;
+    },
+
+    getTitleToolbar: function () {
+        if (!this.titleToolbar) {
+            this.titleToolbar = this.getDetailPanel().getComponent('titleToolbar');
+        }
+        return this.titleToolbar;
+    },
+
+    getShowMenuButton: function () {
+        if (!this.showMenuButton) {
+            this.showMenuButton = this.getTitleToolbar().getComponent('showMenuButton');
+        }
+        return this.showMenuButton;
     },
 
     hideOverlayView: function () {

@@ -2,7 +2,7 @@ Ext.define('Chapter5LocalStorage.view.IndexView', {
     extend: 'Ext.navigation.View',
     xtype: 'indexview',
     config: {
-        id: 'navigationView',
+        itemId: 'indexView',
         navigationBar: {
             items: [{
                 xtype: 'button',
@@ -21,11 +21,9 @@ Ext.define('Chapter5LocalStorage.view.IndexView', {
         },
         items: [{
             xtype: 'list',
-            id: 'listView',
+            itemId: 'listView',
             emptyText: '<p class="instructions">No people here yet.<br>Tap the "+" button to create one.</p>',
-            store: {
-                xtype: 'peoplestore'
-            },
+            store: 'PeopleStore',
             itemTpl: '<div class="contact">{firstName} <strong>{lastName}</strong></div>'
         }]
     }
