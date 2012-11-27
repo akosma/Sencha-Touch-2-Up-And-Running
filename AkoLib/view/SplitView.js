@@ -112,44 +112,42 @@ Ext.define('AkoLib.view.SplitView', {
 
     handleOrientationChange: function (obj) {
         if (this.getCollapsesMasterView()) {
-            var masterPanel = this.getMasterPanel();
-            var showMenuButton = this.getShowMenuButton();
             var o = obj.orientation;
             if (o === 'landscape') {
-                masterPanel.show();
-                showMenuButton.hide();
-                this.getToggleButton().setIconCls('arrow_left');
-                this.setCollapsed(false);
+                this.showMasterView();
             }
             else if (o === 'portrait') {
-                masterPanel.hide();
-                showMenuButton.show();
-                this.getToggleButton().setIconCls('arrow_right');
-                this.setCollapsed(true);
+                this.hideMasterView();
             }
         }
     },
 
     toggle: function () {
         if (this.getCollapsesMasterView()) {
-            var masterPanel = this.getMasterPanel();
-            var showMenuButton = this.getShowMenuButton();
             if (this.getCollapsed()) {
-                masterPanel.show();
-                showMenuButton.hide();
-                this.getToggleButton().setIconCls('arrow_left');
-                this.setCollapsed(false);
+                this.showMasterView();
             }
             else {
-                masterPanel.hide();
-                showMenuButton.show();
-                this.getToggleButton().setIconCls('arrow_right');
-                this.setCollapsed(true);
+                this.hideMasterView();
             }
         }
     },
 
     // PRIVATE METHODS
+    
+    showMasterView: function () {
+        this.getMasterPanel().show();
+        this.getShowMenuButton().hide();
+        this.getToggleButton().setIconCls('arrow_left');
+        this.setCollapsed(false);
+    },
+
+    hideMasterView: function () {
+        this.getMasterPanel().hide();
+        this.getShowMenuButton().show();
+        this.getToggleButton().setIconCls('arrow_right');
+        this.setCollapsed(true);
+    },
 
     getOverlayView: function () {
         if (!this.overlayView) {
