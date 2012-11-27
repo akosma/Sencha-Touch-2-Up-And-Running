@@ -17,7 +17,7 @@ Ext.define('AkoLib.view.SplitView', {
             margin: '0 1 0 0',
             xtype: 'container',
             itemId: 'masterPanel',
-            flex: 1,
+            flex: 300,
             layout: 'fit',
             hideAnimation: 'slideOut',
             showAnimation: {
@@ -29,7 +29,7 @@ Ext.define('AkoLib.view.SplitView', {
             itemId: 'detailPanel',
             xtype: 'container',
             layout: 'fit',
-            flex: 2,
+            flex: 724,
             items: [{
                 itemId: 'titleToolbar',
                 title: '',
@@ -156,7 +156,7 @@ Ext.define('AkoLib.view.SplitView', {
                 layout: 'card',
                 modal: true,
                 hideOnMaskTap: true,
-                width: 340,
+                width: 300,
                 height: 600,
                 hidden: true,
                 hideAnimation: 'fadeOut',
