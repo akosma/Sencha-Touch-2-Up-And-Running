@@ -2,15 +2,12 @@ Ext.define('Chapter5DataViews.controller.phone.PhoneController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
-            listView: '#listView',
-            navigationView: '#navigationView'
+            listView: 'indexview > #listView',
+            indexView: 'indexview'
         },
         control: {
             listView: {
                 itemtap: 'listViewItemTap' 
-            },
-            navigationView: {
-                back: 'navigationViewBack'
             }
         }
     },
@@ -18,13 +15,8 @@ Ext.define('Chapter5DataViews.controller.phone.PhoneController', {
     listViewItemTap: function (listView, index, target, record, e, eOpts) {
         var screenName = record.get('screen');
         var screen = Ext.widget(screenName);
-        var navigationView = this.getNavigationView();
-        navigationView.push(screen);
-    },
-
-    navigationViewBack: function (navigationView, eOpts) {
-        var list = this.getListView();
-        list.deselectAll();
+        var indexView = this.getIndexView();
+        indexView.push(screen);
     }
 });
 

@@ -7,9 +7,7 @@ Ext.define('Chapter5DataViews.view.IndexView', {
             title: 'Data Views',
             xtype: 'list',
             id: 'listView',
-            store: {
-                xtype: 'itemstore'
-            },
+            store: 'ItemStore',
             itemTpl: '{text}'
         }]
     }
