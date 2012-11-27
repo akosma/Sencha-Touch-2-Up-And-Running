@@ -1,17 +1,14 @@
 Ext.define('Chapter6Forms.view.IndexView', {
-    extend: 'Ext.dataview.NestedList',
+    extend: 'Ext.navigation.View',
     xtype: 'indexview',
     config: {
-        id: 'indexView',
-        store: {
-            xtype: 'samplestore'
-        },
-        title: 'Form Demos',
-        listeners: {
-            back: function (nestedList, node, lastActiveList, detailCardActive, eOpts) {
-                lastActiveList.deselectAll();
-            }
-        }
+        items: [{
+            title: 'Foundation',
+            xtype: 'list',
+            itemId: 'listView',
+            store: 'ItemStore',
+            itemTpl: '{text}'
+        }]
     }
 });
 

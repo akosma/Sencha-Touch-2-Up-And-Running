@@ -2,24 +2,24 @@ Ext.define('Chapter6Forms.controller.phone.PhoneController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
-            indexView: '#indexView'
+            indexView: 'indexview',
+            listView: 'indexview > #listView'
         },
         control: {
-            indexView: {
-                itemtap: 'indexViewItemTap' 
+            listView: {
+                itemtap: 'listViewItemTap' 
             }
         }
     },
 
-    indexViewItemTap: function(nestedlist, list, index, target, record, e, eOpts) {
+    listViewItemTap: function(list, index, target, record, e, eOpts) {
         var screenName = record.get('screen');
-        if (!this.screens) {
-            this.screens = {};
-        }
-        if (!this.screens[screenName]) {
-            this.screens[screenName] = Ext.widget(screenName);
-        }
-        nestedlist.setDetailCard(this.screens[screenName]);
+        var text = record.get('text');
+        var widget = Ext.widget(screenName, {
+            title: text
+        });
+        var indexView = this.getIndexView();
+        indexView.push(widget);
     }
 });
 

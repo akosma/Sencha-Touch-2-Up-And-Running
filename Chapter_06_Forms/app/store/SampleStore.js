@@ -1,17 +1,15 @@
 Ext.define('Chapter6Forms.store.SampleStore', {
-    extend: 'Ext.data.TreeStore',
+    extend: 'Ext.data.Store',
     xtype: 'samplestore',
     config: {
-        model: 'Chapter6Forms.model.Sample',
-        defaultRootProperty: 'items',
-        data: {
-            items: [
-                { text: 'Checkboxes', screen: 'checkboxsample', leaf: true },
-                { text: 'Radio Buttons', screen: 'radiobuttonsample', leaf: true },
-                { text: 'Text Fields', screen: 'textfieldsample', leaf: true },
-                { text: 'Slider and Toggle', screen: 'slidertogglesample', leaf: true }
-            ]
-        }
+        storeId: 'ItemStore',
+        model: 'AkoLib.model.Item',
+        data: [
+            { text: 'Checkboxes', screen: 'checkboxsample' },
+            { text: 'Radio Buttons', screen: 'radiobuttonsample' },
+            { text: 'Text Fields', screen: 'textfieldsample' },
+            { text: 'Slider and Toggle', screen: 'slidertogglesample' }
+        ]
     }
 });
 

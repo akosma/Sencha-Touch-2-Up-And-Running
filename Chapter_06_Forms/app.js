@@ -2,6 +2,12 @@ if (!window.Ext) {
     alert('Sencha Touch could not be loaded - please check the paths in the index.html file.');
 }
 
+Ext.Loader.setConfig({
+    paths: {
+        'AkoLib': '../AkoLib'
+    }
+});
+
 Ext.application({
     name: 'Chapter6Forms',
     appFolder: 'app',
@@ -25,7 +31,7 @@ Ext.application({
         '1496x2048': '../img/Default-Landscape@2x.png' // Retina iPad, Landscape
     },
 
-    models: ['Sample'],
+    models: ['AkoLib.model.Item'],
     views: ['RadioButtonSample', 'CheckboxSample', 'TextFieldSample', 'SliderToggleSample', 'IndexView'],
     controllers: [],
     stores: ['SampleStore'],
