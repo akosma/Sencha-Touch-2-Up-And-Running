@@ -16,17 +16,14 @@ Ext.define('Chapter5Data.controller.tablet.TabletController', {
         var first = record.get('firstName');
         var last = record.get('lastName');
         var title = Ext.String.format('{0} {1}', first, last);
-
         var splitView = this.getSplitView();
-
-        splitView.setTitle(title);
 
         if (!splitView.formView) {
             splitView.formView = Ext.widget('formview');
             splitView.displayComponent(splitView.formView);
         }
+        splitView.setTitle(title);
         splitView.formView.setRecord(record);
-        splitView.hideOverlayView();
     }
 });
 

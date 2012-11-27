@@ -14,10 +14,9 @@ Ext.define('Chapter3ClassSystem.controller.tablet.TabletController', {
 
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         var text = record.get('text');
-        var splitView = this.getSplitView();
-        splitView.setTitle(text);
-
         var screenName = record.get('screen');
+        var splitView = this.getSplitView();
+
         if (!this.screens) {
             this.screens = {};
         }
@@ -25,8 +24,8 @@ Ext.define('Chapter3ClassSystem.controller.tablet.TabletController', {
             this.screens[screenName] = Ext.widget(screenName);
         }
 
+        splitView.setTitle(text);
         splitView.displayComponent(this.screens[screenName]);
-        splitView.hideOverlayView();
     }
 });
 

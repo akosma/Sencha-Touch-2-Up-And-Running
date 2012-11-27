@@ -17,7 +17,6 @@ Ext.define('Chapter4Views.controller.tablet.TabletController', {
         var splitView = this.getSplitView();
         var text = record.get('text');
         var screenName = record.get('screen');
-        splitView.setTitle(text);
 
         if (!this.screens) {
             this.screens = {};
@@ -28,8 +27,8 @@ Ext.define('Chapter4Views.controller.tablet.TabletController', {
             });
         }
 
+        splitView.setTitle(text);
         splitView.displayComponent(this.screens[screenName]);
-        splitView.hideOverlayView();
     }
 });
 

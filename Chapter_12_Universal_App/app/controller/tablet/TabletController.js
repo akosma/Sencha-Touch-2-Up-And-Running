@@ -15,9 +15,8 @@ Ext.define('Chapter12Universal.controller.tablet.TabletController', {
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         var text = record.get('text');
         var splitView = this.getSplitView();
-        splitView.setTitle(text);
-
         var screenName = record.get('screen');
+
         if (!this.screens) {
             this.screens = {};
         }
@@ -28,8 +27,8 @@ Ext.define('Chapter12Universal.controller.tablet.TabletController', {
             });
         }
 
+        splitView.setTitle(text);
         splitView.displayComponent(this.screens[screenName]);
-        splitView.hideOverlayView();
     }
 });
 
