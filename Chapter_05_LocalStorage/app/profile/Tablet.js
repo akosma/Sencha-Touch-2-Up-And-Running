@@ -28,7 +28,9 @@ Ext.define('Chapter5LocalStorage.profile.Tablet', {
                 text: 'Save',
                 action: 'saveTablet',
                 hidden: true
-            }]
+            }],
+            showToggleButton: true,
+            collapsesMasterView: true
         });
     }
 });

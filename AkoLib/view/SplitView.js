@@ -7,6 +7,9 @@ Ext.define('AkoLib.view.SplitView', {
         screenTitle: 'Sample Split View',
         menuButtonTitle: 'Menu',
         detailToolbarButtons: null,
+        collapsesMasterView: true,
+        showToggleButton: false,
+        collapsed: false,
 
         itemId: 'splitView',
         layout: 'hbox',
@@ -34,9 +37,16 @@ Ext.define('AkoLib.view.SplitView', {
                 docked: 'top',
                 items: [{
                     xtype: 'button',
+                    itemId: 'toggleButton',
+                    iconCls: 'arrow_left',
+                    iconMask: true,
+                    hidden: true
+                }, {
+                    xtype: 'button',
                     itemId: 'showMenuButton',
                     hideAnimation: 'fadeOut',
-                    showAnimation: 'fadeIn'
+                    showAnimation: 'fadeIn',
+                    hidden: true
                 }]
             }, {
                 xtype: 'container',
@@ -59,8 +69,10 @@ Ext.define('AkoLib.view.SplitView', {
         this.getMasterPanel().add(this.getMasterView());
         this.getContentPanel().add(this.getDetailView());
         this.setTitle(this.getScreenTitle());
-        this.getShowMenuButton().setText(this.getMenuButtonTitle());
-        this.getShowMenuButton().addListener('tap', function (button, e, eOpts) {
+
+        var showMenuButton = this.getShowMenuButton();
+        showMenuButton.setText(this.getMenuButtonTitle());
+        showMenuButton.addListener('tap', function (button, e, eOpts) {
             this.getOverlayView().showBy(button, 'tl-bc');
         }, this);
 
@@ -68,6 +80,12 @@ Ext.define('AkoLib.view.SplitView', {
         if (toolbarButtons) {
             this.getTitleToolbar().add(toolbarButtons);
         }
+
+        var toggleButton = this.getToggleButton();
+        toggleButton.addListener('tap', function (button, e, eOpts) {
+            this.toggle();
+        }, this);
+        toggleButton.setHidden(!this.getShowToggleButton() || !this.getCollapsesMasterView());
     },
 
     // PUBLIC METHODS
@@ -87,20 +105,47 @@ Ext.define('AkoLib.view.SplitView', {
     // EVENT HANDLERS
 
     handleOnBeforeOrientationChange: function () {
-        this.hideOverlayView();
+        if (this.getCollapsesMasterView()) {
+            this.hideOverlayView();
+        }
     },
 
     handleOrientationChange: function (obj) {
-        var masterPanel = this.getMasterPanel();
-        var showMenuButton = this.getShowMenuButton();
-        var o = obj.orientation;
-        if (o === 'landscape') {
-            masterPanel.show();
-            showMenuButton.hide();
+        if (this.getCollapsesMasterView()) {
+            var masterPanel = this.getMasterPanel();
+            var showMenuButton = this.getShowMenuButton();
+            var o = obj.orientation;
+            if (o === 'landscape') {
+                masterPanel.show();
+                showMenuButton.hide();
+                this.getToggleButton().setIconCls('arrow_left');
+                this.setCollapsed(false);
+            }
+            else if (o === 'portrait') {
+                masterPanel.hide();
+                showMenuButton.show();
+                this.getToggleButton().setIconCls('arrow_right');
+                this.setCollapsed(true);
+            }
         }
-        else if (o === 'portrait') {
-            masterPanel.hide();
-            showMenuButton.show();
+    },
+
+    toggle: function () {
+        if (this.getCollapsesMasterView()) {
+            var masterPanel = this.getMasterPanel();
+            var showMenuButton = this.getShowMenuButton();
+            if (this.getCollapsed()) {
+                masterPanel.show();
+                showMenuButton.hide();
+                this.getToggleButton().setIconCls('arrow_left');
+                this.setCollapsed(false);
+            }
+            else {
+                masterPanel.hide();
+                showMenuButton.show();
+                this.getToggleButton().setIconCls('arrow_right');
+                this.setCollapsed(true);
+            }
         }
     },
 
@@ -162,6 +207,13 @@ Ext.define('AkoLib.view.SplitView', {
             this.showMenuButton = this.getTitleToolbar().getComponent('showMenuButton');
         }
         return this.showMenuButton;
+    },
+
+    getToggleButton: function () {
+        if (!this.toggleButton) {
+            this.toggleButton = this.getTitleToolbar().getComponent('toggleButton');
+        }
+        return this.toggleButton;
     },
 
     hideOverlayView: function () {
