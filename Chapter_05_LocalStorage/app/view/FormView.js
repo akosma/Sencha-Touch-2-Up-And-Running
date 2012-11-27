@@ -7,49 +7,27 @@ Ext.define('Chapter5LocalStorage.view.FormView', {
             title: 'Contact Information',
             instructions: 'This information is confidential',
             items: [{
-                xtype: 'textfield',
-                name: 'firstName',
-                label: 'First'
+                xtype: 'textfield', name: 'firstName', label: 'First'
             }, {
-                xtype: 'textfield',
-                name: 'lastName',
-                label: 'Last'
+                xtype: 'textfield', name: 'lastName', label: 'Last'
             }, {
-                xtype: 'textfield',
-                name: 'phone',
-                label: 'Phone'
+                xtype: 'textfield', name: 'phone', label: 'Phone'
             }, {
-                xtype: 'emailfield',
-                name: 'email',
-                label: 'Email'
+                xtype: 'emailfield', name: 'email', label: 'Email'
             }, {
-                xtype: 'textfield',
-                name: 'address',
-                label: 'Address'
+                xtype: 'textfield', name: 'address', label: 'Address'
             }, {
-                xtype: 'textfield',
-                name: 'city', 
-                label: 'City'
+                xtype: 'textfield', name: 'city', label: 'City'
             }, {
-                xtype: 'textfield',
-                name: 'zip', 
-                label: 'ZIP'
+                xtype: 'textfield', name: 'zip', label: 'ZIP'
             }, {
-                xtype: 'textfield',
-                name: 'state',
-                label: 'State'
+                xtype: 'textfield', name: 'state', label: 'State'
             }, {
-                xtype: 'textfield',
-                name: 'country',
-                label: 'Country'
+                xtype: 'textfield', name: 'country', label: 'Country'
             }, {
-                xtype: 'textareafield',
-                name: 'description',
-                label: 'Description'
+                xtype: 'textareafield', name: 'description', label: 'Description'
             }, {
-                xtype: 'passwordfield', 
-                name: 'password',
-                label: 'Password'
+                xtype: 'passwordfield', name: 'password', label: 'Password'
             }]
         }, {
             xtype: 'fieldset',
