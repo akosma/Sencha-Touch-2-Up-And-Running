@@ -45,6 +45,8 @@ Ext.define('AkoLib.view.SplitView', {
         }]
     },
 
+    // INITIALIZER 
+
     initialize: function(){
         this.callParent(arguments);
 
@@ -61,6 +63,22 @@ Ext.define('AkoLib.view.SplitView', {
             this.getOverlayView().showBy(button, 'tl-bc');
         }, this);
     },
+
+    // PUBLIC METHODS
+
+    setTitle: function (title) {
+        var toolbar = this.getToolbar();
+        toolbar.setTitle(title);
+    },
+
+    displayComponent: function (component) {
+        var contentPanel = this.getContentPanel();
+        contentPanel.removeAll(false, false);
+        contentPanel.add(component);
+        this.hideOverlayView();
+    },
+
+    // EVENT HANDLERS
 
     handleOnBeforeOrientationChange: function () {
         this.hideOverlayView();
@@ -79,6 +97,8 @@ Ext.define('AkoLib.view.SplitView', {
             showMenuButton.show();
         }
     },
+
+    // PRIVATE METHODS
 
     getOverlayView: function () {
         if (!this.overlayView) {
@@ -140,18 +160,6 @@ Ext.define('AkoLib.view.SplitView', {
 
     hideOverlayView: function () {
         this.getOverlayView().hide();
-    },
-
-    setTitle: function (title) {
-        var toolbar = this.getToolbar();
-        toolbar.setTitle(title);
-    },
-
-    displayComponent: function (component) {
-        var contentPanel = this.getContentPanel();
-        contentPanel.removeAll(false, false);
-        contentPanel.add(component);
-        this.hideOverlayView();
     }
 });
 
