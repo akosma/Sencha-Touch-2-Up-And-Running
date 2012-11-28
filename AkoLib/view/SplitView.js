@@ -1,16 +1,84 @@
+/**
+ * Basic class for creating a component similar to the
+ * UISplitViewController in the iPad.
+ *
+ * This component requires two components to work: 
+ *
+ * - On the left side, the `masterView` usually contains a list of
+ *   objects.
+ * - On the right side, the `detailView` displays the details of the
+ *   item selected on the `masterView`.
+ *
+ * To use it, include the `AkoLib` in your project:
+ *
+ *     Ext.Loader.setConfig({
+ *         paths: {
+ *             'AkoLib': '../AkoLib'
+ *         }
+ *     });
+ *
+ */
 Ext.define('AkoLib.view.SplitView', {
     extend: 'Ext.Container',
     xtype: 'akosplitview',
     config: {
+
+        /**
+         * @cfg {Object} [masterView=null]
+         * The Component instance to be displayed on the left hand side
+         * of the split view.
+         */
         masterView: null,
+
+        /**
+         * @cfg {Object} [detailView=null]
+         * The Component instance to be displayed on the right hand side
+         * of the split view.
+         */
         detailView: null,
+
+        /**
+         * @cfg {String} [screenTitle="Sample Split View"]
+         * The default title shown when the split view is initialized.
+         */
         screenTitle: 'Sample Split View',
+
+        /**
+         * @cfg {String} [menuButtonTitle="Menu"]
+         * Text displayed in the button that shows the master view when
+         * the component is in `collapsed` state.
+         */
         menuButtonTitle: 'Menu',
+
+        /**
+         * @cfg {Array} [detailToolbarButtons=null]
+         * An array of buttons that are added to the toolbar on top of
+         * the detail component.
+         */
         detailToolbarButtons: null,
+
+        /**
+         * @cfg {Boolean} [collapsesMasterView=true]
+         * A flag that indicates whether the component can collapse
+         * its master view or not.
+         */
         collapsesMasterView: true,
+
+        /**
+         * @cfg {Boolean} [showToggleButton=false]
+         * A flag specifying whether the 'toggle' button (allowing
+         * manual collapse of the master view) is shown or not.
+         */
         showToggleButton: false,
+
+        /**
+         * @cfg {Boolean} [collapsed=false]
+         * A flag indicating whether the split view is shown collapsed
+         * (true) or expanded (false) when the component is initialized.
+         */
         collapsed: false,
 
+        // Common configuration options
         itemId: 'splitView',
         layout: 'hbox',
         items: [{ 
@@ -90,11 +158,19 @@ Ext.define('AkoLib.view.SplitView', {
 
     // PUBLIC METHODS
 
+    /**
+     * Sets the title of the current split view.
+     * @param {String} title The new title for the split view.
+     */
     setTitle: function (title) {
         var toolbar = this.getTitleToolbar();
         toolbar.setTitle(title);
     },
 
+    /**
+     * Sets the component to be displayed inside of the detail view.
+     * @param {Ext.Component} component The component to be displayed.
+     */
     displayComponent: function (component) {
         var contentPanel = this.getContentPanel();
         contentPanel.removeAll(false, false);
@@ -134,7 +210,11 @@ Ext.define('AkoLib.view.SplitView', {
     },
 
     // PRIVATE METHODS
-    
+
+    /**
+     * Expands the master view and shows it
+     * @private
+     */
     showMasterView: function () {
         this.getMasterPanel().show();
         this.getShowMenuButton().hide();
@@ -142,6 +222,10 @@ Ext.define('AkoLib.view.SplitView', {
         this.setCollapsed(false);
     },
 
+    /**
+     * Collapses the master view and hides it
+     * @private
+     */
     hideMasterView: function () {
         this.getMasterPanel().hide();
         this.getShowMenuButton().show();
@@ -149,6 +233,12 @@ Ext.define('AkoLib.view.SplitView', {
         this.setCollapsed(true);
     },
 
+    /**
+     * Lazy-loading method that returns a pointer to the overlay view
+     * used to display the master view when the component is
+     * `collapsed`.
+     * @private
+     */
     getOverlayView: function () {
         if (!this.overlayView) {
             this.overlayView = Ext.Viewport.add({
@@ -172,6 +262,10 @@ Ext.define('AkoLib.view.SplitView', {
         return this.overlayView;
     },
 
+    /**
+     * Returns a pointer to the current master panel.
+     * @private
+     */
     getMasterPanel: function () {
         if (!this.masterPanel) {
             this.masterPanel = this.getComponent('masterPanel');
@@ -179,6 +273,10 @@ Ext.define('AkoLib.view.SplitView', {
         return this.masterPanel;
     },
 
+    /**
+     * Returns a reference to the current detail panel.
+     * @private
+     */
     getDetailPanel: function () {
         if (!this.detailPanel) {
             this.detailPanel = this.getComponent('detailPanel');
@@ -186,6 +284,11 @@ Ext.define('AkoLib.view.SplitView', {
         return this.detailPanel;
     },
 
+    /**
+     * Returns a pointer to the content panel, located inside of the
+     * detail panel.
+     * @private
+     */
     getContentPanel: function () {
         if (!this.contentPanel) {
             this.contentPanel = this.getDetailPanel().getComponent('contentPanel');
@@ -193,6 +296,10 @@ Ext.define('AkoLib.view.SplitView', {
         return this.contentPanel;
     },
 
+    /**
+     * Returns a reference to the toolbar inside of the detail panel.
+     * @private
+     */
     getTitleToolbar: function () {
         if (!this.titleToolbar) {
             this.titleToolbar = this.getDetailPanel().getComponent('titleToolbar');
@@ -200,6 +307,11 @@ Ext.define('AkoLib.view.SplitView', {
         return this.titleToolbar;
     },
 
+    /**
+     * Returns a pointer to the button used to show the overlay view
+     * when the component is `collapsed`.
+     * @private
+     */
     getShowMenuButton: function () {
         if (!this.showMenuButton) {
             this.showMenuButton = this.getTitleToolbar().getComponent('showMenuButton');
@@ -207,6 +319,11 @@ Ext.define('AkoLib.view.SplitView', {
         return this.showMenuButton;
     },
 
+    /**
+     * Returns a pointer to the button used to collapse the current
+     * instance.
+     * @private
+     */
     getToggleButton: function () {
         if (!this.toggleButton) {
             this.toggleButton = this.getTitleToolbar().getComponent('toggleButton');
@@ -214,6 +331,11 @@ Ext.define('AkoLib.view.SplitView', {
         return this.toggleButton;
     },
 
+    /**
+     * Hides the overlay view, used to display the master view when the
+     * component is `collapsed`.
+     * @private
+     */
     hideOverlayView: function () {
         this.getOverlayView().hide();
     }
