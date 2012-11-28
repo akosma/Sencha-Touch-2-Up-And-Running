@@ -38,14 +38,14 @@ echo "#"
 echo "# Downloading Sencha Cmd"
 echo "#"
 echo "###############################"
-curl http://cdn.sencha.io/senchacmd/SenchaCmd-3.0.0.250-osx.app.zip --output $LIBS/sencha_sdk.zip
+curl http://cdn.sencha.io/senchacmd/SenchaCmd-3.0.0.250-osx.app.zip --output $LIBS/sencha_cmd.zip
 
 # Extract the contents of the zip file
-unzip $LIBS/sencha_sdk.zip -d $LIBS
+unzip $LIBS/sencha_cmd.zip -d $LIBS
 
 # Execute the application contained in it (OS X only)
 open $LIBS/SenchaCmd-3.0.0.250-osx.app
 
 # Remove the zip file
-rm $LIBS/sencha_sdk.zip
+rm $LIBS/sencha_cmd.zip
 
