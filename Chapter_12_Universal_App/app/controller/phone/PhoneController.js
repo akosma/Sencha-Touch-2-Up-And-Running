@@ -13,7 +13,6 @@ Ext.define('Chapter12Universal.controller.phone.PhoneController', {
     },
 
     listViewItemTap: function(list, index, target, record, e, eOpts) {
-        var screenName = record.get('screen');
         var text = record.get('text');
         this.getIndexView().push(Ext.widget('panel', {
             html: text,

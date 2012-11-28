@@ -15,20 +15,12 @@ Ext.define('Chapter12Universal.controller.tablet.TabletController', {
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         var text = record.get('text');
         var splitView = this.getSplitView();
-        var screenName = record.get('screen');
-
-        if (!this.screens) {
-            this.screens = {};
-        }
-        if (!this.screens[screenName]) {
-            this.screens[screenName] = Ext.widget('panel', {
-                html: text,
-                title: text
-            });
-        }
 
         splitView.setTitle(text);
-        splitView.displayComponent(this.screens[screenName]);
+        splitView.displayComponent(Ext.widget('panel', {
+            html: text,
+            title: text
+        }));
     }
 });
 
