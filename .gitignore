@@ -3,4 +3,6 @@ _libs
 build
 docs
 archive
+.sass-cache
+packager.temp.json
 
