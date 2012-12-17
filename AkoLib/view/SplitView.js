@@ -17,21 +17,21 @@
  *         }
  *     });
  *  
- *  Then configure a new instance of it and add it to your viewport, typically
- *  inside of the profile for tablets or desktop apps:
+ * Then configure a new instance of it and add it to your viewport, typically
+ * inside of the profile for tablets or desktop apps:
  *  
- *       Ext.Viewport.add({
- *           xtype: 'akosplitview',
- *           screenTitle: 'Universal App',
- *           menuButtonTitle: 'Menu',
- *           masterView: { 
- *               xtype: 'indexview'
- *           },
- *           detailView: {
- *               xtype: 'panel',
- *               html: 'Select an item in the menu'
- *           }
- *       });
+ *     Ext.Viewport.add({
+ *         xtype: 'akosplitview',
+ *         screenTitle: 'Universal App',
+ *         menuButtonTitle: 'Menu',
+ *         masterView: { 
+ *             xtype: 'indexview'
+ *         },
+ *         detailView: {
+ *             xtype: 'panel',
+ *             html: 'Select an item in the menu'
+ *         }
+ *     });
  *
  */
 Ext.define('AkoLib.view.SplitView', {
