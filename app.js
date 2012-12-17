@@ -66,9 +66,9 @@ var data = [{
     order: 1
 }, { 
     title: 'Universal Application',
-    url: 'Chapter_12_Universal_App',
-    chapter: '12. Deployment in Devices',
-    chapterNumber: 12,
+    url: 'Chapter_11_Universal_App',
+    chapter: '11. Deployment in Devices',
+    chapterNumber: 11,
     order: 1
 }];
 
