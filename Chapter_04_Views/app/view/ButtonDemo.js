@@ -4,19 +4,19 @@ Ext.define('Chapter4Views.view.ButtonDemo', {
     config: {
         scrollable: true,
         defaults: {
-            xtype: 'button',
-            margin: 5
+            xtype: 'button'
         },
         layout: {
             type: 'vbox',
-            align: 'center'
+            align: 'left'
         },
         items: [{
             xtype: 'label',
             html: 'Buttons can have badges:'
         }, {
             text: 'Unread',
-            badgeText: '42'
+            badgeText: '42',
+            margin: '5 5 5 30'
         }]
     },
 
@@ -27,11 +27,12 @@ Ext.define('Chapter4Views.view.ButtonDemo', {
             html: 'Different types of UIs:'
         });
         var uis = ['action', 'back', 'confirm', 'decline', 
-                   'forward', 'normal', 'plain', 'round'];
+            'forward', 'normal', 'plain', 'round'];
         Ext.Array.each(uis, function (ui) {
             this.add({
                 ui: ui,
-                text: ui
+                text: ui,
+                margin: '5 5 5 30'
             });
         }, this);
 
@@ -40,12 +41,11 @@ Ext.define('Chapter4Views.view.ButtonDemo', {
             xtype: 'label',
             html: 'Different types of icons: (remember to set "iconMask: true" for the icons to appear!)'
         });
-        var icons = ['action', 'add', 'arrow_down', 'arrow_left',
-                    'arrow_right', 'arrow_up', 'bookmarks', 'compose', 
-                    'delete', 'download', 'favorites', 'home', 'info', 
-                    'locate', 'maps', 'more', 'organize', 'refresh', 
-                    'reply', 'search', 'settings', 'star', 'team', 
-                    'time', 'trash', 'user'];
+        var icons = ['action', 'add', 'arrow_down', 'arrow_left', 'arrow_right', 
+            'arrow_up', 'bookmarks', 'compose', 'delete', 'download', 
+            'favorites', 'home', 'info', 'locate', 'maps', 'more', 
+            'organize', 'refresh', 'reply', 'search', 'settings', 
+            'star', 'team', 'time', 'trash', 'user'];
         var iconAlignments = ['top', 'right', 'bottom', 'left', 'center'];
         var length = iconAlignments.length;
         var counter = -1;
@@ -55,7 +55,8 @@ Ext.define('Chapter4Views.view.ButtonDemo', {
                 iconCls: icon,
                 text: icon,
                 iconMask: true,
-                iconAlign: align
+                iconAlign: align,
+                margin: '5 5 5 30'
             });
         }, this);
     }
