@@ -13,10 +13,11 @@ Ext.define('Chapter4Views.controller.ButtonController', {
 
     tap: function (button, e, eOpts) {
         var parts = [
-            'text: ' + button.getText(),
-            'iconCls: ' + button.getIconCls(),
+            'badgeText: ' + button.getBadgeText(),
             'iconAlign: ' + button.getIconAlign(),
-            'badgeText: ' + button.getBadgeText()
+            'iconCls: ' + button.getIconCls(),
+            'text: ' + button.getText(),
+            'ui: ' + button.getUi()
         ];
         var text = parts.join('<br>');
         Ext.Msg.alert('tap', text);

@@ -9,4 +9,3 @@ Ext.define('Chapter4Views.view.LabelDemo', {
     }
 });
 
-

@@ -6,4 +6,3 @@ Ext.define('Chapter4Views.view.MessageBoxDemo', {
     }
 });
 
-
