@@ -7,7 +7,8 @@ Ext.define('Chapter4Views.view.IndexView', {
             xtype: 'list',
             itemId: 'listView',
             store: 'ItemStore',
-            itemTpl: '{text}'
+            itemTpl: '{text}',
+            grouped: true
         }]
     }
 });

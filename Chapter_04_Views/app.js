@@ -35,7 +35,7 @@ Ext.application({
     views: ['ActionSheetDemo', 'ButtonDemo', 'CarouselDemo', 'ImageDemo', 'LabelDemo',
             'MessageBoxDemo', 'PanelDemo', 'PickerDemo', 'SegmentedButtonDemo', 'SheetDemo',
             'TabPanelDemo', 'TitleBarDemo', 'ToolbarDemo', 'IndexView'],
-    controllers: [],
+    controllers: ['ButtonController'],
     stores: ['ItemStore'],
 
     isIconPrecomposed: true,

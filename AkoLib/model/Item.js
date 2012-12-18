@@ -1,7 +1,7 @@
 Ext.define('AkoLib.model.Item', {
     extend: 'Ext.data.Model',
     config: {
-        fields: ['text', 'screen']
+        fields: ['text', 'screen', 'category']
     }
 });
 

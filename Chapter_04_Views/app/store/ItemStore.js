@@ -4,20 +4,21 @@ Ext.define('Chapter4Views.store.ItemStore', {
     config: {
         model: 'AkoLib.model.Item',
         data: [
-            { text: 'Action Sheet', screen: 'actionsheetdemo' },
-            { text: 'Button', screen: 'buttondemo' },
-            { text: 'Carousel', screen: 'carouseldemo' },
-            { text: 'Image', screen: 'imagedemo' },
-            { text: 'Label', screen: 'labeldemo' },
-            { text: 'Message Boxes', screen: 'messageboxdemo' },
-            { text: 'Panel', screen: 'paneldemo' },
-            { text: 'Picker', screen: 'pickerdemo' },
-            { text: 'Segmented Button', screen: 'segmentedbuttondemo' },
-            { text: 'Sheets', screen: 'sheetdemo' },
-            { text: 'Tab Panels', screen: 'tabpaneldemo' },
-            { text: 'Title Bar', screen: 'titlebardemo' },
-            { text: 'Toolbars', screen: 'toolbardemo' }
-        ]
+            { text: 'Button', screen: 'buttondemo', category: 'Components' },
+            { text: 'Image', screen: 'imagedemo', category: 'Components' },
+            { text: 'Label', screen: 'labeldemo', category: 'Components' },
+            { text: 'Carousel', screen: 'carouseldemo', category: 'Containers'  },
+            { text: 'Segmented Button', screen: 'segmentedbuttondemo', category: 'Containers'  },
+            { text: 'Tab Panels', screen: 'tabpaneldemo', category: 'Containers'  },
+            { text: 'Title Bar', screen: 'titlebardemo', category: 'Containers'  },
+            { text: 'Toolbars', screen: 'toolbardemo', category: 'Containers'  },
+            { text: 'Panel', screen: 'paneldemo', category: 'Panels'  },
+            { text: 'Action Sheet', screen: 'actionsheetdemo', category: 'Panels' },
+            { text: 'Sheets', screen: 'sheetdemo', category: 'Panels'  },
+            { text: 'Message Boxes', screen: 'messageboxdemo', category: 'Panels'  },
+            { text: 'Picker', screen: 'pickerdemo', category: 'Panels'  }
+        ],
+        grouper: 'category'
     }
 });
 
