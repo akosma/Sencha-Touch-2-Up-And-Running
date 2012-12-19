@@ -16,10 +16,12 @@ Ext.define('Chapter4Views.controller.ButtonController', {
             'badgeText: ' + button.getBadgeText(),
             'iconAlign: ' + button.getIconAlign(),
             'iconCls: ' + button.getIconCls(),
+            'iconMask: ' + button.getIconMask(),
             'text: ' + button.getText(),
             'ui: ' + button.getUi()
         ];
         var text = parts.join('<br>');
+        console.log(text);
         Ext.Msg.alert('tap', text);
     }
 });
