@@ -14,9 +14,9 @@ Ext.define('Chapter4Views.store.ItemStore', {
             { text: 'Title Bar', screen: 'titlebardemo', category: 'Containers'  },
             { text: 'Toolbar', screen: 'toolbardemo', category: 'Containers'  },
             { text: 'Panel', screen: 'paneldemo', category: 'Panels'  },
+            { text: 'Message Boxes', screen: 'messageboxdemo', category: 'Panels'  },
             { text: 'Sheet', screen: 'sheetdemo', category: 'Panels'  },
             { text: 'Action Sheet', screen: 'actionsheetdemo', category: 'Panels' },
-            { text: 'Message Boxes', screen: 'messageboxdemo', category: 'Panels'  },
             { text: 'Picker', screen: 'pickerdemo', category: 'Panels'  }
         ],
         grouper: 'category'
