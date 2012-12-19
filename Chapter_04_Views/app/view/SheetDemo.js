@@ -7,17 +7,17 @@ Ext.define('Chapter4Views.view.SheetDemo', {
         },
         items: [{
             xtype: 'label',
-            html: 'Touch the button to show an example of an action sheet'
+            html: 'Touch the button to show an example of an sheet'
         }, {
             xtype: 'button',
-            text: 'Touch to open action sheet',
+            text: 'Touch to show sheet',
             itemId: 'openButton',
             listeners: {
                 tap: function (button, e, eOpts) {
                     if (!button.sheet) {
                         button.sheet = Ext.widget('sheet', {
                             html: 'Some text inside of the sheet',
-                            style: 'color: white',
+                            style: 'color: white; font-weight: bold',
                             stretchX: true,
                             hideOnMaskTap: true
                         });
