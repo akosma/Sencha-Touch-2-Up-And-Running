@@ -3,8 +3,10 @@ Ext.define('Chapter4Views.view.VideoDemo', {
     xtype: 'videodemo',
     config: {
         items: [{
-            xtype: 'label',
-            html: 'Video Demo'
+            xtype: 'video',
+            itemId: 'videoComponent',
+            url  : 'res/video/iphone.m4v',
+            posterUrl: 'res/video/jerome.png'
         }]
     }
 });
