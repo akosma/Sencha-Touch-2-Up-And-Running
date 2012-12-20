@@ -17,6 +17,23 @@ Ext.define('Chapter4Views.view.ButtonDemo', {
             text: 'Unread',
             badgeText: '42',
             margin: '5 5 5 30'
+        }, {
+            xtype: 'label',
+            html: 'Complex button example:'
+        },{
+            xtype: 'button',
+            text: 'Reply',
+            badgeText: '42',
+            ui: 'normal',
+            iconCls: 'reply',
+            iconMask: true,
+            iconAlign: 'top',
+            margin: '5 5 5 30',
+            listeners: {
+                tap: function (button, e, eOpts) {
+                    console.log('button tap');
+                }    
+            }
         }]
     },
 
