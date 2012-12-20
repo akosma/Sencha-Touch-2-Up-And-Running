@@ -12,6 +12,7 @@ Ext.application({
     name: 'Chapter4Views',
     appFolder: 'app',
     profiles: ['Phone', 'Tablet'],
+    requires: ['Ext.tab.Panel', 'Ext.picker.Picker'],
 
     icon: {
         57: '../img/icons/Icon.png',
