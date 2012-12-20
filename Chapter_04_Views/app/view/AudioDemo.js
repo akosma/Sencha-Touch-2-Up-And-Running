@@ -7,7 +7,7 @@ Ext.define('Chapter4Views.view.AudioDemo', {
             html: 'Audio Demo'
         }, {
             xtype: 'audio',
-            url  : '/_libs/sencha/examples/audio/crash.mp3'
+            url  : 'res/audio/music.mp3'
         }]
     }
 });
