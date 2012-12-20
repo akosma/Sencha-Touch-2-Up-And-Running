@@ -5,7 +5,6 @@ Ext.define('Chapter4Views.store.ItemStore', {
         model: 'AkoLib.model.Item',
         data: [
             { text: 'Button', screen: 'buttondemo', category: 'Components' },
-            { text: 'Image', screen: 'imagedemo', category: 'Components' },
             { text: 'Label', screen: 'labeldemo', category: 'Components' },
             { text: 'Horizontal Carousel', screen: 'hcarouseldemo', category: 'Containers'  },
             { text: 'Vertical Carousel', screen: 'vcarouseldemo', category: 'Containers'  },
@@ -18,6 +17,7 @@ Ext.define('Chapter4Views.store.ItemStore', {
             { text: 'Sheet', screen: 'sheetdemo', category: 'Panels'  },
             { text: 'Action Sheet', screen: 'actionsheetdemo', category: 'Panels' },
             { text: 'Picker', screen: 'pickerdemo', category: 'Panels'  },
+            { text: 'Image', screen: 'imagedemo', category: 'Multimedia' },
             { text: 'Maps', screen: 'mapdemo', category: 'Multimedia' },
             { text: 'Audio', screen: 'audiodemo', category: 'Multimedia' },
             { text: 'Video', screen: 'videodemo', category: 'Multimedia' },
