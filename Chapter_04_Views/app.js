@@ -34,7 +34,8 @@ Ext.application({
     models: ['AkoLib.model.Item'],
     views: ['ActionSheetDemo', 'ButtonDemo', 'HorizontalCarouselDemo', 'ImageDemo', 'LabelDemo',
             'MessageBoxDemo', 'PanelDemo', 'PickerDemo', 'SegmentedButtonDemo', 'SheetDemo',
-            'TabPanelDemo', 'TitleBarDemo', 'ToolbarDemo', 'VerticalCarouselDemo', 'IndexView'],
+            'TabPanelDemo', 'TitleBarDemo', 'ToolbarDemo', 'VerticalCarouselDemo', 'IndexView',
+            'AudioDemo', 'VideoDemo', 'MapDemo', 'ChartsDemo'],
     controllers: ['ButtonController', 'SegmentedButtonController', 'TabPanelController'],
     stores: ['ItemStore'],
 

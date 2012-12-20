@@ -17,7 +17,11 @@ Ext.define('Chapter4Views.store.ItemStore', {
             { text: 'Message Boxes', screen: 'messageboxdemo', category: 'Panels'  },
             { text: 'Sheet', screen: 'sheetdemo', category: 'Panels'  },
             { text: 'Action Sheet', screen: 'actionsheetdemo', category: 'Panels' },
-            { text: 'Picker', screen: 'pickerdemo', category: 'Panels'  }
+            { text: 'Picker', screen: 'pickerdemo', category: 'Panels'  },
+            { text: 'Maps', screen: 'mapdemo', category: 'Multimedia' },
+            { text: 'Audio', screen: 'audiodemo', category: 'Multimedia' },
+            { text: 'Video', screen: 'videodemo', category: 'Multimedia' },
+            { text: 'Charts', screen: 'chartsdemo', category: 'Multimedia' }
         ],
         grouper: 'category'
     }
