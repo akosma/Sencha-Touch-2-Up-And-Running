@@ -14,6 +14,10 @@ Ext.define('Chapter4Views.view.TabPanelDemo', {
                 animation: 'flip'
             },
             tabBarPosition: 'bottom',
+            //tabBarPosition: 'top',
+            //tabBar: {
+                //scrollable: true            
+            //},
             items: [{
                 iconCls: 'user',
                 iconMask: true,
