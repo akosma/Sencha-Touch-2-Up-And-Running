@@ -2,9 +2,10 @@ Ext.define('Chapter4Views.view.ToolbarDemo', {
     extend: 'Ext.Panel',
     xtype: 'toolbardemo',
     config: {
+        style: 'background-color: lightgray',
         items: [{
             xtype: 'label',
-            html: 'The toolbar is very similar to the title bar. They can contain "spacer" objects, which as the name implies create proportional, flexible spaces between groups of buttons.',
+            html: 'Toolbars are very similar to title bars. They can contain "spacer" objects, which as the name implies create proportional, flexible spaces between groups of buttons.',
             centered: true,
             margin: 20
         }, {
