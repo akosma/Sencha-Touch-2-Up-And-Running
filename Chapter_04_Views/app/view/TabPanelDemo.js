@@ -18,31 +18,31 @@ Ext.define('Chapter4Views.view.TabPanelDemo', {
                 iconCls: 'user',
                 iconMask: true,
                 title: 'Profile',
-                style: 'background-color: red; color: white',
+                style: 'background-color: #e17467; color: white',
                 html: 'Your profile screen here'
             }, {
                 iconCls: 'favorites',
                 iconMask: true,
                 title: 'Favorites',
-                style: 'background-color: yellow',
+                style: 'background-color: #f6eb69',
                 html: 'Your favorites here'
             }, {
                 iconCls: 'search',
                 iconMask: true,
                 title: 'Search',
-                style: 'background-color: green; color: white',
+                style: 'background-color: #74e796',
                 html: 'Search engine here'
             }, {
                 iconCls: 'action',
                 iconMask: true,
                 title: 'Action',
-                style: 'background-color: blue; color: white',
+                style: 'background-color: #688ee2',
                 html: 'Do something here'
             }, {
                 iconCls: 'more',
                 iconMask: true,
                 title: 'More',
-                style: 'background-color: white',
+                style: 'background-color: lightgray',
                 html: 'There is lots you can do here'
             }]
         }]
