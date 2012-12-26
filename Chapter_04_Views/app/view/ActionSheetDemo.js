@@ -1,5 +1,5 @@
 Ext.define('Chapter4Views.view.ActionSheetDemo', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'actionsheetdemo',
     config: {
         defaults: {
