@@ -7,7 +7,7 @@ Ext.define('Chapter4Views.view.SheetDemo', {
         },
         items: [{
             xtype: 'label',
-            html: 'Touch the button to show an example of an sheet'
+            html: 'Touch the button to show an example of a sheet'
         }, {
             xtype: 'button',
             text: 'Touch to show sheet',
