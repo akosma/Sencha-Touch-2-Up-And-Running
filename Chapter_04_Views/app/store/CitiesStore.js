@@ -1,11 +1,13 @@
 Ext.define('Chapter4Views.store.CitiesStore', {
     extend: 'Ext.data.Store',
     config: {
-        fields: [
-            { name: 'name', type: 'string'},
-            { name: 'latitude', type: 'float'},
-            { name: 'longitude', type: 'float'}
-        ],
+        fields: [{ 
+            name: 'name', type: 'string'
+        }, { 
+            name: 'latitude', type: 'float'
+        }, { 
+            name: 'longitude', type: 'float'
+        }],
         storeId: 'citiesStore',
         // Data borrowed from
         // http://www.timegenie.com/latitude_and_longitude/country_coordinates/ch
