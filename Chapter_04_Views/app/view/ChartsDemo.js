@@ -7,12 +7,12 @@ Ext.define('Chapter4Views.view.ChartsDemo', {
         },
         items: [{
             xtype: 'chart',
-            background: "none",
+            background: 'none',
             store: 'TemperatureStore',
             animate: true,
             interactions: ['panzoom', 'itemhighlight'],
             legend: {
-                position: "bottom"
+                position: 'bottom'
             },
             series: [{
                 type: 'line',
