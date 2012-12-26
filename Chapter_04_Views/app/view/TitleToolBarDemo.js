@@ -1,35 +1,27 @@
-Ext.define('Chapter4Views.view.ToolbarDemo', {
+Ext.define('Chapter4Views.view.TitleToolBarDemo', {
     extend: 'Ext.Panel',
-    xtype: 'toolbardemo',
+    xtype: 'titletoolbardemo',
     config: {
         style: 'background-color: lightgray',
         items: [{
             xtype: 'label',
-            html: 'Toolbars are very similar to title bars. They can contain "spacer" objects, which as the name implies create proportional, flexible spaces between groups of buttons.',
+            html: 'This sample shows a title bar on top, and a toolbar at the bottom (of course, mixing navigation bars and title bars is not such a good idea ;) Toolbars are very similar to title bars. They can contain "spacer" objects, which as the name implies create proportional, flexible spaces between groups of buttons.',
             centered: true,
             margin: 20
         }, {
-            xtype: 'toolbar',
+            xtype: 'titlebar',
             docked: 'top',
+            title: 'Top',
             items: [{
-                iconCls: 'refresh',
-                iconMask: true
-            }, {
-                iconCls: 'home',
-                iconMask: true
-            }, {
                 iconCls: 'action',
-                iconMask: true
-            }, {
-                xtype: 'spacer'
+                iconMask: true,
+                align: 'left',
+                text: 'Action'
             }, {
                 iconCls: 'user',
                 iconMask: true,
                 align: 'right',
                 text: 'Profile'
-            }, {
-                iconCls: 'download',
-                iconMask: true
             }]
         }, {
             xtype: 'toolbar',
