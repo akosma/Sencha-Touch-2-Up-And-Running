@@ -14,7 +14,7 @@ Ext.define('Chapter4Views.view.PickerDemo', {
             itemId: 'openButton',
             listeners: {
                 tap: function (button, e, eOpts) {
-                    if (!button.sheet) {
+                    if (!button.picker) {
                         button.picker = Ext.widget('picker', {
                             slots: [{
                                 name: 'first_name',
