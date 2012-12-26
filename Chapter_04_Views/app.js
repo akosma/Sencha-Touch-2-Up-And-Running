@@ -38,7 +38,7 @@ Ext.application({
             'TabPanelDemo', 'TitleToolBarDemo', 'VerticalCarouselDemo', 'IndexView',
             'AudioDemo', 'VideoDemo', 'MapDemo', 'ChartsDemo'],
     controllers: ['ButtonController', 'SegmentedButtonController', 'TabPanelController'],
-    stores: ['ItemStore'],
+    stores: ['ItemStore', 'CitiesStore'],
 
     isIconPrecomposed: true,
     statusBarStyle: 'black', // can also be 'default'
