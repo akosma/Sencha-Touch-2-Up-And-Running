@@ -59,6 +59,12 @@ var data = [{
     chapterNumber: 5,
     order: 1
 }, { 
+    title: 'Siesta',
+    url: 'Chapter_08_Siesta',
+    chapter: '8. Testing and Debugging',
+    chapterNumber: 8,
+    order: 1
+}, { 
     title: 'Device Profiles',
     url: 'Chapter_10_Profiles',
     chapter: '10. Deployment in Devices',
