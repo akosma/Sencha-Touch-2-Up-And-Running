@@ -34,7 +34,7 @@ StartTest(function(t) {
             },
             function (next) {
                 t.is(titleField.getValue(), 'Buy milk', 'Title field is OK');
-                t.is(descriptionField.getValue(), 'without fat', 'Title field is OK');
+                t.is(descriptionField.getValue(), 'without fat', 'Description field is OK');
                 next();
             },
             function (next) {
@@ -44,7 +44,7 @@ StartTest(function(t) {
             },
             function (next) {
                 t.is(titleField.getValue(), 'Call friend', 'Title field is OK');
-                t.is(descriptionField.getValue(), 'because of birthday', 'Title field is OK');
+                t.is(descriptionField.getValue(), 'because of birthday', 'Description field is OK');
                 next();
             },
             function (next) {
