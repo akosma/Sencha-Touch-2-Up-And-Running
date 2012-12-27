@@ -49,3 +49,20 @@ open $LIBS/SenchaCmd-3.0.0.250-osx.app
 # Remove the zip file
 rm $LIBS/sencha_cmd.zip
 
+
+
+
+echo
+echo "###############################"
+echo "#"
+echo "# Downloading the latest Siesta"
+echo "#"
+echo "###############################"
+curl http://www.bryntum.com/dlsiesta.php --output $LIBS/siesta.zip
+
+# Extract the contents of the zip file
+unzip $LIBS/siesta.zip -d $LIBS
+
+# Remove the zip file
+rm $LIBS/siesta.zip
+
