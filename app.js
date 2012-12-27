@@ -11,7 +11,7 @@ var data = [{
     chapterNumber: 3,
     order: 1
 }, { 
-    title: 'Layouts',
+    title: 'Layouts and Templates',
     url: 'Chapter_03_Layouts',
     chapter: '3. Views',
     chapterNumber: 3,
