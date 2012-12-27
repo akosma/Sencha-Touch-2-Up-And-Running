@@ -11,6 +11,12 @@ var data = [{
     chapterNumber: 3,
     order: 1
 }, { 
+    title: 'Layouts',
+    url: 'Chapter_03_Layouts',
+    chapter: '3. Views',
+    chapterNumber: 3,
+    order: 2
+}, { 
     title: 'Data Browser App',
     url: 'Chapter_04_Data',
     chapter: '4. Data',
