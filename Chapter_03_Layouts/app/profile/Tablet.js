@@ -12,7 +12,7 @@ Ext.define('Chapter3Layouts.profile.Tablet', {
     launch: function () {
         Ext.Viewport.add({
             xtype: 'akosplitview',
-            screenTitle: 'View Catalog',
+            screenTitle: 'Layouts',
             menuButtonTitle: 'Demos',
             masterView: { 
                 xtype: 'indexview'

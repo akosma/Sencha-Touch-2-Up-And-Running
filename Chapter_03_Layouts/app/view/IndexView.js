@@ -3,7 +3,7 @@ Ext.define('Chapter3Layouts.view.IndexView', {
     xtype: 'indexview',
     config: {
         items: [{
-            title: 'Views',
+            title: 'Layouts',
             xtype: 'list',
             itemId: 'listView',
             store: 'ItemStore',
