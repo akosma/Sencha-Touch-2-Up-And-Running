@@ -63,6 +63,9 @@ curl http://www.bryntum.com/dlsiesta.php --output $LIBS/siesta.zip
 # Extract the contents of the zip file
 unzip $LIBS/siesta.zip -d $LIBS
 
+# Rename the folder
+mv siesta-1.1.7-lite siesta
+
 # Remove the zip file
 rm $LIBS/siesta.zip
 
