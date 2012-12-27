@@ -7,7 +7,6 @@ Ext.define('ToDoListApp.view.TaskForm', {
             xtype: 'toolbar',
             docked: 'top',
             title: 'Task',
-            ui: 'light',
             items: [{
                 xtype: 'button',
                 text: 'Back',

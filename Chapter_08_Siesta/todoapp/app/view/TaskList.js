@@ -18,7 +18,6 @@ Ext.define('ToDoListApp.view.TaskList', {
             xtype: 'toolbar',
             title: 'To Do List',
             docked: 'top',
-            ui: 'light',
             items: [{
                 xtype: 'spacer' 
             }, 
@@ -34,7 +33,6 @@ Ext.define('ToDoListApp.view.TaskList', {
             xtype: 'toolbar',
             title: '',
             docked: 'bottom',
-            ui: 'light',
             id: 'taskCountBar'
         }]
     }
