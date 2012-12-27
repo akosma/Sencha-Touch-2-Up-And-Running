@@ -7,7 +7,9 @@ Ext.define('Chapter4Views.model.Temperature', {
             }
         }, {
             name: 'temperature', type: 'float', mapping: 'temp.v', convert: function (value, record) {
-                return value - 273;
+                // The temperatures are returned in Kelvin, but we want to
+                // display them in Celsius.
+                return value - 273.15;
             }
         }]
     }
