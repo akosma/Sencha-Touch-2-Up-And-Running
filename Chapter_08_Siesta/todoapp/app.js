@@ -3,24 +3,10 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-
-    models: [
-        'Task'
-    ],
-
-    stores: [
-        'TaskStore'
-    ],
-
-    views: [
-        'TaskList',
-        'TaskForm'
-    ],
-
-    controllers: [
-        'TaskController'
-    ],
-
+    models: [ 'Task' ],
+    stores: [ 'TaskStore' ],
+    views: [ 'TaskList', 'TaskForm' ],
+    controllers: [ 'TaskController' ],
     name: 'ToDoListApp',
 
     launch: function () {
