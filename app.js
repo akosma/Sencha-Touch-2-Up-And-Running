@@ -1,75 +1,69 @@
 var data = [{ 
-    title: 'Template',
-    url: 'Chapter_Template',
-    chapter: '2. Getting Started',
-    chapterNumber: 2,
-    order: 1
-},{ 
-    title: 'SDK-Generated app',
-    url: 'Chapter_02_Getting_Started/MyApp',
-    chapter: '2. Getting Started',
-    chapterNumber: 2,
-    order: 2
-}, { 
     title: 'Foundation Classes',
-    url: 'Chapter_03_Class_System',
-    chapter: '3. Class System',
-    chapterNumber: 3,
+    url: 'Chapter_02_Class_System',
+    chapter: '2. Class System',
+    chapterNumber: 2,
     order: 1
 }, { 
     title: 'Views Catalogue',
-    url: 'Chapter_04_Views',
-    chapter: '4. Views',
-    chapterNumber: 4,
+    url: 'Chapter_03_Views',
+    chapter: '3. Views',
+    chapterNumber: 3,
     order: 1
 }, { 
     title: 'Data Browser App',
-    url: 'Chapter_05_Data',
-    chapter: '5. Data',
-    chapterNumber: 5,
+    url: 'Chapter_04_Data',
+    chapter: '4. Data',
+    chapterNumber: 4,
     order: 1
 }, { 
     title: 'Server Side HTML',
-    url: 'Chapter_05_Data/Server/index.php',
-    chapter: '5. Data',
-    chapterNumber: 5,
+    url: 'Chapter_04_Data/Server/index.php',
+    chapter: '4. Data',
+    chapterNumber: 4,
     order: 2
 }, { 
     title: 'Server Side JSON',
-    url: 'Chapter_05_Data/Server/index.php?format=json',
-    chapter: '5. Data',
-    chapterNumber: 5,
+    url: 'Chapter_04_Data/Server/index.php?format=json',
+    chapter: '4. Data',
+    chapterNumber: 4,
     order: 3
 }, { 
     title: 'Server Side XML',
-    url: 'Chapter_05_Data/Server/index.php?format=xml',
-    chapter: '5. Data',
-    chapterNumber: 5,
+    url: 'Chapter_04_Data/Server/index.php?format=xml',
+    chapter: '4. Data',
+    chapterNumber: 4,
     order: 4
 }, { 
     title: 'Local Storage',
-    url: 'Chapter_05_LocalStorage',
-    chapter: '5. Data',
-    chapterNumber: 5,
+    url: 'Chapter_04_LocalStorage',
+    chapter: '4. Data',
+    chapterNumber: 4,
     order: 5
 }, { 
     title: 'Data Views',
-    url: 'Chapter_05_DataViews',
-    chapter: '5. Data',
-    chapterNumber: 5,
+    url: 'Chapter_04_DataViews',
+    chapter: '4. Data',
+    chapterNumber: 4,
     order: 6
 }, { 
     title: 'Forms',
-    url: 'Chapter_06_Forms',
-    chapter: '6. Forms',
-    chapterNumber: 6,
+    url: 'Chapter_05_Forms',
+    chapter: '5. Forms',
+    chapterNumber: 5,
+    order: 1
+}, { 
+    title: 'Device Profiles',
+    url: 'Chapter_10_Profiles',
+    chapter: '10. Deployment in Devices',
+    chapterNumber: 10,
     order: 1
 }, { 
     title: 'Universal Application',
-    url: 'Chapter_11_Universal_App',
-    chapter: '11. Deployment in Devices',
-    chapterNumber: 11,
-    order: 1
+    url: 'Chapter_10_Universal_App',
+    chapter: '10. Deployment in Devices',
+    chapterNumber: 10,
+    order: 2
 }];
 
 var store = Ext.create('Ext.data.Store', {
