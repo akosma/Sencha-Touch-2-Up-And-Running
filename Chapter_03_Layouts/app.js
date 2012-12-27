@@ -33,7 +33,7 @@ Ext.application({
     },
 
     models: ['AkoLib.model.Item'],
-    views: ['CardDemo', 'DockingDemo', 'IndexView', 'HBoxDemo', 'VBoxDemo', 'FitDemo'],
+    views: ['CardDemo', 'DockingDemo', 'IndexView', 'HBoxDemo', 'VBoxDemo', 'FitDemo', 'TemplatesDemo'],
     controllers: [],
     stores: ['ItemStore'],
 

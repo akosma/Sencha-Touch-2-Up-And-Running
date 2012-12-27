@@ -1,5 +1,5 @@
 Ext.define('Chapter3Layouts.view.VBoxDemo', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'vboxdemo',
     config: {
         defaults: {

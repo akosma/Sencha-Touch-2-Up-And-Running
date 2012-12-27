@@ -8,7 +8,8 @@ Ext.define('Chapter3Layouts.store.ItemStore', {
             { text: 'Fit Layout', screen: 'fitdemo' },
             { text: 'Docking', screen: 'dockingdemo' },
             { text: 'HBox Layout', screen: 'hboxdemo' },
-            { text: 'VBox Layout', screen: 'vboxdemo' }
+            { text: 'VBox Layout', screen: 'vboxdemo' },
+            { text: 'Templates', screen: 'templatesdemo' }
         ]
     }
 });
