@@ -20,7 +20,9 @@ Ext.define('Chapter12Universal.profile.Tablet', {
             detailView: {
                 xtype: 'panel',
                 html: 'Select an item in the menu'
-            }
+            },
+            showToggleButton: true,
+            collapsesMasterView: true
         });
     }
 });

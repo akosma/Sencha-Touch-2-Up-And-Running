@@ -94,6 +94,54 @@ Ext.define('AkoLib.view.SplitView', {
          */
         collapsed: false,
 
+        /**
+         * @event beforemasterviewhide
+         * Fires whenever the master view is about to be hidden
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+
+        /**
+         * @event masterviewhide
+         * Fires whenever the master view has been hidden
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+        
+        /**
+         * @event beforemasterviewshow
+         * Fires whenever the master view is about to be shown
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+
+        /**
+         * @event masterviewshow
+         * Fires whenever the master view has been shown
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+
+        /**
+         * @event beforeoverlayhide
+         * Fires whenever the overlay view is about to be hidden
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+
+        /**
+         * @event overlayhide
+         * Fires whenever the overlay view has been hidden
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+
+        /**
+         * @event beforeoverlayshow
+         * Fires whenever the overlay view is about to be shown
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+
+        /**
+         * @event overlayshow
+         * Fires whenever the overlay view has been shown
+         * @param {AkoLib.view.SplitView} this The component instance
+         */
+
         // Common configuration options
         itemId: 'splitView',
         layout: 'hbox',
@@ -232,10 +280,12 @@ Ext.define('AkoLib.view.SplitView', {
      * @private
      */
     showMasterView: function () {
+        this.fireEvent('beforemasterviewshow', this);
         this.getMasterPanel().show();
         this.getShowMenuButton().hide();
         this.getToggleButton().setIconCls('arrow_left');
         this.setCollapsed(false);
+        this.fireEvent('masterviewshow', this);
     },
 
     /**
@@ -243,10 +293,12 @@ Ext.define('AkoLib.view.SplitView', {
      * @private
      */
     hideMasterView: function () {
+        this.fireEvent('beforemasterviewhide', this);
         this.getMasterPanel().hide();
         this.getShowMenuButton().show();
         this.getToggleButton().setIconCls('arrow_right');
         this.setCollapsed(true);
+        this.fireEvent('masterviewhide', this);
     },
 
     /**
@@ -269,10 +321,14 @@ Ext.define('AkoLib.view.SplitView', {
                 showAnimation: 'fadeIn'
             });
             this.overlayView.addListener('show', function () {
+                this.fireEvent('beforeoverlayshow', this);
                 this.getOverlayView().add(this.getMasterView());
+                this.fireEvent('overlayshow', this);
             }, this);
             this.overlayView.addListener('hide', function () {
+                this.fireEvent('beforeoverlayhide', this);
                 this.getMasterPanel().add(this.getMasterView());
+                this.fireEvent('overlayhide', this);
             }, this);
         }
         return this.overlayView;
