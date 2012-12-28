@@ -59,6 +59,12 @@ var data = [{
     chapterNumber: 5,
     order: 1
 }, { 
+    title: 'Controllers',
+    url: 'Chapter_06_Controllers',
+    chapter: '6. Controllers',
+    chapterNumber: 6,
+    order: 1
+}, { 
     title: 'To Do App',
     url: 'Chapter_08_Siesta/todoapp',
     chapter: '8. Testing and Debugging',
