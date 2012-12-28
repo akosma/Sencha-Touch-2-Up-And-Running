@@ -33,7 +33,7 @@ Ext.application({
 
     models: ['AkoLib.model.Item'],
     views: ['RadioButtonSample', 'CheckboxSample', 'TextFieldSample', 'SliderToggleSample', 'IndexView'],
-    controllers: ['MainController'],
+    controllers: ['MainController', 'AnotherController'],
     stores: ['SampleStore'],
 
     isIconPrecomposed: true,
