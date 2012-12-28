@@ -33,12 +33,14 @@ Ext.application({
 
     models: ['AkoLib.model.Item'],
     views: ['RadioButtonSample', 'CheckboxSample', 'TextFieldSample', 'SliderToggleSample', 'IndexView'],
-    controllers: ['MainController', 'AnotherController'],
+    controllers: ['MainController', 'AnotherController', 'RoutesController'],
     stores: ['SampleStore'],
 
     isIconPrecomposed: true,
     statusBarStyle: 'black', // can also be 'default'
 
-    launch: function () {}
+    launch: function () {
+        console.log('LAUNCH from app.js');
+    }
 });
 

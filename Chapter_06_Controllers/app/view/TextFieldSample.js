@@ -7,6 +7,11 @@ Ext.define('Chapter6Controllers.view.TextFieldSample', {
             title: 'Text Fields',
             instructions: 'Select each field and see how the input experience changes',
             items: [{
+                xtype: 'textfield',
+                itemId: 'sampleTextField',
+                label: 'Text Field',
+                value: ''
+            }, {
                 xtype: 'datepickerfield',
                 name: 'date',
                 label: 'Date Picker',

@@ -12,6 +12,12 @@ Ext.define('Chapter6Controllers.controller.phone.PhoneController', {
         }
     },
 
+    init: function () {
+        console.log('INIT from PhoneController');
+    },
+    launch: function () {
+        console.log('LAUNCH from PhoneController');
+    },
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         var screenName = record.get('screen');
         var text = record.get('text');

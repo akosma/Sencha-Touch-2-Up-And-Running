@@ -15,6 +15,12 @@ Ext.define('Chapter6Controllers.controller.MainController', {
             }
         }
     },
+    init: function () {
+        console.log('INIT from MainController');
+    },
+    launch: function () {
+        console.log('LAUNCH from MainController');
+    },
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         console.log('list item single tap handler: ' + record.get('text'));
     },

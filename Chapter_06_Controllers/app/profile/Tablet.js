@@ -10,6 +10,8 @@ Ext.define('Chapter6Controllers.profile.Tablet', {
         return Ext.os.is.Tablet || Ext.os.is.Desktop;
     },
     launch: function () {
+        console.log('LAUNCH from Tablet profile');
+
         Ext.Viewport.add({
             xtype: 'akosplitview',
             screenTitle: 'Controllers',

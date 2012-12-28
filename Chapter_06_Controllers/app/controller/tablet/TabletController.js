@@ -12,6 +12,12 @@ Ext.define('Chapter6Controllers.controller.tablet.TabletController', {
         }
     },
 
+    init: function () {
+        console.log('INIT from TabletController');
+    },
+    launch: function () {
+        console.log('LAUNCH from TabletController');
+    },
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         var splitView = this.getSplitView();
         var text = record.get('text');

@@ -15,6 +15,12 @@ Ext.define('Chapter6Controllers.controller.AnotherController', {
             }
         }
     },
+    init: function () {
+        console.log('INIT from AnotherController');
+    },
+    launch: function () {
+        console.log('LAUNCH from AnotherController');
+    },
     listViewItemTap: function(list, index, target, record, e, eOpts) {
         console.log('ANOTHER CONTROLLER: list item single tap handler: ' + record.get('text'));
     },

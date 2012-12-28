@@ -10,6 +10,8 @@ Ext.define('Chapter6Controllers.profile.Phone', {
         return Ext.os.is.Phone;
     },
     launch: function () {
+        console.log('LAUNCH from Phone profile');
+
         Ext.Viewport.add({
             xtype: 'indexview'
         });
