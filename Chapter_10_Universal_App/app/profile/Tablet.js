@@ -22,7 +22,12 @@ Ext.define('Chapter12Universal.profile.Tablet', {
                 html: 'Select an item in the menu'
             },
             showToggleButton: true,
-            collapsesMasterView: true
+            collapsesMasterView: true,
+            listeners: {
+                masterviewshow: function (splitview) {
+                    console.log('masterviewshow handler in the launch() function');
+                }
+            }
         });
     }
 });

@@ -19,19 +19,19 @@ Ext.define('Chapter12Universal.controller.tablet.TabletController', {
     },
 
     masterViewShow: function (splitView) {
-        Ext.Msg.alert('masterviewshow event');
+        console.log('controller: masterviewshow event');
     },
     
     masterViewHide: function (splitView) {
-        Ext.Msg.alert('masterviewhide event');
+        console.log('controller: masterviewhide event');
     },
 
     overlayHide: function (splitview) {
-        Ext.Msg.alert('overlayhide event');
+        console.log('controller: overlayhide event');
     },
 
     overlayShow: function (splitview) {
-        Ext.Msg.alert('overlayshow event');
+        console.log('controller: overlayshow event');
     },
 
     listViewItemTap: function(list, index, target, record, e, eOpts) {
