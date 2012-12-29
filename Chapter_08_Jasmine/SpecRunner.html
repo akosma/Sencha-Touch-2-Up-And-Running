@@ -14,6 +14,9 @@
   <script type="text/javascript" src="lib/jasmine.js"></script>
   <script type="text/javascript" src="lib/jasmine-html.js"></script>
 
+  <!--include a console runner here-->
+  <script type="text/javascript" src="lib/console-runner.js"></script>
+
   <!-- include source files here... -->
   <script src="/_libs/sencha/sencha-touch-all-debug.js"></script>
 
@@ -31,6 +34,9 @@
       var htmlReporter = new jasmine.HtmlReporter();
 
       jasmineEnv.addReporter(htmlReporter);
+
+      window.consoleReporter = new jasmine.ConsoleReporter();
+      jasmineEnv.addReporter(consoleReporter);
 
       jasmineEnv.specFilter = function(spec) {
         return htmlReporter.specFilter(spec);
