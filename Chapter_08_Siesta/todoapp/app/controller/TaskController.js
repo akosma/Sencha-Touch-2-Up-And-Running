@@ -2,7 +2,6 @@ Ext.define('ToDoListApp.controller.TaskController', {
     extend: 'Ext.app.Controller',
 
     config: {
-        id: 'taskController',
         refs: {
             navigationView: 'navigationview',
             saveButton: 'button[action=saveTask]',
@@ -21,8 +20,9 @@ Ext.define('ToDoListApp.controller.TaskController', {
             },
 
             taskList: {
-                itemtap: 'showTask',
-                disclose: 'changeDoneStatus'
+                itemsingletap: 'showTask',
+                disclose: 'changeDoneStatus',
+                itemswipe: 'deleteTaskSwipe'
             },
 
             deleteButton: {
@@ -46,18 +46,23 @@ Ext.define('ToDoListApp.controller.TaskController', {
         }, this);
     },
 
+    deleteTaskSwipe: function (list, index, target, record, e, eOpts) {
+        var title = 'Delete the task "' + record.get('title') + '"?';
+        Ext.Msg.confirm(title, 'You cannot undo this!', function (answer) {
+            if (answer === 'yes') {
+                var store = this.getTaskList().getStore();
+                store.remove(record);
+                this.updateTaskCount();
+            }
+        }, this);
+    },
+
     changeDoneStatus: function (list, task, target, index, e, eOpts) {
         var done = task.get('completed');
         task.set('completed', !done);
     },
 
     showTask: function(list, index, target, task, e, eOpts) {
-
-        // This is bug #w354352 in Sencha, to be done
-        if (e.getTarget('.x-list-disclosure')) {
-            return;
-        }
-        
         this.getTaskForm().setRecord(task);
         this.getDeleteButton().setHidden(false);
         this.getNavigationView().push(this.getTaskForm());

@@ -1,9 +1,9 @@
 Ext.application({
+    name: 'ToDoListApp',
     models: [ 'Task' ],
     stores: [ 'TaskStore' ],
     views: [ 'TaskList', 'TaskForm' ],
     controllers: [ 'TaskController' ],
-    name: 'ToDoListApp',
     
     icon: {
         57: '../../img/icons/Icon.png',

@@ -1,11 +1,7 @@
 Ext.define('ToDoListApp.view.TaskList', {
     extend: 'Ext.dataview.List',
     xtype: 'tasklist',
-
-    requires: [
-        'ToDoListApp.store.TaskStore'
-    ],
-
+    requires: [ 'ToDoListApp.store.TaskStore' ],
     config: {
         title: 'To Do List',
         itemId: 'taskList',
@@ -20,7 +16,7 @@ Ext.define('ToDoListApp.view.TaskList', {
             xtype: 'toolbar',
             title: '',
             docked: 'bottom',
-            id: 'taskCountBar',
+            itemId: 'taskCountBar',
             items: [{
                 xtype: 'spacer'
             }, {

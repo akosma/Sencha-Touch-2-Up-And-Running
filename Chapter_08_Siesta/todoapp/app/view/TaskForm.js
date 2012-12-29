@@ -1,7 +1,6 @@
 Ext.define('ToDoListApp.view.TaskForm', {
     extend: 'Ext.form.Panel',
     xtype: 'taskform',
-
     config: {
         itemId: 'taskForm',
         title: 'Task',
@@ -22,8 +21,7 @@ Ext.define('ToDoListApp.view.TaskForm', {
                 action: 'saveTask',
                 ui: 'confirm'
             }]
-        }, 
-        {
+        }, {
             xtype: 'fieldset',
             itemId: 'mainFieldset',
             instructions: 'Enter the details of the task',
@@ -35,16 +33,14 @@ Ext.define('ToDoListApp.view.TaskForm', {
                 name: 'title',
                 autoCapitalize: true,
                 placeHolder: 'Enter a title'
-            }, 
-            {
+            }, {
                 xtype: 'textareafield',
                 itemId: 'descriptionField',
                 label: 'Description',
                 name: 'description',
                 autoCapitalize: true,
                 placeHolder: 'Enter a description'
-            }, 
-            {
+            }, {
                 xtype: 'datepickerfield',
                 itemId: 'dateField',
                 label: 'Due on',
@@ -56,8 +52,7 @@ Ext.define('ToDoListApp.view.TaskForm', {
                     yearFrom: (new Date().getFullYear()),
                     yearTo: (new Date().getFullYear()) + 10
                 }
-            }, 
-            {
+            }, {
                 xtype: 'togglefield',
                 itemId: 'completedField',
                 label: 'Done',
