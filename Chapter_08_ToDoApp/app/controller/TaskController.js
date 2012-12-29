@@ -1,28 +1,27 @@
 Ext.define('ToDoListApp.controller.TaskController', {
     extend: 'Ext.app.Controller',
-
     config: {
         refs: {
-            navigationView: 'navigationview',
-            saveButton: 'button[action=saveTask]',
+            navigationView:   'navigationview',
+            taskList:         'tasklist',
+            taskCountBar:     '#taskCountBar',
             createTaskButton: 'button[action=createTask]',
-            taskList: 'tasklist',
-            deleteButton: 'button[action=deleteTask]',
-            taskCountBar: '#taskCountBar'
+            saveButton:       'button[action=saveTask]',
+            deleteButton:     'button[action=deleteTask]'
         },
         control: {
-            saveButton: {
-                tap: 'saveTask'
+            taskList: {
+                itemsingletap: 'showTask',
+                disclose: 'changeDoneStatus',
+                itemswipe: 'deleteTaskSwipe'
             },
 
             createTaskButton: {
                 tap: 'createTask'
             },
 
-            taskList: {
-                itemsingletap: 'showTask',
-                disclose: 'changeDoneStatus',
-                itemswipe: 'deleteTaskSwipe'
+            saveButton: {
+                tap: 'saveTask'
             },
 
             deleteButton: {
@@ -65,11 +64,12 @@ Ext.define('ToDoListApp.controller.TaskController', {
     showTask: function(list, index, target, task, e, eOpts) {
         this.getTaskForm().setRecord(task);
         this.getDeleteButton().setHidden(false);
-        this.getNavigationView().push(this.getTaskForm());
+        this.showForm();
 
-        setTimeout(function () {
+        var delayedTask = Ext.create('Ext.util.DelayedTask', function() {
             list.deselect(index);
-        }, 500);
+        });
+        delayedTask.delay(500); 
     },
 
     saveTask: function (button, e, eOpts) {
@@ -95,6 +95,10 @@ Ext.define('ToDoListApp.controller.TaskController', {
 
         this.getTaskForm().setRecord(newTask);
         this.getDeleteButton().setHidden(true);
+        this.showForm();
+    },
+
+    showForm: function () {
         this.getNavigationView().push(this.getTaskForm());
     },
 

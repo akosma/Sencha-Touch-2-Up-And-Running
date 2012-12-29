@@ -1,10 +1,6 @@
 Ext.define('ToDoListApp.store.TaskStore', {
     extend: 'Ext.data.Store',
-
-    requires: [
-        'ToDoListApp.model.Task'
-    ],
-
+    requires: [ 'ToDoListApp.model.Task' ],
     config: {
         autoLoad: true,
         autoSync: true,
