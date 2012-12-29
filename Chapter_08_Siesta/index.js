@@ -3,7 +3,7 @@ var Harness = Siesta.Harness.Browser.SenchaTouch;
 Harness.configure({
     title         : 'Testing the To Do List Application',
     transparentEx : false,
-    loaderPath    : { 'ToDoListApp' : 'todoapp/app' }
+    loaderPath    : { 'ToDoListApp' : '../Chapter_08_ToDoApp/app' }
 });
 
 Harness.start(
