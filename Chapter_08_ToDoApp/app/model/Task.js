@@ -13,7 +13,8 @@ Ext.define('ToDoListApp.model.Task', {
             type: 'date'
         }, {
             name: 'title',
-            type: 'string'
+            type: 'string',
+            defaultValue: ''
         }, {
             name: 'description',
             type: 'string'
