@@ -1,6 +1,11 @@
 Ext.define('ToDoListApp.view.TaskForm', {
     extend: 'Ext.form.Panel',
     xtype: 'taskform',
+    requires: [
+        'Ext.form.FieldSet', 
+        'Ext.field.DatePicker', 
+        'Ext.field.Toggle'
+    ],
     config: {
         itemId: 'taskForm',
         title: 'Task',

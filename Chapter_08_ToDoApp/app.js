@@ -4,6 +4,7 @@ Ext.application({
     stores: [ 'TaskStore' ],
     views: [ 'TaskList', 'TaskForm' ],
     controllers: [ 'TaskController' ],
+    requires: ['Ext.navigation.View'],
     
     icon: {
         57: '../img/icons/Icon.png',
@@ -24,7 +25,7 @@ Ext.application({
     },
 
     isIconPrecomposed: true,
-    statusBarStyle: 'black', // can also be 'default'
+    statusBarStyle: 'default', // can also be 'black'
 
     launch: function () {
         Ext.Viewport.add({
