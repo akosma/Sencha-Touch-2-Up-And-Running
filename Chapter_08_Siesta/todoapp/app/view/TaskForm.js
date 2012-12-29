@@ -1,19 +1,14 @@
 Ext.define('ToDoListApp.view.TaskForm', {
     extend: 'Ext.form.Panel',
+    xtype: 'taskform',
 
     config: {
-        id: 'taskForm',
+        itemId: 'taskForm',
+        title: 'Task',
         items: [{
             xtype: 'toolbar',
-            docked: 'top',
-            title: 'Task',
+            docked: 'bottom',
             items: [{
-                xtype: 'button',
-                text: 'Back',
-                ui: 'back',
-                action: 'cancel'
-            }, 
-            {
                 xtype: 'spacer'
             }, 
             {
@@ -24,12 +19,12 @@ Ext.define('ToDoListApp.view.TaskForm', {
         }, 
         {
             xtype: 'fieldset',
-            id: 'mainFieldset',
+            itemId: 'mainFieldset',
             instructions: 'Enter the details of the task',
             title: 'Task Details',
             items: [{
                 xtype: 'textfield',
-                id: 'titleField',
+                itemId: 'titleField',
                 label: 'Title',
                 name: 'title',
                 autoCapitalize: true,
@@ -37,7 +32,7 @@ Ext.define('ToDoListApp.view.TaskForm', {
             }, 
             {
                 xtype: 'textareafield',
-                id: 'descriptionField',
+                itemId: 'descriptionField',
                 label: 'Description',
                 name: 'description',
                 autoCapitalize: true,
@@ -45,7 +40,7 @@ Ext.define('ToDoListApp.view.TaskForm', {
             }, 
             {
                 xtype: 'datepickerfield',
-                id: 'dateField',
+                itemId: 'dateField',
                 label: 'Due on',
                 name: 'dueDate',
                 placeHolder: 'dd/mm/yyyy',
@@ -58,14 +53,14 @@ Ext.define('ToDoListApp.view.TaskForm', {
             }, 
             {
                 xtype: 'togglefield',
-                id: 'completedField',
+                itemId: 'completedField',
                 label: 'Done',
                 name: 'completed'
             }]
         },
         {
             xtype: 'fieldset',
-            id: 'taskFormDeleteFieldset',
+            itemId: 'taskFormDeleteFieldset',
             title: 'Actions',
             instructions: 'This cannot be undone',
             items: [{

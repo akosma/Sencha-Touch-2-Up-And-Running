@@ -1,12 +1,14 @@
 Ext.define('ToDoListApp.view.TaskList', {
     extend: 'Ext.dataview.List',
+    xtype: 'tasklist',
 
     requires: [
         'ToDoListApp.store.TaskStore'
     ],
 
     config: {
-        id: 'taskList',
+        title: 'To Do List',
+        itemId: 'taskList',
         displayField: 'title',
         store: 'TaskStore',
         emptyText: '<p class="instructions">No tasks here yet; please touch the button "+" above to make one. If you do not want, please dont bother. But if you like this app, remember to pay it. Thanks.</p>',
@@ -16,12 +18,12 @@ Ext.define('ToDoListApp.view.TaskList', {
 
         items: [{
             xtype: 'toolbar',
-            title: 'To Do List',
-            docked: 'top',
+            title: '',
+            docked: 'bottom',
+            id: 'taskCountBar',
             items: [{
-                xtype: 'spacer' 
-            }, 
-            {
+                xtype: 'spacer'
+            }, {
                 xtype: 'button',
                 iconCls: 'add',
                 iconMask: true,
@@ -29,11 +31,6 @@ Ext.define('ToDoListApp.view.TaskList', {
                 ui: 'plain',
                 action: 'createTask'
             }]
-        }, {
-            xtype: 'toolbar',
-            title: '',
-            docked: 'bottom',
-            id: 'taskCountBar'
         }]
     }
 });

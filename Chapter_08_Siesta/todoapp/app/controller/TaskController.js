@@ -4,12 +4,11 @@ Ext.define('ToDoListApp.controller.TaskController', {
     config: {
         id: 'taskController',
         refs: {
+            navigationView: 'navigationview',
             saveButton: 'button[action=saveTask]',
             createTaskButton: 'button[action=createTask]',
-            taskForm: '#taskForm',
-            taskFormDeleteFieldset: '#taskFormDeleteFieldset',
-            taskList: '#taskList',
-            cancelButton: 'button[action=cancel]',
+            taskFormDeleteFieldset: 'taskform > #taskFormDeleteFieldset',
+            taskList: 'tasklist',
             deleteButton: 'button[action=deleteTask]',
             taskCountBar: '#taskCountBar'
         },
@@ -20,10 +19,6 @@ Ext.define('ToDoListApp.controller.TaskController', {
 
             createTaskButton: {
                 tap: 'createTask'
-            },
-
-            cancelButton: {
-                tap: 'cancel'
             },
 
             taskList: {
@@ -66,15 +61,11 @@ Ext.define('ToDoListApp.controller.TaskController', {
         
         this.getTaskForm().setRecord(task);
         this.getTaskFormDeleteFieldset().setHidden(false);
-        this.showForm();
+        this.getNavigationView().push(this.getTaskForm());
 
         setTimeout(function () {
             list.deselect(index);
         }, 500);
-    },
-
-    cancel: function(button, e, eOpts) {
-        this.showList();
     },
 
     saveTask: function (button, e, eOpts) {
@@ -100,30 +91,25 @@ Ext.define('ToDoListApp.controller.TaskController', {
 
         this.getTaskForm().setRecord(newTask);
         this.getTaskFormDeleteFieldset().setHidden(true);
-        this.showForm();
-    },
-
-    showForm: function() {
-        Ext.Viewport.getLayout().setAnimation({
-            type: 'slide',
-            direction: 'left'
-        });
-        Ext.Viewport.setActiveItem(this.getTaskForm());
+        this.getNavigationView().push(this.getTaskForm());
     },
 
     showList: function() {
         this.updateTaskCount();
-        Ext.Viewport.getLayout().setAnimation({
-            type: 'slide',
-            direction: 'right'
-        });
-        Ext.Viewport.setActiveItem(this.getTaskList());
+        this.getNavigationView().pop();
     },
 
     updateTaskCount: function () {
         var store = this.getTaskList().getStore();
         var count = store.getCount();
         this.getTaskCountBar().setTitle(count + ' tasks');
+    },
+
+    getTaskForm: function () {
+        if (!this.taskForm) {
+            this.taskForm = Ext.widget('taskform');
+        }
+        return this.taskForm;
     }
 });
 
