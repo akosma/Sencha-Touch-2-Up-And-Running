@@ -66,7 +66,7 @@ var data = [{
     order: 1
 }, { 
     title: 'To Do App',
-    url: 'Chapter_08_Siesta/todoapp',
+    url: 'Chapter_08_ToDoApp',
     chapter: '8. Testing and Debugging',
     chapterNumber: 8,
     order: 1
