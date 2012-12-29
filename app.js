@@ -71,7 +71,13 @@ var data = [{
     chapterNumber: 8,
     order: 1
 }, { 
-    title: 'Siesta',
+    title: 'Jasmine Tests',
+    url: 'Chapter_08_Jasmine/SpecRunner.html',
+    chapter: '8. Testing and Debugging',
+    chapterNumber: 8,
+    order: 2
+}, { 
+    title: 'Siesta Tests',
     url: 'Chapter_08_Siesta',
     chapter: '8. Testing and Debugging',
     chapterNumber: 8,
