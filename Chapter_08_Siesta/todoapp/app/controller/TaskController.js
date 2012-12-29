@@ -7,7 +7,6 @@ Ext.define('ToDoListApp.controller.TaskController', {
             navigationView: 'navigationview',
             saveButton: 'button[action=saveTask]',
             createTaskButton: 'button[action=createTask]',
-            taskFormDeleteFieldset: 'taskform > #taskFormDeleteFieldset',
             taskList: 'tasklist',
             deleteButton: 'button[action=deleteTask]',
             taskCountBar: '#taskCountBar'
@@ -60,7 +59,7 @@ Ext.define('ToDoListApp.controller.TaskController', {
         }
         
         this.getTaskForm().setRecord(task);
-        this.getTaskFormDeleteFieldset().setHidden(false);
+        this.getDeleteButton().setHidden(false);
         this.getNavigationView().push(this.getTaskForm());
 
         setTimeout(function () {
@@ -90,7 +89,7 @@ Ext.define('ToDoListApp.controller.TaskController', {
         });
 
         this.getTaskForm().setRecord(newTask);
-        this.getTaskFormDeleteFieldset().setHidden(true);
+        this.getDeleteButton().setHidden(true);
         this.getNavigationView().push(this.getTaskForm());
     },
 

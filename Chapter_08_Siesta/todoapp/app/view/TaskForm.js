@@ -9,12 +9,18 @@ Ext.define('ToDoListApp.view.TaskForm', {
             xtype: 'toolbar',
             docked: 'bottom',
             items: [{
+                xtype: 'button',
+                id: 'deleteButton',
+                ui: 'decline',
+                text: 'Delete',
+                action: 'deleteTask'
+            }, {
                 xtype: 'spacer'
-            }, 
-            {
+            }, {
                 xtype: 'button',
                 text: 'Save',
-                action: 'saveTask'
+                action: 'saveTask',
+                ui: 'confirm'
             }]
         }, 
         {
@@ -56,20 +62,6 @@ Ext.define('ToDoListApp.view.TaskForm', {
                 itemId: 'completedField',
                 label: 'Done',
                 name: 'completed'
-            }]
-        },
-        {
-            xtype: 'fieldset',
-            itemId: 'taskFormDeleteFieldset',
-            title: 'Actions',
-            instructions: 'This cannot be undone',
-            items: [{
-                xtype: 'button',
-                height: 44,
-                id: 'deleteButton',
-                ui: 'decline',
-                text: 'Delete this task',
-                action: 'deleteTask'
             }]
         }]
     }
