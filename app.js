@@ -65,6 +65,12 @@ var data = [{
     chapterNumber: 6,
     order: 1
 }, { 
+    title: 'Styles with SASS',
+    url: 'Chapter_07_Styles',
+    chapter: '7. Styling Applications',
+    chapterNumber: 7,
+    order: 1
+}, { 
     title: 'To Do App',
     url: 'Chapter_08_ToDoApp',
     chapter: '8. Testing and Debugging',
@@ -81,7 +87,7 @@ var data = [{
     url: 'Chapter_08_Siesta',
     chapter: '8. Testing and Debugging',
     chapterNumber: 8,
-    order: 2
+    order: 3
 }, { 
     title: 'Device Profiles',
     url: 'Chapter_10_Profiles',

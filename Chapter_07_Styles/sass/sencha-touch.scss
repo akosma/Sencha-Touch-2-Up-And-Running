@@ -1,0 +1,38 @@
+/*Here we include the overrides required by our design*/
+
+/*Base parameters*/
+$base-color: orange;
+$font-family: AvenirNextCondensed-DemiBold, sans;
+$include-border-radius: false
+
+/*Buttons*/
+$button-height: 2em;
+$include-button-uis: false;
+
+/*Lists*/
+$list-color: red;
+$list-zebrastripe: true;
+
+@import 'sencha-touch/default/all';
+
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+/*You can remove elements that are not used, to make the resulting CSS*/
+/*lighter:*/
+/*@include sencha-list-paging;*/
+/*@include sencha-list-pullrefresh;*/
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+@include sencha-draw;
+@include sencha-charts;
+
