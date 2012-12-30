@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.profile.Tablet', {
+Ext.define('Chapter7Styles.profile.Tablet', {
     extend: 'Ext.app.Profile',
     config: {
         name: 'Tablet',

@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.MessageBoxDemo', {
+Ext.define('Chapter7Styles.view.MessageBoxDemo', {
     extend: 'Ext.Panel',
     xtype: 'messageboxdemo',
     config: {

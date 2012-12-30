@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.ButtonDemo', {
+Ext.define('Chapter7Styles.view.ButtonDemo', {
     extend: 'Ext.Panel',
     xtype: 'buttondemo',
     config: {

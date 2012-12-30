@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.ActionSheetDemo', {
+Ext.define('Chapter7Styles.view.ActionSheetDemo', {
     extend: 'Ext.Container',
     xtype: 'actionsheetdemo',
     config: {

@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.ImageDemo', {
+Ext.define('Chapter7Styles.view.ImageDemo', {
     extend: 'Ext.Panel',
     xtype: 'imagedemo',
     config: {

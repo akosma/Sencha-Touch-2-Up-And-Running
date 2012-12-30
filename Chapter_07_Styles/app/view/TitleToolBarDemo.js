@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.TitleToolBarDemo', {
+Ext.define('Chapter7Styles.view.TitleToolBarDemo', {
     extend: 'Ext.Panel',
     xtype: 'titletoolbardemo',
     config: {

@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.model.Temperature', {
+Ext.define('Chapter7Styles.model.Temperature', {
     extend: 'Ext.data.Model',
     config: {
         fields: [{

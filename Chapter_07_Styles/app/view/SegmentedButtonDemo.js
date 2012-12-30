@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.SegmentedButtonDemo', {
+Ext.define('Chapter7Styles.view.SegmentedButtonDemo', {
     extend: 'Ext.Panel',
     xtype: 'segmentedbuttondemo',
     config: {

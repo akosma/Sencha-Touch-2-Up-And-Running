@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.controller.ButtonController', {
+Ext.define('Chapter7Styles.controller.ButtonController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {

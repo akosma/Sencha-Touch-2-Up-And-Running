@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.store.CitiesStore', {
+Ext.define('Chapter7Styles.store.CitiesStore', {
     extend: 'Ext.data.Store',
     config: {
         fields: [{ 

@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.PickerDemo', {
+Ext.define('Chapter7Styles.view.PickerDemo', {
     extend: 'Ext.Panel',
     xtype: 'pickerdemo',
     config: {

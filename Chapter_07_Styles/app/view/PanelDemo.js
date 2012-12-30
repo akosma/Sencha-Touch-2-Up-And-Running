@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.PanelDemo', {
+Ext.define('Chapter7Styles.view.PanelDemo', {
     extend: 'Ext.Panel',
     xtype: 'paneldemo',
     config: {

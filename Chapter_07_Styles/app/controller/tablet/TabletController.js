@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.controller.tablet.TabletController', {
+Ext.define('Chapter7Styles.controller.tablet.TabletController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
