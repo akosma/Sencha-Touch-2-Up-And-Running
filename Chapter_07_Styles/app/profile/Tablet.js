@@ -12,7 +12,7 @@ Ext.define('Chapter7Styles.profile.Tablet', {
     launch: function () {
         Ext.Viewport.add({
             xtype: 'akosplitview',
-            screenTitle: 'View Catalog',
+            screenTitle: 'Styling Apps',
             menuButtonTitle: 'Demos',
             masterView: { 
                 xtype: 'indexview'

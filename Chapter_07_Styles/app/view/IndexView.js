@@ -3,7 +3,7 @@ Ext.define('Chapter7Styles.view.IndexView', {
     xtype: 'indexview',
     config: {
         items: [{
-            title: 'Views',
+            title: 'Styling Apps',
             xtype: 'list',
             itemId: 'listView',
             store: 'ItemStore',
