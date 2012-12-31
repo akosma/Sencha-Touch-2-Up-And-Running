@@ -18,7 +18,6 @@ Ext.define('Chapter7Styles.controller.SegmentedButtonController', {
         }, this);
         var text = parts.join('<br>');
         console.log(text);
-        Ext.Msg.alert('toggle', text);
     }
 });
 

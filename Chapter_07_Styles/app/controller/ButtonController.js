@@ -22,7 +22,6 @@ Ext.define('Chapter7Styles.controller.ButtonController', {
         ];
         var text = parts.join('<br>');
         console.log(text);
-        Ext.Msg.alert('tap', text);
     }
 });
 

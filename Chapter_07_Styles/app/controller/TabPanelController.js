@@ -14,7 +14,6 @@ Ext.define('Chapter7Styles.controller.TabPanelController', {
     activeitemchange: function (tabpanel, value, oldValue, eOpts) {
         var text = value.getHtml();
         console.log(text);
-        Ext.Msg.alert('activeitemchange', text);
     }
 });
 

@@ -30,14 +30,6 @@ Ext.define('Chapter7Styles.view.PanelDemo', {
                 }
             }
         }]
-    },
-    initialize: function () {
-        var button = this.getComponent('openPanelButton');
-        var task = Ext.create('Ext.util.DelayedTask', function() {
-            button.fireEvent('tap', button);
-        });
-
-        task.delay(750);
     }
 });
 

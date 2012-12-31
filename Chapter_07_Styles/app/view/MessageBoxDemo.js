@@ -42,14 +42,6 @@ Ext.define('Chapter7Styles.view.MessageBoxDemo', {
                 }
             }
         }]
-    },
-    initialize: function () {
-        var button = this.getComponent('alertButton');
-        var task = Ext.create('Ext.util.DelayedTask', function() {
-            button.fireEvent('tap', button);
-        });
-
-        task.delay(750);
     }
 });
 
