@@ -65,11 +65,35 @@ var data = [{
     chapterNumber: 6,
     order: 1
 }, { 
-    title: 'Styles with SASS',
-    url: 'Chapter_07_Styles',
+    title: 'Sencha Default',
+    url: 'Chapter_07_Styles/default_sencha.html',
     chapter: '7. Styling Applications',
     chapterNumber: 7,
     order: 1
+}, { 
+    title: 'iOS Style',
+    url: 'Chapter_07_Styles/default_apple.html',
+    chapter: '7. Styling Applications',
+    chapterNumber: 7,
+    order: 2
+}, { 
+    title: 'Android Style',
+    url: 'Chapter_07_Styles/default_android.html',
+    chapter: '7. Styling Applications',
+    chapterNumber: 7,
+    order: 3
+}, { 
+    title: 'BlackBerry 6 Style',
+    url: 'Chapter_07_Styles/default_bb6.html',
+    chapter: '7. Styling Applications',
+    chapterNumber: 7,
+    order: 4
+}, { 
+    title: 'Custom Styles with SASS',
+    url: 'Chapter_07_Styles',
+    chapter: '7. Styling Applications',
+    chapterNumber: 7,
+    order: 5
 }, { 
     title: 'To Do App',
     url: 'Chapter_08_ToDoApp',

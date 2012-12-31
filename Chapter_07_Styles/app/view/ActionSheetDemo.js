@@ -47,14 +47,6 @@ Ext.define('Chapter7Styles.view.ActionSheetDemo', {
                 }
             }
         }]
-    },
-    initialize: function () {
-        var button = this.getComponent('openButton');
-        var task = Ext.create('Ext.util.DelayedTask', function() {
-            button.fireEvent('tap', button);
-        });
-
-        task.delay(750);
     }
 });
 

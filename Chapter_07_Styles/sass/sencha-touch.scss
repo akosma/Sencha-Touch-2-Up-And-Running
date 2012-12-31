@@ -1,18 +1,55 @@
-/*Here we override global variables as required by our design*/
+/* Here we override global variables as required by our design */
 
-/*Base parameters*/
-$base-color: gray;
+/* Custom color */
+$red: 18;
+$green: 152;
+$blue: 227;
+$alpha: 0.7;
+$blue: rgba($red, $green, $blue, $alpha);
+
+/* Base parameters */
+$base-color: $blue;
 $font-family: AvenirNextCondensed-DemiBold, sans;
 $include-border-radius: false;
 $base-gradient: recessed; /* bevel, glossy, recessed, matte (default) */
 
-/*Buttons*/
+/* Buttons */
 $button-height: 2em;
 $include-button-uis: false;
 
-/*Lists*/
-$list-color: red;
+/* Lists */
+$list-color: complement(darken($blue, 20%));
 $list-zebrastripe: true;
+
+/* Variables with calculations */
+$height: 920px;
+
+div.instructions {
+    width: 2in + 7pt;
+    height: $height / 2;
+}
+
+/* Mixins */
+@mixin some-special-style($color, $font-size) {
+    font: {
+        family: serif;
+        size: $font-size;
+    }
+    color: $color;
+}
+
+div.special {
+    @include some-special-style(red, 45pt);
+    margin: 1em;
+}
+
+div.notsospecial {
+    @include some-special-style(green, 3em);
+    margin: 1em;
+    padding: 10px;
+    background-color: yellow;
+}
+
 
 @import 'sencha-touch/default/all';
 
@@ -22,18 +59,22 @@ $list-zebrastripe: true;
 @include sencha-picker;
 @include sencha-tabs;
 @include sencha-toolbar;
-@include sencha-toolbar-forms;
 @include sencha-indexbar;
 @include sencha-list;
-/*You can remove elements that are not used, to make the resulting CSS*/
-/*lighter:*/
-/*@include sencha-list-paging;*/
-/*@include sencha-list-pullrefresh;*/
 @include sencha-layout;
-@include sencha-carousel;
-@include sencha-form;
 @include sencha-msgbox;
 @include sencha-loading-spinner;
 @include sencha-draw;
+
+/*
+You should remove elements that are not used, to make the resulting CSS
+smaller and faster to download:
+
+@include sencha-toolbar-forms;
+@include sencha-carousel;
+@include sencha-list-paging;
+@include sencha-list-pullrefresh;
+@include sencha-form;
 @include sencha-charts;
+*/
 
