@@ -32,12 +32,12 @@ Ext.application({
         '1496x2048': '../img/loading/Default-Landscape@2x.png' // Retina iPad, Landscape
     },
 
-    models: ['AkoLib.model.Item', 'Temperature'],
+    models: ['AkoLib.model.Item'],
     views: ['ActionSheetDemo', 'ButtonDemo', 'ImageDemo', 'LabelDemo',
             'MessageBoxDemo', 'PanelDemo', 'PickerDemo', 'SegmentedButtonDemo', 'SheetDemo',
             'TabPanelDemo', 'TitleToolBarDemo', 'IndexView'],
     controllers: ['ButtonController', 'SegmentedButtonController', 'TabPanelController'],
-    stores: ['ItemStore', 'CitiesStore', 'TemperatureStore'],
+    stores: ['ItemStore'],
 
     isIconPrecomposed: true,
     statusBarStyle: 'black', // can also be 'default'

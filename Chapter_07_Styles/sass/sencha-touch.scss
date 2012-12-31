@@ -1,9 +1,10 @@
 /*Here we include the overrides required by our design*/
 
 /*Base parameters*/
-$base-color: orange;
+$base-color: gray;
 $font-family: AvenirNextCondensed-DemiBold, sans;
-$include-border-radius: false
+$include-border-radius: false;
+$base-gradient: recessed; /* bevel, glossy, recessed, matte (default) */
 
 /*Buttons*/
 $button-height: 2em;
