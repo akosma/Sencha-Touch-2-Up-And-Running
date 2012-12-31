@@ -1,7 +1,6 @@
 _libs
 .DS_Store
 build
-docs
 archive
 .sass-cache
 packager.temp.json
