@@ -1,0 +1,93 @@
+{
+    "name": "ToDoList",
+    "settings": {
+        "urlPrefix": "http://localhost:8888/Chapter_09_Architect/ToDoList/",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "ca7b0940-17dc-48b8-8d42-92ca8d416a87": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "d11469d0-bdeb-43bb-b734-7437088c71d0": {
+            "paths": [
+                "metadata/model/Task",
+                "app/model/override/Task.js",
+                "app/model/Task.js"
+            ],
+            "className": "Task"
+        },
+        "b8757af5-7825-45a0-a670-b578bb3b7078": {
+            "paths": [
+                "metadata/view/RootNavView",
+                "app/view/override/RootNavView.js",
+                "app/view/RootNavView.js"
+            ],
+            "className": "RootNavView"
+        },
+        "b1a3583d-1ed4-4e1f-bb3b-ae8b0d5888d5": {
+            "paths": [
+                "metadata/store/TaskStore",
+                "app/store/override/TaskStore.js",
+                "app/store/TaskStore.js"
+            ],
+            "className": "TaskStore"
+        },
+        "ddce5fc7-d5d2-4411-a966-df136b57d0fc": {
+            "paths": [
+                "metadata/controller/TaskController",
+                "app/controller/override/TaskController.js",
+                "app/controller/TaskController.js"
+            ],
+            "className": "TaskController"
+        },
+        "e23968ed-f2cb-4325-aaaa-729b14f8cb93": {
+            "paths": [
+                "metadata/view/TaskForm",
+                "app/view/override/TaskForm.js",
+                "app/view/TaskForm.js"
+            ],
+            "className": "TaskForm"
+        },
+        "2ab8ceec-55aa-431e-88c6-d1efb7980de5": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "b8757af5-7825-45a0-a670-b578bb3b7078",
+            "e23968ed-f2cb-4325-aaaa-729b14f8cb93"
+        ],
+        "store": [
+            "b1a3583d-1ed4-4e1f-bb3b-ae8b0d5888d5"
+        ],
+        "controller": [
+            "ddce5fc7-d5d2-4411-a966-df136b57d0fc"
+        ],
+        "model": [
+            "d11469d0-bdeb-43bb-b734-7437088c71d0"
+        ],
+        "resource": [
+            "ca7b0940-17dc-48b8-8d42-92ca8d416a87",
+            "2ab8ceec-55aa-431e-88c6-d1efb7980de5"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

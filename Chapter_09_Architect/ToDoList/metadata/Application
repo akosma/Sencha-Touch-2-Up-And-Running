@@ -1,0 +1,26 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Task"
+        ],
+        "stores": [
+            "TaskStore"
+        ],
+        "views": [
+            "RootNavView",
+            "TaskForm"
+        ],
+        "name": "ToDoList",
+        "controllers": [
+            "TaskController"
+        ]
+    },
+    "id": "ExtBox1-ext-gen1790",
+    "designerId": "application"
+}

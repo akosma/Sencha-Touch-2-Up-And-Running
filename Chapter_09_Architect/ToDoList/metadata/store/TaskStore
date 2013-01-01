@@ -1,0 +1,31 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TaskStore",
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "Task",
+        "storeId": "TaskStore"
+    },
+    "id": "ExtBox1-ext-gen3565",
+    "designerId": "b1a3583d-1ed4-4e1f-bb3b-ae8b0d5888d5",
+    "cn": [
+        {
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy"
+            },
+            "designerId": "73527224-ea76-4e15-a5c3-6c5669a6c4bc"
+        }
+    ]
+}

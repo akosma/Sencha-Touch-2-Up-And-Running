@@ -1,0 +1,225 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "title": "Task Details",
+        "designer|userClassName": "TaskForm",
+        "itemId": "taskForm"
+    },
+    "id": "ExtBox1-ext-gen9242",
+    "designerId": "e23968ed-f2cb-4325-aaaa-729b14f8cb93",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "title",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "instructions": "Please complete all fields",
+                "title": "Task Details"
+            },
+            "designerId": "5e6ad8b4-aeb2-4549-94e3-a64bd193c4d4",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField",
+                        "label": "Title",
+                        "name": "title",
+                        "autoCapitalize": true,
+                        "placeHolder": "Task title"
+                    },
+                    "designerId": "d0de0bcb-2a63-46d2-9dbf-5bd5d5f73dca"
+                },
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea",
+                        "label": "Details",
+                        "name": "description",
+                        "autoCapitalize": true,
+                        "placeHolder": "Task details"
+                    },
+                    "designerId": "7726bb38-babe-4df2-b656-b34895b514b4"
+                },
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField",
+                        "label": "Done",
+                        "name": "completed"
+                    },
+                    "designerId": "f9bccd39-91a9-4008-9bf3-16e9cf540909"
+                },
+                {
+                    "type": "datepickerfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDateField",
+                        "label": "Field",
+                        "name": "dueDate",
+                        "placeHolder": "dd/mm/yyyy",
+                        "dateFormat": "D d M Y"
+                    },
+                    "designerId": "fe765232-0652-4edc-a778-a74e98d8f3bc",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "datepicker",
+                            "reference": {
+                                "name": "picker",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyDatePicker",
+                                "slotOrder": "['day', 'month', 'year']",
+                                "yearFrom": 2013,
+                                "yearTo": 2023
+                            },
+                            "designerId": "9b5d6485-70b1-4b1b-b571-7e9ce1a3aed6",
+                            "cn": [
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "doneButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyButton3",
+                                        "text": "Done"
+                                    },
+                                    "designerId": "fda9a351-ae97-41af-b854-400eadae7a04"
+                                },
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "cancelButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyButton4",
+                                        "text": "Cancel"
+                                    },
+                                    "designerId": "4a4fff32-0138-446c-ab24-493b30322b24"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar1",
+                "docked": "bottom"
+            },
+            "designerId": "6b0a901b-3937-4255-86d4-5454d186cf15",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "deleteTask",
+                        "designer|userClassName": "MyButton1",
+                        "ui": "decline",
+                        "text": "Delete"
+                    },
+                    "designerId": "c7c34621-52a9-47ea-912e-84e719f58a22",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer1"
+                    },
+                    "designerId": "281d2561-84ff-4d0a-93f8-63997284ec56"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "saveTask",
+                        "designer|userClassName": "MyButton2",
+                        "ui": "confirm",
+                        "text": "Save"
+                    },
+                    "designerId": "086fa76d-f111-4ca5-9caf-22ec4325a89b",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Task"
+    },
+    "id": "ExtBox1-ext-gen2217",
+    "designerId": "d11469d0-bdeb-43bb-b734-7437088c71d0",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "title",
+                "type": "string"
+            },
+            "designerId": "c8648f2e-bd68-4099-aba3-66991c6aec74"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "completed",
+                "defaultValue": [
+                    "false"
+                ],
+                "type": "boolean"
+            },
+            "designerId": "ebdc09c1-ba22-481a-8829-876d8319f29c"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "description",
+                "type": "string"
+            },
+            "designerId": "d455b4ac-1146-49a4-9f0b-12eaefa82c3d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "dueDate",
+                "type": "date"
+            },
+            "designerId": "cbaf3550-8ce2-4cc3-b65e-fd20de22565c"
+        }
+    ]
+}

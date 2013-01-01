@@ -1,0 +1,344 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TaskController"
+    },
+    "id": "ExtBox1-ext-gen5689",
+    "designerId": "ddce5fc7-d5d2-4411-a966-df136b57d0fc",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "saveTask",
+                "fn": "saveTask",
+                "implHandler": [
+                    "var store = this.getTaskList().getStore();",
+                    "var task = this.getTaskForm().getRecord();",
+                    "this.getTaskForm().updateRecord(task);",
+                    "",
+                    "// Is it a new object?",
+                    "if (null === store.findRecord(\"id\", task.get('id'))) {",
+                    "    store.add(task);",
+                    "}",
+                    "",
+                    "this.showList();",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "saveTaskButton"
+            },
+            "designerId": "b1e9231f-55b1-4b9c-8402-0de37548f1c3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deleteTask",
+                "fn": "deleteTask",
+                "implHandler": [
+                    "Ext.Msg.confirm('Delete this task?', 'You cannot undo this!', function (answer) {",
+                    "    if (answer === 'yes') {",
+                    "        var task = this.getTaskForm().getRecord();",
+                    "        var store = this.getTaskList().getStore();",
+                    "        store.remove(task);",
+                    "        this.showList();",
+                    "    }",
+                    "}, this);",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "deleteTaskButton"
+            },
+            "designerId": "cac98699-5ed9-460b-98d3-1a7e3d54885d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showTask",
+                "fn": "showTask",
+                "implHandler": [
+                    "this.getTaskForm().setRecord(record);",
+                    "this.getDeleteTaskButton().setHidden(false);",
+                    "this.showForm();",
+                    "",
+                    "var delayedTask = Ext.create('Ext.util.DelayedTask', function() {",
+                    "    dataview.deselect(index);",
+                    "});",
+                    "delayedTask.delay(500);"
+                ],
+                "name": "itemsingletap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list"
+            },
+            "designerId": "72641f59-5ed9-446a-8b25-ee8e05e66e7b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deleteTaskSwipe",
+                "fn": "deleteTaskSwipe",
+                "implHandler": [
+                    "var title = 'Delete the task \"' + record.get('title') + '\"?';",
+                    "Ext.Msg.confirm(title, 'You cannot undo this!', function (answer) {",
+                    "    if (answer === 'yes') {",
+                    "        var store = this.getTaskList().getStore();",
+                    "        store.remove(record);",
+                    "        this.updateTaskCount();",
+                    "    }",
+                    "}, this);"
+                ],
+                "name": "itemswipe",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list"
+            },
+            "designerId": "714cacd7-8c95-48b3-b338-17d4a9d8dec3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "changeDoneStatus",
+                "fn": "changeDoneStatus",
+                "implHandler": [
+                    "var done = record.get('completed');",
+                    "record.set('completed', !done);"
+                ],
+                "name": "disclose",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list"
+            },
+            "designerId": "27f9d040-0848-4339-be6f-c2c1732347c4"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "createTaskButton",
+                "designer|displayName": "createTaskButton",
+                "ref": "createTaskButton",
+                "selector": "button[action=createTask]"
+            },
+            "designerId": "311f7e5d-09ed-484b-8f70-7d64bf942a27"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "createTask",
+                "fn": "createTask",
+                "implHandler": [
+                    "var task = Ext.create('ToDoList.model.Task', {",
+                    "    title: 'New task',",
+                    "    description: '',",
+                    "    completed: false,",
+                    "    dueDate: new Date()",
+                    "});",
+                    "this.getTaskForm().setRecord(task);",
+                    "this.getDeleteTaskButton().setHidden(true);",
+                    "this.showForm();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "createTaskButton"
+            },
+            "designerId": "04bd8649-31bb-4e09-b06a-7120f6c2490d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deleteTaskButton",
+                "ref": "deleteTaskButton",
+                "selector": "button[action=deleteTask]"
+            },
+            "designerId": "2e3e5070-fe2e-44f7-819d-9eabb3f5b442"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "saveTaskButton",
+                "ref": "saveTaskButton",
+                "selector": "button[action=saveTask]"
+            },
+            "designerId": "41db840e-5ef4-4aef-a9d1-d0468408234d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "navigationView",
+                "designer|displayName": "navigationView",
+                "ref": "navigationView",
+                "selector": "navigationview",
+                "xtype": null
+            },
+            "designerId": "4ab934ed-7e43-4e2b-b275-71bf0e31eedd"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "taskList",
+                "ref": "taskList",
+                "selector": "#taskList"
+            },
+            "designerId": "b55978ed-ecba-4a09-93c0-ded20c927d50"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "taskCountBar",
+                "designer|displayName": "taskCountBar",
+                "ref": "taskCountBar",
+                "selector": "#taskList > toolbar"
+            },
+            "designerId": "a32e5601-ec4d-4d41-bc1a-8ecde4ac7677"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "this.updateTaskCount();"
+                ]
+            },
+            "designerId": "1343be2c-868c-4178-b92e-351c4100290e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "updateTaskCount",
+                "fn": "updateTaskCount",
+                "implHandler": [
+                    "var store = this.getTaskList().getStore();",
+                    "var count = store.getCount();",
+                    "this.getTaskCountBar().setTitle(count + ' tasks');"
+                ]
+            },
+            "designerId": "d9a10346-5076-4bb3-8bcb-e8afc9cad7a5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getTaskForm",
+                "fn": "getTaskForm",
+                "implHandler": [
+                    "if (!this.taskForm) {",
+                    "    this.taskForm = Ext.create('ToDoList.view.TaskForm');",
+                    "}",
+                    "return this.taskForm;"
+                ]
+            },
+            "designerId": "e8c1e669-669e-4622-8cf1-5f8a41bbccfb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showForm",
+                "fn": "showForm",
+                "implHandler": [
+                    "this.getNavigationView().push(this.getTaskForm());"
+                ]
+            },
+            "designerId": "aeb4f975-e3d6-474b-8d97-eebbc7e316a6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showList",
+                "fn": "showList",
+                "implHandler": [
+                    "this.updateTaskCount();",
+                    "this.getNavigationView().pop();"
+                ]
+            },
+            "designerId": "f724b32d-216c-4eaa-a33a-3b286a8a4af1"
+        }
+    ]
+}

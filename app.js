@@ -113,6 +113,12 @@ var data = [{
     chapterNumber: 8,
     order: 3
 }, { 
+    title: 'Architect',
+    url: 'Chapter_09_Architect/ToDoList/app.html',
+    chapter: '9. Sencha Architect',
+    chapterNumber: 9,
+    order: 3
+}, { 
     title: 'Device Profiles',
     url: 'Chapter_10_Profiles',
     chapter: '10. Deployment in Devices',
