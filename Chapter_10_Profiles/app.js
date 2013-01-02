@@ -3,7 +3,7 @@ if (!window.Ext) {
 }
 
 Ext.application({
-    name: 'TemplateApp',
+    name: 'Chapter10Profiles',
     appFolder: 'app',
     profiles: ['Phone', 'Tablet', 'Desktop'],
 

@@ -1,4 +1,4 @@
-Ext.define('TemplateApp.profile.Desktop', {
+Ext.define('Chapter10Profiles.profile.Desktop', {
     extend: 'Ext.app.Profile',
     config: {
         name: 'Desktop',

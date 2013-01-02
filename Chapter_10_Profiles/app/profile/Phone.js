@@ -1,4 +1,4 @@
-Ext.define('TemplateApp.profile.Phone', {
+Ext.define('Chapter10Profiles.profile.Phone', {
     extend: 'Ext.app.Profile',
     config: {
         name: 'Phone',
