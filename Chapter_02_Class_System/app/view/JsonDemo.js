@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.JsonDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.JsonDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'jsondemo',
     
     getPrefix: function () {

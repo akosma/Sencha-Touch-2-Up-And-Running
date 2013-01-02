@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.DelayedTaskDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.DelayedTaskDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'delayedtaskdemo',
 
     getPrefix: function () {

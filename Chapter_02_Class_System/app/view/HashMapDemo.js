@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.HashMapDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.HashMapDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'hashmapdemo',
     
     getPrefix: function () {

@@ -1,4 +1,4 @@
-Ext.define('Chapter3ClassSystem.store.ItemStore', {
+Ext.define('Chapter2ClassSystem.store.ItemStore', {
     extend: 'Ext.data.Store',
     xtype: 'itemstore',
     config: {

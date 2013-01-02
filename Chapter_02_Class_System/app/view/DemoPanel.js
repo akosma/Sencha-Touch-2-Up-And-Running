@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.DemoPanel', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter2ClassSystem.view.DemoPanel', {
+    extend: 'Ext.Container',
     config: {
         scrollable: true,
         padding: '20'

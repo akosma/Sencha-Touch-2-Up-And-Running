@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.DomHelper', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.DomHelper', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'domhelperdemo',
 
     config: {

@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.DomQuery', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.DomQuery', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'domquerydemo',
 
     config: {

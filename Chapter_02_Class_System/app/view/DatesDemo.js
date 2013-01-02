@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.DatesDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.DatesDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'datesdemo',
     requires: 'Ext.DateExtras',    
     getPrefix: function () {

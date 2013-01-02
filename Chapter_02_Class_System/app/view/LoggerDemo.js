@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.LoggerDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.LoggerDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'loggerdemo',
     
     getPrefix: function () {

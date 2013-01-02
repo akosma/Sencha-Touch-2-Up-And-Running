@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.ExtObjDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.ExtObjDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'extdemo',
     config: {
         id: 'extdemo' // used by the getCmpDemo() function below

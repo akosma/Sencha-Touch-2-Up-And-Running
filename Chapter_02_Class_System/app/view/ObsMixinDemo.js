@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.ObsMixinDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.ObsMixinDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'obsdemo',
 
     getPrefix: function () {

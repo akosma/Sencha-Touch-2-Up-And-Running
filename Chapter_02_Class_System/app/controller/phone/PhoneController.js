@@ -1,4 +1,4 @@
-Ext.define('Chapter3ClassSystem.controller.phone.PhoneController', {
+Ext.define('Chapter2ClassSystem.controller.phone.PhoneController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {

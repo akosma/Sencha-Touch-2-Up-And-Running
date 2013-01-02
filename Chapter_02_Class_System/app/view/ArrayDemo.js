@@ -1,5 +1,5 @@
-Ext.define('Chapter3ClassSystem.view.ArrayDemo', {
-    extend: 'Chapter3ClassSystem.view.DemoPanel',
+Ext.define('Chapter2ClassSystem.view.ArrayDemo', {
+    extend: 'Chapter2ClassSystem.view.DemoPanel',
     xtype: 'arraydemo',
 
     getPrefix: function () {

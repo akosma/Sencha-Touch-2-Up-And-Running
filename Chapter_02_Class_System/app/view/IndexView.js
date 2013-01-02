@@ -1,4 +1,4 @@
-Ext.define('Chapter3ClassSystem.view.IndexView', {
+Ext.define('Chapter2ClassSystem.view.IndexView', {
     extend: 'Ext.navigation.View',
     xtype: 'indexview',
     config: {

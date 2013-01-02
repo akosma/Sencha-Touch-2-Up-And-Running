@@ -9,7 +9,7 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-    name: 'Chapter3ClassSystem',
+    name: 'Chapter2ClassSystem',
     appFolder: 'app',
     profiles: ['Phone', 'Tablet'],
 
