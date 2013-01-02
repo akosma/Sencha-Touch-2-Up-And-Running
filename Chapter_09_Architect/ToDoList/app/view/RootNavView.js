@@ -28,6 +28,7 @@ Ext.define('ToDoList.view.RootNavView', {
                     '<div class="task completed_{completed}">{title}</div>'
                 ],
                 store: 'TaskStore',
+                grouped: true,
                 onItemDisclosure: true,
                 items: [
                     {

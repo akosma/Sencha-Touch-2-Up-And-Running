@@ -9,6 +9,7 @@
         "designer|userClassName": "TaskStore",
         "autoLoad": true,
         "autoSync": true,
+        "groupField": null,
         "model": "Task",
         "storeId": "TaskStore"
     },
@@ -23,9 +24,61 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy"
+                "designer|userClassName": "MyLocalStorageProxy",
+                "id": "senchatasks"
             },
             "designerId": "73527224-ea76-4e15-a5c3-6c5669a6c4bc"
+        },
+        {
+            "type": "sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySorter",
+                "designer|displayName": "dueDateSorter",
+                "property": "dueDate"
+            },
+            "designerId": "6f5da646-a611-4274-b5ff-e183f30b7dab"
+        },
+        {
+            "type": "grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper",
+                "designer|displayName": "dueDateGrouper",
+                "sortProperty": "dueDate"
+            },
+            "designerId": "5776ad0b-dec6-4691-81f0-7e2dbff9318e",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupFn",
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "if (record && record.get('dueDate')) {",
+                            "    return record.get(\"dueDate\").toDateString();",
+                            "}"
+                        ]
+                    },
+                    "designerId": "d98564a3-edc0-4189-ae08-f3bdc78f490b"
+                }
+            ]
         }
     ]
 }

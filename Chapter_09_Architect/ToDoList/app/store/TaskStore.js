@@ -26,7 +26,19 @@ Ext.define('ToDoList.store.TaskStore', {
         model: 'ToDoList.model.Task',
         storeId: 'TaskStore',
         proxy: {
-            type: 'localstorage'
+            type: 'localstorage',
+            id: 'senchatasks'
+        },
+        sorters: {
+            property: 'dueDate'
+        },
+        grouper: {
+            groupFn: function(record) {
+                if (record && record.get('dueDate')) {
+                    return record.get("dueDate").toDateString();
+                }
+            },
+            sortProperty: 'dueDate'
         }
     }
 });

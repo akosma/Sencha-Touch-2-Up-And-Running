@@ -26,6 +26,7 @@
                 "itemId": "taskList",
                 "emptyText": "<p class=\"instructions\">No tasks here yet; please touch the button \"+\" in the toolbar below to make one.<br>If you like this app, buy the book! :) Thanks.</p>",
                 "store": "TaskStore",
+                "grouped": true,
                 "onItemDisclosure": true
             },
             "designerId": "a39dc8b9-f36c-457d-a821-cd29f97c75ce",
