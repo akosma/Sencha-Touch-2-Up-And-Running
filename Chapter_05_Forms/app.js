@@ -9,7 +9,7 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-    name: 'Chapter6Forms',
+    name: 'Chapter5Forms',
     appFolder: 'app',
     profiles: ['Phone', 'Tablet'],
 

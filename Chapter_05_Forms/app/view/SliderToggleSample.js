@@ -1,4 +1,4 @@
-Ext.define('Chapter6Forms.view.SliderToggleSample', {
+Ext.define('Chapter5Forms.view.SliderToggleSample', {
     extend: 'Ext.form.Panel',
     xtype: 'slidertogglesample',
     config: {

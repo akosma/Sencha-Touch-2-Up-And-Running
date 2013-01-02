@@ -1,4 +1,4 @@
-Ext.define('Chapter6Forms.view.TextFieldSample', {
+Ext.define('Chapter5Forms.view.TextFieldSample', {
     extend: 'Ext.form.Panel',
     xtype: 'textfieldsample',
     config: {

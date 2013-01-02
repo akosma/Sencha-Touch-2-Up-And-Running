@@ -1,4 +1,4 @@
-Ext.define('Chapter6Forms.view.CheckboxSample', {
+Ext.define('Chapter5Forms.view.CheckboxSample', {
     extend: 'Ext.form.Panel',
     xtype: 'checkboxsample',
     config: {

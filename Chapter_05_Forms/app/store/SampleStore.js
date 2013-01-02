@@ -1,4 +1,4 @@
-Ext.define('Chapter6Forms.store.SampleStore', {
+Ext.define('Chapter5Forms.store.SampleStore', {
     extend: 'Ext.data.Store',
     xtype: 'samplestore',
     config: {
