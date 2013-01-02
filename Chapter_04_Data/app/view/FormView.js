@@ -1,4 +1,4 @@
-Ext.define('Chapter5Data.view.FormView', {
+Ext.define('Chapter4Data.view.FormView', {
     extend: 'Ext.form.Panel',
     xtype: 'formview',
     config: {

@@ -1,5 +1,5 @@
-Ext.define('Chapter5Data.controller.tablet.TabletController', {
-    extend: 'Chapter5Data.controller.MainController',
+Ext.define('Chapter4Data.controller.tablet.TabletController', {
+    extend: 'Chapter4Data.controller.MainController',
     config: {
         refs: {
             splitView: 'akosplitview',

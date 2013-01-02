@@ -1,4 +1,4 @@
-Ext.define('Chapter5Data.model.Person', {
+Ext.define('Chapter4Data.model.Person', {
     extend: 'Ext.data.Model',
     config: {
         fields: [{

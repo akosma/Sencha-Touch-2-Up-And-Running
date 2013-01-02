@@ -1,8 +1,8 @@
-Ext.define('Chapter5Data.store.PeopleStore', {
+Ext.define('Chapter4Data.store.PeopleStore', {
     extend: 'Ext.data.Store',
     xtype: 'peoplestore',
     config: {
-        model: 'Chapter5Data.model.Person',
+        model: 'Chapter4Data.model.Person',
         storeId: 'PeopleStore',
         autoLoad: true,
         sorters: [{

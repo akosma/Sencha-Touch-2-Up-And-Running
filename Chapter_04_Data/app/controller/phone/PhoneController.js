@@ -1,5 +1,5 @@
-Ext.define('Chapter5Data.controller.phone.PhoneController', {
-    extend: 'Chapter5Data.controller.MainController',
+Ext.define('Chapter4Data.controller.phone.PhoneController', {
+    extend: 'Chapter4Data.controller.MainController',
     config: {
         refs: {
             listView: 'indexview > #listView',

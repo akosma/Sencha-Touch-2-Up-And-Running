@@ -1,4 +1,4 @@
-Ext.define('Chapter5Data.controller.MainController', {
+Ext.define('Chapter4Data.controller.MainController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
