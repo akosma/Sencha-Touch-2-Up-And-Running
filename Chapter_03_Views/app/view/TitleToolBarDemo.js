@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.TitleToolBarDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.TitleToolBarDemo', {
+    extend: 'Ext.Container',
     xtype: 'titletoolbardemo',
     config: {
         style: 'background-color: lightgray',

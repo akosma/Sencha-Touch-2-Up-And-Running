@@ -9,7 +9,7 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-    name: 'Chapter4Views',
+    name: 'Chapter3Views',
     appFolder: 'app',
     profiles: ['Phone', 'Tablet'],
     requires: ['Ext.tab.Panel', 'Ext.picker.Picker'],

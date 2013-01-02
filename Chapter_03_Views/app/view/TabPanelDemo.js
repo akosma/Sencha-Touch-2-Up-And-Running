@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.TabPanelDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.TabPanelDemo', {
+    extend: 'Ext.Container',
     xtype: 'tabpaneldemo',
     config: {
         layout: {

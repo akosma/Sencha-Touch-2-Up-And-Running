@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.LabelDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.LabelDemo', {
+    extend: 'Ext.Container',
     xtype: 'labeldemo',
     config: {
         items: [{

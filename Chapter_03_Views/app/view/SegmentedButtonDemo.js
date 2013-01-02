@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.SegmentedButtonDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.SegmentedButtonDemo', {
+    extend: 'Ext.Container',
     xtype: 'segmentedbuttondemo',
     config: {
         defaults: {

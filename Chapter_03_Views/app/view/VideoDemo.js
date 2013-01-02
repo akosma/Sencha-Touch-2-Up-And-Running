@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.VideoDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.VideoDemo', {
+    extend: 'Ext.Container',
     xtype: 'videodemo',
     config: {
         items: [{

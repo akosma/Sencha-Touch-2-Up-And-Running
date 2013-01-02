@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.AudioDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.AudioDemo', {
+    extend: 'Ext.Container',
     xtype: 'audiodemo',
     config: {
         items: [{

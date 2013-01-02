@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.SheetDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.SheetDemo', {
+    extend: 'Ext.Container',
     xtype: 'sheetdemo',
     config: {
         defaults: {

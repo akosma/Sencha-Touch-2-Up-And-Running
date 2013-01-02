@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.ButtonDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.ButtonDemo', {
+    extend: 'Ext.Container',
     xtype: 'buttondemo',
     config: {
         scrollable: true,

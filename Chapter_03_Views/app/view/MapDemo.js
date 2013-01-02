@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.MapDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.MapDemo', {
+    extend: 'Ext.Container',
     xtype: 'mapdemo',
     config: {
         layout: {

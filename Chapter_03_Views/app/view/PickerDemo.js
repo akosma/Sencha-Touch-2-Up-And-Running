@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.PickerDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.PickerDemo', {
+    extend: 'Ext.Container',
     xtype: 'pickerdemo',
     config: {
         defaults: {

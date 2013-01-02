@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.HorizontalCarouselDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.HorizontalCarouselDemo', {
+    extend: 'Ext.Container',
     xtype: 'hcarouseldemo',
     config: {
         layout: {

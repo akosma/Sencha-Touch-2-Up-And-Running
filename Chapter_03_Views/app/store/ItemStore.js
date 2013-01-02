@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.store.ItemStore', {
+Ext.define('Chapter3Views.store.ItemStore', {
     extend: 'Ext.data.Store',
     xtype: 'itemstore',
     config: {

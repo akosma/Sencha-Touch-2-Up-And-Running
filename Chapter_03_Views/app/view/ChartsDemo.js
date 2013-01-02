@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.ChartsDemo', {
+Ext.define('Chapter3Views.view.ChartsDemo', {
     extend: 'Ext.Container',
     xtype: 'chartsdemo',
     config: {

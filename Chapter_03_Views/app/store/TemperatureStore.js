@@ -1,8 +1,8 @@
-Ext.define('Chapter4Views.store.TemperatureStore', {
+Ext.define('Chapter3Views.store.TemperatureStore', {
     extend: 'Ext.data.Store',
     xtype: 'temperaturestore',
     config: {
-        model: 'Chapter4Views.model.Temperature',
+        model: 'Chapter3Views.model.Temperature',
         sorters: [{
             property: 'time',
             direction: 'ASC'

@@ -1,5 +1,5 @@
-Ext.define('Chapter4Views.view.VerticalCarouselDemo', {
-    extend: 'Ext.Panel',
+Ext.define('Chapter3Views.view.VerticalCarouselDemo', {
+    extend: 'Ext.Container',
     xtype: 'vcarouseldemo',
     config: {
         layout: {

@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.controller.TabPanelController', {
+Ext.define('Chapter3Views.controller.TabPanelController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {

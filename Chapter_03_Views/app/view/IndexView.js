@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.view.IndexView', {
+Ext.define('Chapter3Views.view.IndexView', {
     extend: 'Ext.navigation.View',
     xtype: 'indexview',
     config: {

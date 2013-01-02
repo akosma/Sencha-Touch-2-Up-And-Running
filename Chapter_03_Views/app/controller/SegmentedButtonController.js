@@ -1,4 +1,4 @@
-Ext.define('Chapter4Views.controller.SegmentedButtonController', {
+Ext.define('Chapter3Views.controller.SegmentedButtonController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
