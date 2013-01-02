@@ -1,4 +1,4 @@
-Ext.define('Chapter5DataViews.view.DataViewDemo', {
+Ext.define('Chapter4DataViews.view.DataViewDemo', {
     extend: 'Ext.dataview.DataView',
     xtype: 'dataviewdemo',
     config: {

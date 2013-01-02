@@ -9,7 +9,7 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-    name: 'Chapter5LocalStorage',
+    name: 'Chapter4LocalStorage',
     appFolder: 'app',
     profiles: ['Phone', 'Tablet'],
 

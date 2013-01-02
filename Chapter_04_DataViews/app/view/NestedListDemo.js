@@ -1,4 +1,4 @@
-Ext.define('Chapter5DataViews.view.NestedListDemo', {
+Ext.define('Chapter4DataViews.view.NestedListDemo', {
     extend: 'Ext.dataview.NestedList',
     xtype: 'nestedlistdemo',
     config: {

@@ -1,4 +1,4 @@
-Ext.define('Chapter5LocalStorage.controller.tablet.TabletController', {
+Ext.define('Chapter4LocalStorage.controller.tablet.TabletController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
@@ -40,7 +40,7 @@ Ext.define('Chapter5LocalStorage.controller.tablet.TabletController', {
     },
 
     add: function (button, e, eOpts) {
-        var person = Ext.create('Chapter5LocalStorage.model.Person', {
+        var person = Ext.create('Chapter4LocalStorage.model.Person', {
             firstName: 'First',
             lastName: 'Last'
         });

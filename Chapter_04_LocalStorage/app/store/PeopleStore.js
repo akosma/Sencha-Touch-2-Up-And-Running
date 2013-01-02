@@ -1,8 +1,8 @@
-Ext.define('Chapter5LocalStorage.store.PeopleStore', {
+Ext.define('Chapter4LocalStorage.store.PeopleStore', {
     extend: 'Ext.data.Store',
     xtype: 'peoplestore',
     config: {
-        model: 'Chapter5LocalStorage.model.Person',
+        model: 'Chapter4LocalStorage.model.Person',
         storeId: 'PeopleStore',
         autoLoad: true,
         autoSync: true,

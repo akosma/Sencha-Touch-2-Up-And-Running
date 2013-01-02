@@ -1,4 +1,4 @@
-Ext.define('Chapter5LocalStorage.view.FormView', {
+Ext.define('Chapter4LocalStorage.view.FormView', {
     extend: 'Ext.form.Panel',
     xtype: 'formview',
     config: {

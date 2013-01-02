@@ -1,4 +1,4 @@
-Ext.define('Chapter5LocalStorage.profile.Tablet', {
+Ext.define('Chapter4LocalStorage.profile.Tablet', {
     extend: 'Ext.app.Profile',
     config: {
         name: 'Tablet',

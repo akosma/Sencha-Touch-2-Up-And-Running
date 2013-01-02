@@ -1,4 +1,4 @@
-Ext.define('Chapter5LocalStorage.controller.phone.PhoneController', {
+Ext.define('Chapter4LocalStorage.controller.phone.PhoneController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
@@ -42,7 +42,7 @@ Ext.define('Chapter5LocalStorage.controller.phone.PhoneController', {
 
     add: function (button, e, eOpts) {
         var store = Ext.getStore('PeopleStore');
-        var person = Ext.create('Chapter5LocalStorage.model.Person', {
+        var person = Ext.create('Chapter4LocalStorage.model.Person', {
             firstName: 'First',
             lastName: 'Last'
         });

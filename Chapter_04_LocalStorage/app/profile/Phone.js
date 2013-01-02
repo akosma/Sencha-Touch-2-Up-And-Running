@@ -1,4 +1,4 @@
-Ext.define('Chapter5LocalStorage.profile.Phone', {
+Ext.define('Chapter4LocalStorage.profile.Phone', {
     extend: 'Ext.app.Profile',
     config: {
         name: 'Phone',

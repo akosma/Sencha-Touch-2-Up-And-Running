@@ -1,4 +1,4 @@
-Ext.define('Chapter5DataViews.controller.phone.PhoneController', {
+Ext.define('Chapter4DataViews.controller.phone.PhoneController', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {

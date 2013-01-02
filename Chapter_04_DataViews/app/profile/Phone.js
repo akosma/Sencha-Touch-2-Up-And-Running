@@ -1,4 +1,4 @@
-Ext.define('Chapter5DataViews.profile.Phone', {
+Ext.define('Chapter4DataViews.profile.Phone', {
     extend: 'Ext.app.Profile',
     config: {
         name: 'Phone',

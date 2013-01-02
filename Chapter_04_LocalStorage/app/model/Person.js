@@ -1,4 +1,4 @@
-Ext.define('Chapter5LocalStorage.model.Person', {
+Ext.define('Chapter4LocalStorage.model.Person', {
     extend: 'Ext.data.Model',
     config: {
         identifier: 'uuid',

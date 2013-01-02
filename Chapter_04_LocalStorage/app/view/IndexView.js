@@ -1,4 +1,4 @@
-Ext.define('Chapter5LocalStorage.view.IndexView', {
+Ext.define('Chapter4LocalStorage.view.IndexView', {
     extend: 'Ext.navigation.View',
     xtype: 'indexview',
     config: {
