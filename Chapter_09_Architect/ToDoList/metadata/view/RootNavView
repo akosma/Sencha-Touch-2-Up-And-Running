@@ -56,6 +56,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyToolbar",
+                        "designer|displayName": "listToolbar",
                         "docked": "bottom"
                     },
                     "designerId": "49640e62-92e2-426d-9459-a70f9b4da21a",
@@ -68,7 +69,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MySpacer"
+                                "designer|userClassName": "MySpacer",
+                                "designer|displayName": "spacer"
                             },
                             "designerId": "575c9cf3-f376-4d7e-84c0-4a8b1d2968b1"
                         },
@@ -82,6 +84,7 @@
                             "userConfig": {
                                 "action": "createTask",
                                 "designer|userClassName": "MyButton",
+                                "designer|displayName": "addButton",
                                 "ui": "plain",
                                 "iconCls": "add",
                                 "iconMask": true,

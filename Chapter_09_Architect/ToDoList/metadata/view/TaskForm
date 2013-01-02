@@ -159,6 +159,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyToolbar1",
+                "designer|displayName": "taskEditorToolbar",
                 "docked": "bottom"
             },
             "designerId": "6b0a901b-3937-4255-86d4-5454d186cf15",
@@ -193,7 +194,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySpacer1"
+                        "designer|userClassName": "MySpacer1",
+                        "designer|displayName": "spacer"
                     },
                     "designerId": "281d2561-84ff-4d0a-93f8-63997284ec56"
                 },
