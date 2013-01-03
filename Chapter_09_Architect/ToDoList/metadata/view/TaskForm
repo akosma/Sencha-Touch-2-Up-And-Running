@@ -10,7 +10,7 @@
         "designer|userClassName": "TaskForm",
         "itemId": "taskForm"
     },
-    "id": "ExtBox1-ext-gen9242",
+    "id": "ucmpTaskForm",
     "designerId": "e23968ed-f2cb-4325-aaaa-729b14f8cb93",
     "customConfigs": [
         {

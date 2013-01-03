@@ -1,0 +1,19 @@
+.task {
+    font-weight: bold;
+}
+
+.completed_false {
+    color: red;
+}
+
+.completed_true {
+    color: green;
+}
+
+p.instructions {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: gray;
+}

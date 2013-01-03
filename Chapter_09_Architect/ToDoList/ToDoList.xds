@@ -1,9 +1,9 @@
 {
     "name": "ToDoList",
     "settings": {
-        "urlPrefix": "http://localhost:8888/Chapter_09_Architect/ToDoList/",
+        "urlPrefix": "http://localhost:8888/Chapter_09_Architect/deploy",
         "spacesToIndent": 4,
-        "exportPath": "",
+        "exportPath": "/Users/adrian/Desktop/akosma/2012/OReilly/Sencha Touch/Code/Chapter_09_Architect/deploy",
         "sdkPath": "",
         "lineEnding": "LF",
         "genTimestamps": false,
