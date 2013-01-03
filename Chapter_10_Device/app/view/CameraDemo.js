@@ -15,7 +15,10 @@ Ext.define('Chapter10Device.view.CameraDemo', {
             action: 'loadLibrary'
         }, {
             xtype: 'image',
-            itemId: 'selectedImage'
+            itemId: 'selectedImage',
+            src: 'resources/icons/Icon~ipad@2x.png',
+            height: 144,
+            width: 144
         }]
     }
 });

@@ -131,11 +131,17 @@ var data = [{
     chapterNumber: 10,
     order: 1
 }, { 
+    title: 'Device APIs Demo',
+    url: 'Chapter_10_Device',
+    chapter: '10. Deployment in Devices',
+    chapterNumber: 10,
+    order: 2
+}, { 
     title: 'Universal Application',
     url: 'Chapter_10_Universal_App',
     chapter: '10. Deployment in Devices',
     chapterNumber: 10,
-    order: 2
+    order: 3
 }];
 
 var store = Ext.create('Ext.data.Store', {

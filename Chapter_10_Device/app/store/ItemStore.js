@@ -5,12 +5,13 @@ Ext.define('Chapter10Device.store.ItemStore', {
         storeId: 'ItemStore',
         model: 'AkoLib.model.Item',
         data: [
-                { text: 'Capabilities', screen: 'capabilitiesdemo' },
                 { text: 'Camera', screen: 'camerademo' },
-                { text: 'Notifications', screen: 'notificationsdemo' },
-                { text: 'Orientation', screen: 'orientationdemo' },
+                { text: 'Capabilities', screen: 'capabilitiesdemo' },
+                //{ text: 'Contacts', screen: 'contactsdemo' },
+                { text: 'Location', screen: 'locationdemo' },
                 { text: 'Network', screen: 'networkdemo' },
-                { text: 'Location', screen: 'locationdemo' }
+                { text: 'Notifications', screen: 'notificationsdemo' },
+                { text: 'Orientation', screen: 'orientationdemo' }
         ]
     }
 });

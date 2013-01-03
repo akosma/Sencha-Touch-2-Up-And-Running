@@ -1,7 +1,22 @@
 Ext.define('Chapter10Device.view.LocationDemo', {
     extend: 'Ext.Container',
     xtype: 'locationdemo',
-    config: {},
+    config: {
+        layout: 'vbox',
+        items: [{
+            xtype: 'container',
+            html: 'Getting location... please wait...',
+            flex: 1,
+            itemId: 'dataLabel',
+            scrollable: true
+        }, {
+            xtype: 'image',
+            src: '',
+            itemId: 'staticMapImage',
+            flex: 2
+        }]
+    },
+
     initialize: function () {
         this.callParent(arguments);
         var self = this;
@@ -11,7 +26,7 @@ Ext.define('Chapter10Device.view.LocationDemo', {
                 self.showPosition(position.coords);
             },
             failure: function() {
-                console.log('Could not get the current position');
+                self.showError();
             }
         });
         
@@ -21,11 +36,14 @@ Ext.define('Chapter10Device.view.LocationDemo', {
                 self.showPosition(position.coords);
             },
             failure: function() {
-                console.log('Could not watch the current position');
+                self.showError();
             }
         });
     },
+
     showPosition: function (position) {
+        var label = this.down('#dataLabel');
+        var image = this.down('#staticMapImage');
         var text = [
             'Accuracy: ' + position.accuracy,
             'Altitude: ' + position.altitude,
@@ -35,7 +53,16 @@ Ext.define('Chapter10Device.view.LocationDemo', {
             'Longitude: ' + position.longitude,
             'Speed: ' + position.speed
         ];
-        this.setHtml(text.join('<br>'));
+        label.setHtml(text.join('<br>'));
+
+        // Using the Google Static Maps API
+        // https://developers.google.com/maps/documentation/staticmaps/
+        image.setSrc('http://maps.googleapis.com/maps/api/staticmap?center=' + position.latitude + ',' + position.longitude + '&zoom=12&size=300x300&sensor=true&key=AIzaSyCgwmb4EmL7RBJJhqHVjd-9myB4Zspbnos');
+    },
+
+    showError: function () {
+        var label = this.down('#dataLabel');
+        label.setHtml('Could not retrieve location');
     }
 });
 

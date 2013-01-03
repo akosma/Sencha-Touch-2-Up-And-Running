@@ -7,7 +7,7 @@ Ext.define('Chapter10Device.controller.tablet.TabletController', {
         },
         control: {
             listView: {
-                itemtap: 'listViewItemTap' 
+                itemsingletap: 'listViewItemTap' 
             }
         }
     },

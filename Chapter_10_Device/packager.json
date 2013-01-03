@@ -5,19 +5,19 @@
 	 * This is the name of your application, which is displayed on the device when the app is installed. On IOS, this should match
 	 * the name of your application in the Apple Provisioning Portal.
 	 */
-	"applicationName":"My Application",
+	"applicationName":"DeviceAPI",
 
 	/**
 	 * @cfg {String} applicationId
 	 * This is the name namespace for your application. On IOS, this should match the name of your application in the Apple Provisioning Portal.
 	 */
-	"applicationId":"com.mycompany.myAppID",
+	"applicationId":"com.akosma.DeviceAPI",
 
 	/**
 	 * @cfg {String} bundleSeedId
 	 * A ten character string which stands before aplication ID in Apple Provisioning Portal
 	 */
-	"bundleSeedId":"KPXFEPZ6EF",
+	"bundleSeedId":"2DCEUWWNKF",
 
 	/**
 	 * @cfg {String} versionString
@@ -53,7 +53,7 @@
 	 * @required
 	 * This is location of your Sencha Touch 2 application, relative to this configuration file.
 	 */
-	"inputPath":"./",
+	"inputPath":"../build/Chapter10Device/package",
 
 	/**
 	 * @cfg {String} outputPath
@@ -79,7 +79,7 @@
 	 *  - Android
 	 *  - AndroidEmulator
 	 */
-	"platform":"iOSSimulator",
+	"platform":"iOS",
 
 	/**
 	 * @cfg {String} deviceType
@@ -113,6 +113,8 @@
 	 *
 	 * When using a certificatePath on Windows, you do not need to specify this.
 	 */
+    "certificateAlias": "iPhone Developer: Adrian Kosmaczewski",
+
 	"certificatePassword":"",
 	/**
 	 * @cfg {String} certificatePassword

@@ -9,11 +9,17 @@ Ext.application({
     profiles: ['Phone', 'Tablet'],
     
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Ext.device.Connection',
+        'Ext.device.Contacts',
+        'Ext.device.Camera',
+        'Ext.device.Orientation',
+        'Ext.device.Notification',
+        'Ext.device.Geolocation'
     ],
 
     views: ['IndexView', 'CameraDemo', 'NotificationsDemo', 'OrientationDemo', 
-        'NetworkDemo', 'LocationDemo', 'CapabilitiesDemo'],
+        'NetworkDemo', 'LocationDemo', 'CapabilitiesDemo', 'ContactsDemo'],
     stores: ['ItemStore'],
     models: ['AkoLib.model.Item'],
     controllers: ['CameraController'],
@@ -39,6 +45,10 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
+
+        if (!Ext.device || !Ext.device.Device) {
+            Ext.Msg.alert('Device only!', 'This demo is meant to be run inside of a device. Please follow the instructions and compile this application as a native app using Sencha Cmd.');
+        }
     },
 
     onUpdated: function() {

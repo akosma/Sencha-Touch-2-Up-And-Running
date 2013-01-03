@@ -17,24 +17,28 @@ Ext.define('Chapter10Device.controller.CameraController', {
     },
 
     loadCamera: function (button, e, eOpts) {
+        var self = this;
+
         Ext.device.Camera.capture({
             source: 'camera',
             destination: 'file',
 
             success: function(url) {
-                this.getImage().setSrc(url);
+                self.getImage().setSrc(url);
             }
         }); 
     },
 
 
     loadLibrary: function (button, e, eOpts) {
+        var self = this;
+        
         Ext.device.Camera.capture({
             source: 'library',
             destination: 'file',
 
             success: function(url) {
-                this.getImage().setSrc(url);
+                self.getImage().setSrc(url);
             }
         }); 
     }
