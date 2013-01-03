@@ -12,8 +12,8 @@ Ext.define('Chapter10Device.profile.Tablet', {
     launch: function () {
         Ext.Viewport.add({
             xtype: 'akosplitview',
-            screenTitle: 'Universal App',
-            menuButtonTitle: 'Menu',
+            screenTitle: 'Device APIs',
+            menuButtonTitle: 'APIs',
             masterView: { 
                 xtype: 'indexview'
             },

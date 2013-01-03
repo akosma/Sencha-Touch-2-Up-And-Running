@@ -4,7 +4,7 @@ Ext.define('Chapter10Device.view.IndexView', {
     xtype: 'indexview',
     config: {
         items: [{
-            title: 'Items',
+            title: 'Device APIs',
             xtype: 'list',
             itemId: 'listView',
             store: 'ItemStore',
