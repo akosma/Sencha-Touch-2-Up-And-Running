@@ -1,9 +1,9 @@
 Ext.define('Chapter10Profiles.profile.Phone', {
     extend: 'Ext.app.Profile',
     config: {
-        name: 'Phone',
+        name: 'SamplePhone',
         models: [],
-        views: [],
+        views: ['PhoneView'],
         controllers: []
     },
     isActive: function () {
@@ -11,21 +11,7 @@ Ext.define('Chapter10Profiles.profile.Phone', {
     },
     launch: function () {
         Ext.Viewport.add({
-            xtype: 'panel',
-            html: 'Hello World on Phone!',
-            items: [{
-                xtype: 'toolbar',
-                docked: 'bottom',
-                items: [{
-                    xtype: 'button',
-                    text: 'Test',
-                    listeners: {
-                        tap: function() {
-                            Ext.Msg.alert('Test on Phone');
-                        }
-                    }
-                }]
-            }]
+            xtype: 'phoneview'
         });
     }
 });
