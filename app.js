@@ -113,11 +113,17 @@ var data = [{
     chapterNumber: 8,
     order: 3
 }, { 
+    title: 'JSDuck output',
+    url: 'Chapter_08_JSDuck/#!/api/AkoLib.view.SplitView',
+    chapter: '8. Testing and Debugging',
+    chapterNumber: 8,
+    order: 4
+}, { 
     title: 'Architect',
     url: 'Chapter_09_Architect/ToDoList/app.html',
     chapter: '9. Sencha Architect',
     chapterNumber: 9,
-    order: 3
+    order: 1
 }, { 
     title: 'Device Profiles',
     url: 'Chapter_10_Profiles',
