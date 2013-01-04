@@ -47,7 +47,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         if (!Ext.device || !Ext.device.Device) {
-            Ext.Msg.alert('Device only!', 'This demo is meant to be run inside of a device. Please follow the instructions and compile this application as a native app using Sencha Cmd.');
+            Ext.Msg.alert('Device only!', 'This demo is meant to be run inside of a device. Please follow the instructions in the book and compile this application as a native app using Sencha Cmd.');
         }
     },
 
