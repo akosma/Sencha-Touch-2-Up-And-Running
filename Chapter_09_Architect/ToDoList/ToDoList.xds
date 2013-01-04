@@ -4,7 +4,7 @@
         "urlPrefix": "http://localhost:8888/Chapter_09_Architect/deploy",
         "spacesToIndent": 4,
         "exportPath": "/Users/adrian/Desktop/akosma/2012/OReilly/Sencha Touch/Code/Chapter_09_Architect/deploy",
-        "sdkPath": "",
+        "sdkPath": "/Users/adrian/Desktop/akosma/2012/OReilly/Sencha Touch/Code/_libs/sencha",
         "lineEnding": "LF",
         "genTimestamps": false,
         "cacheBust": false
@@ -66,6 +66,14 @@
                 "metadata/resource/css"
             ],
             "className": "css"
+        },
+        "6d09d71d-37bd-4513-b75c-e04fcc17c663": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
         }
     },
     "viewOrderMap": {
@@ -84,7 +92,8 @@
         ],
         "resource": [
             "ca7b0940-17dc-48b8-8d42-92ca8d416a87",
-            "2ab8ceec-55aa-431e-88c6-d1efb7980de5"
+            "2ab8ceec-55aa-431e-88c6-d1efb7980de5",
+            "6d09d71d-37bd-4513-b75c-e04fcc17c663"
         ],
         "app": [
             "application"

@@ -4,7 +4,7 @@
         "model": false,
         "component": true,
         "controller": false,
-        "resource": false,
+        "resource": true,
         "b8757af5-7825-45a0-a670-b578bb3b7078": {
             "id": "b8757af5-7825-45a0-a670-b578bb3b7078",
             "expanded": false,
@@ -177,6 +177,9 @@
         },
         "2ab8ceec-55aa-431e-88c6-d1efb7980de5": {
             "id": "2ab8ceec-55aa-431e-88c6-d1efb7980de5"
+        },
+        "6d09d71d-37bd-4513-b75c-e04fcc17c663": {
+            "id": "6d09d71d-37bd-4513-b75c-e04fcc17c663"
         }
     }
 }

@@ -1,0 +1,41 @@
+{
+    "type": "packagesetting",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "packager",
+        "applicationName": "ToDoList",
+        "applicationId": "com.mycompany.myAppID",
+        "versionString": "1.0",
+        "versionCode": 1,
+        "icon": [
+            "{\"57\":\"resources/icons/Icon.png\",\"72\":\"resources/icons/Icon~ipad.png\",\"114\":\"resources/icons/Icon@2x.png\",\"144\":\"resources/icons/Icon~ipad@2x.png\"}"
+        ],
+        "inputPath": "./",
+        "outputPath": "../build/",
+        "configuration": "Debug",
+        "platform": "iOSSimulator",
+        "deviceType": "Universal",
+        "androidAPILevel": "8",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "orientations": [
+            "portrait",
+            "landscapeLeft",
+            "landscapeRight",
+            "portraitUpsideDown"
+        ]
+    },
+    "id": "ExtBox1-ext-gen2874",
+    "designerId": "6d09d71d-37bd-4513-b75c-e04fcc17c663"
+}
