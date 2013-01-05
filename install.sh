@@ -16,11 +16,11 @@ mkdir $LIBS
 
 
 echo
-echo "###############################"
-echo "#"
-echo "# Downloading Sencha Touch"
-echo "#"
-echo "###############################"
+echo "############################"
+echo "#                          #"
+echo "# Downloading Sencha Touch #"
+echo "#                          #"
+echo "############################"
 curl http://cdn.sencha.io/touch/sencha-touch-2.1.0-gpl.zip --output $LIBS/sencha.zip
 
 # Extract the contents of the zip file
@@ -33,18 +33,18 @@ rm $LIBS/sencha.zip
 
 
 echo
-echo "###############################"
-echo "#"
-echo "# Downloading Sencha Cmd"
-echo "#"
-echo "###############################"
+echo "############################"
+echo "#                          #"
+echo "# Downloading Sencha Cmd   #"
+echo "#                          #"
+echo "############################"
 curl http://cdn.sencha.io/senchacmd/SenchaCmd-3.0.0.250-osx.app.zip --output $LIBS/sencha_cmd.zip
 
 # Extract the contents of the zip file
 unzip $LIBS/sencha_cmd.zip -d $LIBS
 
 # Execute the application contained in it (OS X only)
-open $LIBS/SenchaCmd-3.0.0.250-osx.app
+# open $LIBS/SenchaCmd-3.0.0.250-osx.app
 
 # Remove the zip file
 rm $LIBS/sencha_cmd.zip
@@ -53,19 +53,19 @@ rm $LIBS/sencha_cmd.zip
 
 
 echo
-echo "###############################"
-echo "#"
-echo "# Downloading the latest Siesta"
-echo "#"
-echo "###############################"
-curl http://www.bryntum.com/dlsiesta.php --output $LIBS/siesta.zip
+echo "######################################"
+echo "#                                    #"
+echo "# Downloading the latest Siesta Lite #"
+echo "#                                    #"
+echo "######################################"
+curl http://www.bryntum.com/download/?product_id=siesta-lite --output $LIBS/siesta.zip
 
 # Extract the contents of the zip file
 unzip $LIBS/siesta.zip -d $LIBS
 
-# Rename the folder
-mv siesta-1.1.7-lite siesta
-
 # Remove the zip file
 rm $LIBS/siesta.zip
+
+# Rename the folder
+mv $LIBS/siesta* $LIBS/siesta
 
