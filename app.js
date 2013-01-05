@@ -1,4 +1,16 @@
 var data = [{ 
+    title: 'Bare Bones App',
+    url: 'Chapter_01_Bare_Bones',
+    chapter: '1. Getting Started',
+    chapterNumber: 1,
+    order: 1
+}, { 
+    title: 'Sencha Cmd App',
+    url: 'Chapter_01_Sencha_Cmd',
+    chapter: '1. Getting Started',
+    chapterNumber: 1,
+    order: 2
+}, { 
     title: 'Foundation Classes',
     url: 'Chapter_02_Class_System',
     chapter: '2. Class System',
@@ -190,7 +202,7 @@ Ext.application({
             store: store,
             grouped: true,
             indexBar: {
-                letters: ['2', '3', '4', '5', '6', '7', '8', '9', '10']
+                letters: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
             },
             items: [{
                 xtype: 'titlebar',
