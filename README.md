@@ -10,6 +10,13 @@ Installation
 Run the `install.sh` script to download all the required libraries from
 their respective repositories.
 
+How to Use
+----------
+
+Do not open the `index.html` file directly by double-clicking on it;
+rather, install this folder as the root of your local development
+webserver instead, and browse to `http://localhost/index.html`.
+
 Buy the Book
 ------------
 
