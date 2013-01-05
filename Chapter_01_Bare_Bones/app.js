@@ -1,5 +1,11 @@
 Ext.application({
     name: 'HelloWorld',
+    launch: function () { 
+        Ext.Msg.alert('Application launched');
+    } 
+    
+    // Everything down here is optional:
+    /*
     appFolder: 'app',
     icon: {
         57: '../img/icons/Icon.png',
@@ -19,11 +25,11 @@ Ext.application({
     models: [], 
     views: [], 
     controllers: [],
+    stores: [],
+    profiles: [],
     fullscreen: true,
     isIconPrecomposed: true,
-    statusBarStyle: 'black', // can also be 'default'
-    launch: function () { 
-        Ext.Msg.alert('Application launched');
-    } 
+    statusBarStyle: 'black' // can also be 'default'
+    */
 });
 
