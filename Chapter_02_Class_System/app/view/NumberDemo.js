@@ -18,10 +18,12 @@ Ext.define('Chapter2ClassSystem.view.NumberDemo', {
     },
 
     fromDemo: function () {
-        var num = Ext.Number.from('4535', 1111);
-        var txt = 'Retrieved value: ' + num;
-        console.log(txt);
-        this.showTitleText('from() demo', txt);
+        var num1 = Ext.Number.from('4535', 1111);
+        var num2 = Ext.Number.from('Some other value', 1111);
+        var txt1 = 'Retrieved value: ' + num1;
+        var txt2 = 'Retrieved value: ' + num2;
+        console.log(txt1);
+        console.log(txt2);
     },
 
     snapDemo: function () {
