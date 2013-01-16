@@ -22,7 +22,7 @@ Buy the Book
 
 You can buy a copy of the book at these locations:
 
-- O'Reilly
+- [O'Reilly](http://shop.oreilly.com/product/0636920026877.do)
 - Amazon
 
 License
