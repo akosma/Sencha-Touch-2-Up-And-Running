@@ -23,7 +23,7 @@ Buy the Book
 You can buy a copy of the book at these locations:
 
 - [O'Reilly](http://shop.oreilly.com/product/0636920026877.do)
-- Amazon
+- [Amazon.com](http://www.amazon.com/Sencha-Touch-2-Up-Running/dp/1449339387)
 
 License
 -------
