@@ -5,7 +5,7 @@ Ext.define('Chapter3Views.view.TitleToolBarDemo', {
         style: 'background-color: lightgray',
         items: [{
             xtype: 'label',
-            html: 'This sample shows a title bar on top, and a toolbar at the bottom (of course, mixing navigation bars and title bars is not such a good idea ;) Toolbars are very similar to title bars. They can contain "spacer" objects, which as the name implies create proportional, flexible spaces between groups of buttons.',
+            html: 'This sample shows a title bar on top and a toolbar at the bottom. (Of course, mixing navigation bars and title bars is not such a good idea.) Toolbars are similar to title bars. They can contain "spacer" objects, which, as the name implies, create proportional, flexible spaces between groups of buttons.',
             centered: true,
             margin: 20
         }, {
