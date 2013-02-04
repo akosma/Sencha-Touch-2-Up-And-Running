@@ -22,8 +22,15 @@ Buy the Book
 
 You can buy a copy of the book at these locations:
 
-- O'Reilly
-- Amazon
+- [O'Reilly](http://shop.oreilly.com/product/0636920026877.do)
+- [Amazon.com](http://www.amazon.com/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Amazon.de](http://www.amazon.de/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Amazon.ca](http://www.amazon.ca/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Amazon.co.uk](http://www.amazon.co.uk/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Amazon.es](http://www.amazon.es/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Amazon.it](http://www.amazon.it/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Amazon.fr](http://www.amazon.fr/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Amazon.co.jp](http://www.amazon.co.jp/Sencha-Touch-2-Up-Running/dp/1449339387)
 
 License
 -------
