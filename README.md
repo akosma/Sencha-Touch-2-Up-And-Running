@@ -4,6 +4,8 @@ Sencha Touch 2 Up and Running
 This repository contains the code of the "Sencha Touch 2 Up and Running"
 book by Adrian Kosmaczewski, published by O'Reilly.
 
+![Book cover](http://akamaicovers.oreilly.com/images/0636920026877/cat.gif)
+
 Installation
 ------------
 
