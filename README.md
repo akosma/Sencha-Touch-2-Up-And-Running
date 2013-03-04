@@ -25,6 +25,7 @@ Buy the Book
 You can buy a copy of the book at these locations:
 
 - [O'Reilly](http://shop.oreilly.com/product/0636920026877.do)
+- [iBooks Store](https://itunes.apple.com/us/book/sencha-touch-2-up-and-running/id610869809?mt=11)
 - [Amazon.com](http://www.amazon.com/Sencha-Touch-2-Up-Running/dp/1449339387)
 - [Amazon.de](http://www.amazon.de/Sencha-Touch-2-Up-Running/dp/1449339387)
 - [Amazon.ca](http://www.amazon.ca/Sencha-Touch-2-Up-Running/dp/1449339387)
