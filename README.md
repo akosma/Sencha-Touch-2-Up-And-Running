@@ -36,6 +36,7 @@ You can buy a copy of the book at these locations:
 - [Amazon.fr](http://www.amazon.fr/Sencha-Touch-2-Up-Running/dp/1449339387)
 - [Amazon.co.jp](http://www.amazon.co.jp/Sencha-Touch-2-Up-Running/dp/1449339387)
 - [Amazon.cn](http://www.amazon.cn/Sencha-Touch-2-Up-Running/dp/1449339387)
+- [Barnes and Noble](http://www.barnesandnoble.com/w/sencha-touch-2-up-and-running-adrian-kosmaczewski/1114198364)
 
 License
 -------
